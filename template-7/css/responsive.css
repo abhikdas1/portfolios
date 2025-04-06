@@ -1,0 +1,264 @@
+/* Responsive CSS: Media queries for different screen sizes */
+
+/* Large Desktop (1200px and up) */
+@media (min-width: 1200px) {
+    /* Adjust the window default sizes */
+    .window {
+        width: 70%;
+        height: 70%;
+        max-width: 1200px;
+        max-height: 800px;
+    }
+}
+
+/* Desktop (992px - 1199px) */
+@media (min-width: 992px) and (max-width: 1199px) {
+    /* Adjust the window default sizes */
+    .window {
+        width: 80%;
+        height: 75%;
+    }
+    
+    /* Start menu size */
+    .start-menu {
+        width: 550px;
+    }
+    
+    /* Skills tiles */
+    .tech-tiles {
+        grid-template-columns: repeat(4, 1fr);
+    }
+}
+
+/* Tablet (768px - 991px) */
+@media (min-width: 768px) and (max-width: 991px) {
+    /* Adjust the window default sizes */
+    .window {
+        width: 85%;
+        height: 80%;
+    }
+    
+    /* Start menu size */
+    .start-menu {
+        width: 80%;
+    }
+    
+    /* Projects grid */
+    .projects-grid {
+        grid-template-columns: 1fr;
+        gap: var(--space-md);
+    }
+    
+    /* Skills tiles */
+    .tech-tiles {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    
+    /* About section */
+    .about-body {
+        grid-template-columns: 1fr;
+        gap: var(--space-lg);
+    }
+    
+    /* Welcome section */
+    .welcome-header {
+        flex-direction: column;
+        text-align: center;
+    }
+    
+    .welcome-actions {
+        justify-content: center;
+    }
+    
+    /* Quick stats */
+    .quick-stats {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    
+    /* Contact section */
+    .contact-body {
+        grid-template-columns: 1fr;
+        gap: var(--space-md);
+    }
+    
+    .contact-info {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+    }
+    
+    .contact-socials {
+        grid-column: span 2;
+    }
+    
+    /* Search box */
+    .search-box {
+        width: 150px;
+    }
+}
+
+/* Mobile (up to 767px) */
+@media (max-width: 767px) {
+    /* Adjust the window default sizes */
+    .window {
+        width: 90%;
+        height: 85%;
+        min-width: 300px;
+    }
+    
+    /* Start menu size */
+    .start-menu {
+        width: 100%;
+        flex-direction: column;
+        height: auto;
+    }
+    
+    .start-menu-left {
+        width: 100%;
+    }
+    
+    .start-menu-right {
+        padding: var(--space-sm);
+    }
+    
+    .start-tiles {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    
+    /* Projects grid */
+    .projects-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    /* Skills tiles */
+    .tech-tiles {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    
+    .skill-tiles {
+        grid-template-columns: 1fr;
+    }
+    
+    /* About section */
+    .about-body {
+        grid-template-columns: 1fr;
+    }
+    
+    /* Welcome section */
+    .welcome-header {
+        flex-direction: column;
+        text-align: center;
+    }
+    
+    .welcome-actions {
+        flex-direction: column;
+        align-items: center;
+    }
+    
+    /* Quick stats */
+    .quick-stats {
+        grid-template-columns: 1fr;
+    }
+    
+    /* Contact section */
+    .contact-body {
+        grid-template-columns: 1fr;
+    }
+    
+    /* Hide search box */
+    .search-box {
+        display: none;
+    }
+    
+    /* Desktop icons */
+    .desktop-icons {
+        grid-template-columns: repeat(4, 1fr);
+    }
+    
+    /* Window title */
+    .window-title {
+        max-width: 150px;
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+    }
+    
+    /* Action center */
+    .action-center {
+        width: 80%;
+    }
+}
+
+/* Small Mobile (up to 576px) */
+@media (max-width: 576px) {
+    /* Window controls */
+    .window-control {
+        width: 32px;
+    }
+    
+    /* Adjust desktop icons */
+    .desktop-icons {
+        grid-template-columns: repeat(3, 1fr);
+    }
+    
+    /* Start tiles */
+    .start-tiles {
+        grid-template-columns: 1fr;
+    }
+    
+    .start-tile.wide {
+        grid-column: auto;
+    }
+    
+    /* Welcome actions */
+    .welcome-actions .win10-btn {
+        width: 100%;
+    }
+    
+    /* Taskbar time */
+    .date-display {
+        display: none;
+    }
+    
+    /* Projects filter */
+    .projects-filter {
+        justify-content: center;
+    }
+    
+    .filter-btn {
+        padding: var(--space-xxs) var(--space-xs);
+        font-size: var(--font-size-xs);
+    }
+}
+
+/* Handle Windows in Mobile devices - Touch support */
+@media (hover: none) and (pointer: coarse) {
+    /* Make window header larger for touch */
+    .window-header {
+        height: 40px;
+    }
+    
+    .window-control {
+        width: 40px;
+        height: 40px;
+    }
+    
+    /* Increase touch target size for desktop icons */
+    .desktop-icon {
+        padding: var(--space-xs);
+    }
+    
+    /* Adjust taskbar height */
+    .taskbar {
+        height: 48px;
+    }
+    
+    .start-btn {
+        width: 48px;
+        height: 48px;
+    }
+    
+    /* Adjust start menu items for touch */
+    .start-menu-item {
+        padding: var(--space-sm);
+    }
+}

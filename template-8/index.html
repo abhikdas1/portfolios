@@ -1,0 +1,443 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Terminal@YourName:~$ | ProfileCraft</title>
+    <meta name="description" content="Hacker-style terminal portfolio showcasing skills and projects">
+    
+    <!-- CSS Links -->
+    <link rel="stylesheet" href="css/base.css">
+    <link rel="stylesheet" href="css/terminal.css">
+    <link rel="stylesheet" href="css/animations.css">
+    <link rel="stylesheet" href="css/responsive.css">
+    
+    <!-- Font Awesome for icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- Google Fonts - Monospace fonts for terminal look -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Fira+Code:wght@300;400;500;600;700&family=VT323&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Matrix background animation -->
+    <canvas id="matrix-bg"></canvas>
+    
+    <!-- Main terminal container -->
+    <div class="terminal-container">
+        <!-- Terminal header -->
+        <div class="terminal-header">
+            <div class="terminal-controls">
+                <span class="control close"></span>
+                <span class="control minimize"></span>
+                <span class="control maximize"></span>
+            </div>
+            <div class="terminal-title">user@portfolio:~</div>
+            <div class="terminal-actions">
+                <button class="action-btn" id="toggle-sound"><i class="fas fa-volume-mute"></i></button>
+                <button class="action-btn" id="fullscreen-btn"><i class="fas fa-expand"></i></button>
+            </div>
+        </div>
+        
+        <!-- Terminal content -->
+        <div class="terminal-content">
+            <!-- Terminal welcome banner -->
+            <div class="welcome-banner">
+                <pre class="ascii-art">
+ _______________________________________________________
+|                                                       |
+|   ██████╗ ██████╗  ██████╗ ███████╗██╗██╗     ███████╗  |
+|   ██╔══██╗██╔══██╗██╔═══██╗██╔════╝██║██║     ██╔════╝  |
+|   ██████╔╝██████╔╝██║   ██║█████╗  ██║██║     █████╗    |
+|   ██╔═══╝ ██╔══██╗██║   ██║██╔══╝  ██║██║     ██╔══╝    |
+|   ██║     ██║  ██║╚██████╔╝██║     ██║███████╗███████╗  |
+|   ╚═╝     ╚═╝  ╚═╝ ╚═════╝ ╚═╝     ╚═╝╚══════╝╚══════╝  |
+|                                                       |
+|_______________________________________________________|
+                </pre>
+                <div class="terminal-welcome">
+                    <p>Welcome to the portfolio of <span class="highlight">Your Name</span></p>
+                    <p>Type <span class="command">help</span> to see available commands</p>
+                    <p class="loading-message">Initializing system...</p>
+                    <div class="progress-bar">
+                        <div class="progress"></div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Terminal output -->
+            <div id="terminal-output">
+                <!-- Output will be added here by JavaScript -->
+            </div>
+            
+            <!-- Terminal input line -->
+            <div class="terminal-input-line">
+                <span class="prompt">user@portfolio:~$</span>
+                <span class="input-area">
+                    <input type="text" id="terminal-input" autofocus spellcheck="false">
+                    <span class="cursor"></span>
+                </span>
+            </div>
+        </div>
+        
+        <!-- Terminal footer -->
+        <div class="terminal-footer">
+            <div class="terminal-status">Connected</div>
+            <div class="terminal-info">Memory: 64MB | CPU: 1.0GHz</div>
+        </div>
+    </div>
+    
+    <!-- Sections content (hidden initially, will be shown on command) -->
+    <div id="terminal-sections" style="display: none;">
+        <!-- About Section Content -->
+        <div id="about-content">
+            <h2>About Me</h2>
+            <p>Hello! I am a <span class="highlight">professional developer</span> with experience in creating secure, efficient, and innovative applications.</p>
+            <p>My technical journey began [your story here]. I specialize in full-stack development with a focus on cybersecurity principles.</p>
+            
+            <h3>Personal Info</h3>
+            <ul class="info-list">
+                <li><span class="label">Name:</span> Your Name</li>
+                <li><span class="label">Location:</span> City, Country</li>
+                <li><span class="label">Email:</span> your.email@example.com</li>
+                <li><span class="label">Status:</span> Available for hire</li>
+            </ul>
+        </div>
+        
+        <!-- Skills Section Content -->
+        <div id="skills-content">
+            <h2>Skills</h2>
+            
+            <h3>Programming Languages</h3>
+            <div class="skill-group">
+                <div class="skill-item">
+                    <div class="skill-info">
+                        <span class="skill-name">JavaScript</span>
+                        <span class="skill-level">[█████████░] 90%</span>
+                    </div>
+                </div>
+                <div class="skill-item">
+                    <div class="skill-info">
+                        <span class="skill-name">Python</span>
+                        <span class="skill-level">[████████░░] 80%</span>
+                    </div>
+                </div>
+                <div class="skill-item">
+                    <div class="skill-info">
+                        <span class="skill-name">Java</span>
+                        <span class="skill-level">[███████░░░] 70%</span>
+                    </div>
+                </div>
+                <div class="skill-item">
+                    <div class="skill-info">
+                        <span class="skill-name">C/C++</span>
+                        <span class="skill-level">[██████░░░░] 60%</span>
+                    </div>
+                </div>
+            </div>
+            
+            <h3>Technologies & Frameworks</h3>
+            <div class="skill-group">
+                <div class="skill-item">
+                    <div class="skill-info">
+                        <span class="skill-name">React.js</span>
+                        <span class="skill-level">[████████░░] 80%</span>
+                    </div>
+                </div>
+                <div class="skill-item">
+                    <div class="skill-info">
+                        <span class="skill-name">Node.js</span>
+                        <span class="skill-level">[████████░░] 80%</span>
+                    </div>
+                </div>
+                <div class="skill-item">
+                    <div class="skill-info">
+                        <span class="skill-name">Express</span>
+                        <span class="skill-level">[███████░░░] 70%</span>
+                    </div>
+                </div>
+                <div class="skill-item">
+                    <div class="skill-info">
+                        <span class="skill-name">MongoDB</span>
+                        <span class="skill-level">[██████░░░░] 60%</span>
+                    </div>
+                </div>
+            </div>
+            
+            <h3>Cybersecurity</h3>
+            <div class="skill-group">
+                <div class="skill-item">
+                    <div class="skill-info">
+                        <span class="skill-name">Penetration Testing</span>
+                        <span class="skill-level">[███████░░░] 70%</span>
+                    </div>
+                </div>
+                <div class="skill-item">
+                    <div class="skill-info">
+                        <span class="skill-name">Network Security</span>
+                        <span class="skill-level">[██████░░░░] 60%</span>
+                    </div>
+                </div>
+                <div class="skill-item">
+                    <div class="skill-info">
+                        <span class="skill-name">Cryptography</span>
+                        <span class="skill-level">[█████░░░░░] 50%</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Projects Section Content -->
+        <div id="projects-content">
+            <h2>Projects</h2>
+            
+            <div class="project-item">
+                <h3>Project Alpha</h3>
+                <div class="project-info">
+                    <p class="project-desc">A secure communication platform with end-to-end encryption.</p>
+                    <p class="project-tech"><span class="label">Tech Stack:</span> Node.js, React, MongoDB, WebRTC</p>
+                    <div class="project-links">
+                        <a href="#" target="_blank" class="project-link">[ Demo ]</a>
+                        <a href="#" target="_blank" class="project-link">[ GitHub ]</a>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="project-item">
+                <h3>Project Beta</h3>
+                <div class="project-info">
+                    <p class="project-desc">An automated vulnerability scanner for web applications.</p>
+                    <p class="project-tech"><span class="label">Tech Stack:</span> Python, Django, SQLite, Docker</p>
+                    <div class="project-links">
+                        <a href="#" target="_blank" class="project-link">[ Demo ]</a>
+                        <a href="#" target="_blank" class="project-link">[ GitHub ]</a>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="project-item">
+                <h3>Project Gamma</h3>
+                <div class="project-info">
+                    <p class="project-desc">A real-time network traffic analyzer with intrusion detection.</p>
+                    <p class="project-tech"><span class="label">Tech Stack:</span> C++, Qt, libpcap, PostgreSQL</p>
+                    <div class="project-links">
+                        <a href="#" target="_blank" class="project-link">[ Demo ]</a>
+                        <a href="#" target="_blank" class="project-link">[ GitHub ]</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Experience Section Content -->
+        <div id="experience-content">
+            <h2>Experience</h2>
+            
+            <div class="timeline">
+                <div class="timeline-item">
+                    <div class="timeline-date">2021 - Present</div>
+                    <div class="timeline-content">
+                        <h3>Senior Developer</h3>
+                        <h4>Cybersecurity Solutions Inc.</h4>
+                        <ul class="responsibilities">
+                            <li>Lead development of secure enterprise applications</li>
+                            <li>Conduct code reviews and security audits</li>
+                            <li>Implement encryption protocols and authentication systems</li>
+                            <li>Train junior developers in secure coding practices</li>
+                        </ul>
+                    </div>
+                </div>
+                
+                <div class="timeline-item">
+                    <div class="timeline-date">2018 - 2021</div>
+                    <div class="timeline-content">
+                        <h3>Full Stack Developer</h3>
+                        <h4>Tech Innovations Ltd.</h4>
+                        <ul class="responsibilities">
+                            <li>Developed RESTful APIs and microservices</li>
+                            <li>Built responsive web applications using React</li>
+                            <li>Implemented CI/CD pipelines</li>
+                            <li>Optimized database queries and application performance</li>
+                        </ul>
+                    </div>
+                </div>
+                
+                <div class="timeline-item">
+                    <div class="timeline-date">2016 - 2018</div>
+                    <div class="timeline-content">
+                        <h3>Junior Developer</h3>
+                        <h4>StartUp Nexus</h4>
+                        <ul class="responsibilities">
+                            <li>Assisted in front-end development using JavaScript and CSS</li>
+                            <li>Fixed bugs and implemented minor features</li>
+                            <li>Participated in code reviews and learned best practices</li>
+                            <li>Contributed to documentation and testing</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Education Section Content -->
+        <div id="education-content">
+            <h2>Education</h2>
+            
+            <div class="timeline">
+                <div class="timeline-item">
+                    <div class="timeline-date">2014 - 2018</div>
+                    <div class="timeline-content">
+                        <h3>BSc in Computer Science</h3>
+                        <h4>University of Technology</h4>
+                        <p class="education-details">
+                            <span class="label">GPA:</span> 3.8/4.0<br>
+                            <span class="label">Focus:</span> Cybersecurity, Software Engineering<br>
+                            <span class="label">Thesis:</span> "Implementing Secure Communication Protocols in IoT Devices"
+                        </p>
+                    </div>
+                </div>
+                
+                <div class="timeline-item">
+                    <div class="timeline-date">2020</div>
+                    <div class="timeline-content">
+                        <h3>Certified Ethical Hacker (CEH)</h3>
+                        <h4>EC-Council</h4>
+                        <p class="education-details">
+                            Professional certification in ethical hacking methodologies and penetration testing.
+                        </p>
+                    </div>
+                </div>
+                
+                <div class="timeline-item">
+                    <div class="timeline-date">2019</div>
+                    <div class="timeline-content">
+                        <h3>Full Stack Web Development</h3>
+                        <h4>Tech Bootcamp</h4>
+                        <p class="education-details">
+                            Intensive 12-week program covering modern web development technologies and practices.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Contact Section Content -->
+        <div id="contact-content">
+            <h2>Contact</h2>
+            
+            <p>Feel free to reach out through any of the following channels:</p>
+            
+            <div class="contact-methods">
+                <div class="contact-item">
+                    <div class="contact-label">Email:</div>
+                    <div class="contact-value">your.email@example.com</div>
+                </div>
+                <div class="contact-item">
+                    <div class="contact-label">GitHub:</div>
+                    <div class="contact-value">github.com/your-username</div>
+                </div>
+                <div class="contact-item">
+                    <div class="contact-label">LinkedIn:</div>
+                    <div class="contact-value">linkedin.com/in/your-profile</div>
+                </div>
+            </div>
+            
+            <div class="contact-form">
+                <h3>Send a Message</h3>
+                <form id="contact-form">
+                    <div class="form-group">
+                        <label for="name">Name:</label>
+                        <input type="text" id="name" name="name" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="email">Email:</label>
+                        <input type="email" id="email" name="email" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="message">Message:</label>
+                        <textarea id="message" name="message" rows="5" required></textarea>
+                    </div>
+                    <button type="submit" class="terminal-btn">Send Message</button>
+                </form>
+            </div>
+            
+            <div class="contact-response" style="display: none;">
+                <pre class="response-message">
+Message sent successfully!
+Connection established. 
+Awaiting response...
+                </pre>
+            </div>
+        </div>
+        
+        <!-- Help Section Content -->
+        <div id="help-content">
+            <h2>Available Commands</h2>
+            
+            <table class="commands-table">
+                <tr>
+                    <td><span class="command">about</span></td>
+                    <td>Display information about me</td>
+                </tr>
+                <tr>
+                    <td><span class="command">skills</span></td>
+                    <td>List my technical skills</td>
+                </tr>
+                <tr>
+                    <td><span class="command">projects</span></td>
+                    <td>View my portfolio projects</td>
+                </tr>
+                <tr>
+                    <td><span class="command">experience</span></td>
+                    <td>Show my work experience</td>
+                </tr>
+                <tr>
+                    <td><span class="command">education</span></td>
+                    <td>Display my educational background</td>
+                </tr>
+                <tr>
+                    <td><span class="command">contact</span></td>
+                    <td>Get my contact information</td>
+                </tr>
+                <tr>
+                    <td><span class="command">clear</span></td>
+                    <td>Clear the terminal screen</td>
+                </tr>
+                <tr>
+                    <td><span class="command">help</span></td>
+                    <td>Display this help information</td>
+                </tr>
+                <tr>
+                    <td><span class="command">social</span></td>
+                    <td>Show social media links</td>
+                </tr>
+                <tr>
+                    <td><span class="command">whoami</span></td>
+                    <td>Display current user info</td>
+                </tr>
+                <tr>
+                    <td><span class="command">date</span></td>
+                    <td>Show current date and time</td>
+                </tr>
+                <tr>
+                    <td><span class="command">echo [text]</span></td>
+                    <td>Echo back the provided text</td>
+                </tr>
+                <tr>
+                    <td><span class="command">download resume</span></td>
+                    <td>Download my resume (PDF)</td>
+                </tr>
+            </table>
+        </div>
+    </div>
+    
+    <!-- Sound effects (muted by default) -->
+    <audio id="keypress-sound" src="assets/sounds/keypress.mp3" preload="auto"></audio>
+    <audio id="command-sound" src="assets/sounds/command.mp3" preload="auto"></audio>
+    <audio id="error-sound" src="assets/sounds/error.mp3" preload="auto"></audio>
+    
+    <!-- JavaScript Files -->
+    <script src="js/matrix.js"></script>
+    <script src="js/terminal.js"></script>
+    <script src="js/commands.js"></script>
+</body>
+</html>

@@ -1,0 +1,203 @@
+/* Main stylesheet: Imports all other CSS files and contains additional custom styles */
+
+/* Import Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=DM+Sans:wght@400;500;700&display=swap');
+
+/* Particles.js styling */
+#particles-js {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    z-index: -1;
+}
+
+/* Dark theme enables particles to be more visible */
+body.dark-theme #particles-js {
+    opacity: 0.6;
+}
+
+/* Custom transitions for theme toggle */
+.theme-toggle i {
+    transition: transform 0.5s ease, opacity 0.3s ease;
+}
+
+.theme-toggle .light-icon,
+.theme-toggle .dark-icon {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+body.dark-theme .light-icon {
+    opacity: 1;
+    transform: translate(-50%, -50%) rotate(360deg);
+}
+
+body.dark-theme .dark-icon {
+    opacity: 0;
+    transform: translate(-50%, -50%) rotate(-360deg);
+}
+
+body:not(.dark-theme) .light-icon {
+    opacity: 0;
+    transform: translate(-50%, -50%) rotate(-360deg);
+}
+
+body:not(.dark-theme) .dark-icon {
+    opacity: 1;
+    transform: translate(-50%, -50%) rotate(360deg);
+}
+
+/* Animated Elements */
+.counter-number {
+    transition: color 0.3s ease;
+}
+
+.counter-item:hover .counter-number {
+    color: var(--primary-hover);
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+    width: 10px;
+}
+
+::-webkit-scrollbar-track {
+    background: var(--surface);
+}
+
+::-webkit-scrollbar-thumb {
+    background: var(--primary);
+    border-radius: 5px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: var(--primary-hover);
+}
+
+/* Selection Color */
+::selection {
+    background-color: var(--primary);
+    color: white;
+}
+
+/* Typing Animation for Hero Section */
+.txt-rotate {
+    position: relative;
+    display: inline-block;
+}
+
+/* Sliding underline for nav links */
+.nav-link::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 0;
+    height: 2px;
+    background-color: var(--primary);
+    transition: width var(--transition-normal);
+}
+
+.nav-link:hover::after,
+.nav-link.active::after {
+    width: calc(100% - 2.5rem);
+}
+
+/* Mobile Nav Active State */
+.mobile-nav-link.active {
+    color: var(--primary);
+}
+
+.mobile-nav-link.active i {
+    transform: translateY(-3px);
+}
+
+/* Custom Animation for Project Item Hover */
+.portfolio-item:hover .portfolio-img img {
+    transform: scale(1.05);
+}
+
+/* Make the buttons more interactive */
+.btn {
+    position: relative;
+    overflow: hidden;
+}
+
+.btn::after {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 0;
+    height: 0;
+    background-color: rgba(255, 255, 255, 0.1);
+    border-radius: 50%;
+    transform: translate(-50%, -50%);
+    transition: width 0.5s ease, height 0.5s ease;
+}
+
+.btn:hover::after {
+    width: 300px;
+    height: 300px;
+}
+
+/* Better focus states for accessibility */
+a:focus, button:focus, input:focus, textarea:focus {
+    outline: 2px dashed var(--primary);
+    outline-offset: 3px;
+}
+
+/* Preload animation effects */
+.preload * {
+    animation-duration: 0s !important;
+    transition: none !important;
+}
+
+/* Loading Screen */
+.loading-screen {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: var(--background);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 9999;
+    transition: opacity 0.5s ease, visibility 0.5s ease;
+}
+
+.loading-screen.hidden {
+    opacity: 0;
+    visibility: hidden;
+}
+
+.loading-animation {
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    border: 4px solid var(--border);
+    border-top-color: var(--primary);
+    animation: spin 1s infinite linear;
+}
+
+/* Hidden elements when printing */
+@media print {
+    .side-panel, .mobile-nav, .theme-toggle, .particles-container {
+        display: none !important;
+    }
+    
+    .main-content {
+        margin-left: 0 !important;
+    }
+    
+    section {
+        break-inside: avoid;
+        page-break-inside: avoid;
+    }
+}

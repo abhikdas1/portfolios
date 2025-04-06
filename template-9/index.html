@@ -1,0 +1,511 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Your Name - Glass Portfolio | ProfileCraft</title>
+    <meta name="description" content="Glassmorphism portfolio showcasing professional work and skills">
+    
+    <!-- CSS Links -->
+    <link rel="stylesheet" href="css/base.css">
+    <link rel="stylesheet" href="css/layout.css">
+    <link rel="stylesheet" href="css/components.css">
+    <link rel="stylesheet" href="css/animations.css">
+    <link rel="stylesheet" href="css/responsive.css">
+    
+    <!-- Font Awesome for icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Background Elements -->
+    <div class="background">
+        <div class="gradient-bg"></div>
+        <div class="shape shape-1"></div>
+        <div class="shape shape-2"></div>
+        <div class="shape shape-3"></div>
+        <div class="shape shape-4"></div>
+    </div>
+    
+    <!-- Particles -->
+    <div id="particles-js"></div>
+    
+    <!-- Header/Navigation -->
+    <header class="glass-nav">
+        <div class="container">
+            <div class="nav-content">
+                <div class="logo">
+                    <a href="#home">YourName</a>
+                </div>
+                <nav class="main-nav">
+                    <ul>
+                        <li><a href="#home" class="active">Home</a></li>
+                        <li><a href="#about">About</a></li>
+                        <li><a href="#skills">Skills</a></li>
+                        <li><a href="#projects">Projects</a></li>
+                        <li><a href="#contact">Contact</a></li>
+                    </ul>
+                </nav>
+                <div class="nav-toggle">
+                    <div class="hamburger">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <main>
+        <!-- Hero Section -->
+        <section id="home" class="hero-section">
+            <div class="container">
+                <div class="glass-card hero-card">
+                    <div class="hero-content">
+                        <div class="hero-text">
+                            <h1 class="animated-text">Hi, I'm <span class="highlight">Your Name</span></h1>
+                            <div class="profession">
+                                <span class="typed-text"></span><span class="cursor">&nbsp;</span>
+                            </div>
+                            <p class="hero-description">A passionate professional dedicated to creating stunning, user-centered digital experiences.</p>
+                            <div class="hero-buttons">
+                                <a href="#contact" class="glass-btn primary">Get in Touch</a>
+                                <a href="#projects" class="glass-btn secondary">View Projects</a>
+                            </div>
+                        </div>
+                        <div class="hero-image">
+                            <div class="image-container">
+                                <img src="assets/profile-placeholder.jpg" alt="Your Name">
+                                <div class="floating-shapes">
+                                    <div class="float-shape s1"></div>
+                                    <div class="float-shape s2"></div>
+                                    <div class="float-shape s3"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="social-links">
+                        <a href="#" aria-label="LinkedIn" class="social-link"><i class="fab fa-linkedin-in"></i></a>
+                        <a href="#" aria-label="GitHub" class="social-link"><i class="fab fa-github"></i></a>
+                        <a href="#" aria-label="Twitter" class="social-link"><i class="fab fa-twitter"></i></a>
+                        <a href="#" aria-label="Instagram" class="social-link"><i class="fab fa-instagram"></i></a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- About Section -->
+        <section id="about" class="about-section">
+            <div class="container">
+                <div class="section-header">
+                    <h2 class="section-title">About Me</h2>
+                    <div class="title-underline"></div>
+                </div>
+                <div class="glass-card about-card">
+                    <div class="about-content">
+                        <div class="about-image">
+                            <div class="image-frame">
+                                <img src="assets/about-placeholder.jpg" alt="About Me">
+                            </div>
+                        </div>
+                        <div class="about-text">
+                            <h3>Who am I?</h3>
+                            <p>I'm a passionate [Your Profession] with [X] years of experience, specializing in creating [what you create/do]. I love tackling complex problems and turning them into simple, beautiful solutions.</p>
+                            
+                            <h3>My Approach</h3>
+                            <p>I believe in user-centered design and development. Every project I undertake focuses on delivering exceptional user experiences through clean design, efficient code, and thoughtful interactions.</p>
+                            
+                            <div class="about-details">
+                                <div class="detail-item">
+                                    <span class="detail-label">Name:</span>
+                                    <span class="detail-info">Your Name</span>
+                                </div>
+                                <div class="detail-item">
+                                    <span class="detail-label">Email:</span>
+                                    <span class="detail-info">your.email@example.com</span>
+                                </div>
+                                <div class="detail-item">
+                                    <span class="detail-label">Location:</span>
+                                    <span class="detail-info">City, Country</span>
+                                </div>
+                                <div class="detail-item">
+                                    <span class="detail-label">Availability:</span>
+                                    <span class="detail-info">Available for Freelance</span>
+                                </div>
+                            </div>
+                            
+                            <div class="about-buttons">
+                                <a href="#" class="glass-btn primary">Download CV</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Skills Section -->
+        <section id="skills" class="skills-section">
+            <div class="container">
+                <div class="section-header">
+                    <h2 class="section-title">My Skills</h2>
+                    <div class="title-underline"></div>
+                </div>
+                
+                <div class="skills-container">
+                    <div class="glass-card skills-card">
+                        <h3 class="card-title">Technical Skills</h3>
+                        <div class="skills-grid">
+                            <div class="skill-item">
+                                <div class="skill-info">
+                                    <span class="skill-name">HTML/CSS</span>
+                                    <span class="skill-percentage">90%</span>
+                                </div>
+                                <div class="skill-bar">
+                                    <div class="skill-progress" data-progress="90"></div>
+                                </div>
+                            </div>
+                            <div class="skill-item">
+                                <div class="skill-info">
+                                    <span class="skill-name">JavaScript</span>
+                                    <span class="skill-percentage">85%</span>
+                                </div>
+                                <div class="skill-bar">
+                                    <div class="skill-progress" data-progress="85"></div>
+                                </div>
+                            </div>
+                            <div class="skill-item">
+                                <div class="skill-info">
+                                    <span class="skill-name">React</span>
+                                    <span class="skill-percentage">80%</span>
+                                </div>
+                                <div class="skill-bar">
+                                    <div class="skill-progress" data-progress="80"></div>
+                                </div>
+                            </div>
+                            <div class="skill-item">
+                                <div class="skill-info">
+                                    <span class="skill-name">Node.js</span>
+                                    <span class="skill-percentage">75%</span>
+                                </div>
+                                <div class="skill-bar">
+                                    <div class="skill-progress" data-progress="75"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="glass-card skills-card">
+                        <h3 class="card-title">Design Skills</h3>
+                        <div class="skills-grid">
+                            <div class="skill-item">
+                                <div class="skill-info">
+                                    <span class="skill-name">UI/UX Design</span>
+                                    <span class="skill-percentage">85%</span>
+                                </div>
+                                <div class="skill-bar">
+                                    <div class="skill-progress" data-progress="85"></div>
+                                </div>
+                            </div>
+                            <div class="skill-item">
+                                <div class="skill-info">
+                                    <span class="skill-name">Adobe XD</span>
+                                    <span class="skill-percentage">80%</span>
+                                </div>
+                                <div class="skill-bar">
+                                    <div class="skill-progress" data-progress="80"></div>
+                                </div>
+                            </div>
+                            <div class="skill-item">
+                                <div class="skill-info">
+                                    <span class="skill-name">Figma</span>
+                                    <span class="skill-percentage">90%</span>
+                                </div>
+                                <div class="skill-bar">
+                                    <div class="skill-progress" data-progress="90"></div>
+                                </div>
+                            </div>
+                            <div class="skill-item">
+                                <div class="skill-info">
+                                    <span class="skill-name">Photoshop</span>
+                                    <span class="skill-percentage">70%</span>
+                                </div>
+                                <div class="skill-bar">
+                                    <div class="skill-progress" data-progress="70"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="glass-card technologies-card">
+                    <h3 class="card-title">Technologies I Work With</h3>
+                    <div class="technologies-grid">
+                        <div class="tech-item">
+                            <i class="fab fa-html5"></i>
+                            <span>HTML5</span>
+                        </div>
+                        <div class="tech-item">
+                            <i class="fab fa-css3-alt"></i>
+                            <span>CSS3</span>
+                        </div>
+                        <div class="tech-item">
+                            <i class="fab fa-js"></i>
+                            <span>JavaScript</span>
+                        </div>
+                        <div class="tech-item">
+                            <i class="fab fa-react"></i>
+                            <span>React</span>
+                        </div>
+                        <div class="tech-item">
+                            <i class="fab fa-node-js"></i>
+                            <span>Node.js</span>
+                        </div>
+                        <div class="tech-item">
+                            <i class="fab fa-npm"></i>
+                            <span>npm</span>
+                        </div>
+                        <div class="tech-item">
+                            <i class="fab fa-git-alt"></i>
+                            <span>Git</span>
+                        </div>
+                        <div class="tech-item">
+                            <i class="fab fa-sass"></i>
+                            <span>Sass</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Projects Section -->
+        <section id="projects" class="projects-section">
+            <div class="container">
+                <div class="section-header">
+                    <h2 class="section-title">My Projects</h2>
+                    <div class="title-underline"></div>
+                </div>
+                
+                <div class="projects-filter">
+                    <button class="glass-btn filter-btn active" data-filter="all">All</button>
+                    <button class="glass-btn filter-btn" data-filter="web">Web</button>
+                    <button class="glass-btn filter-btn" data-filter="app">Apps</button>
+                    <button class="glass-btn filter-btn" data-filter="design">Design</button>
+                </div>
+                
+                <div class="projects-grid">
+                    <div class="glass-card project-card" data-category="web">
+                        <div class="project-image">
+                            <img src="assets/project-placeholder-1.jpg" alt="Project One">
+                            <div class="project-overlay">
+                                <div class="project-links">
+                                    <a href="#" class="project-link" aria-label="View Project"><i class="fas fa-eye"></i></a>
+                                    <a href="#" class="project-link" aria-label="GitHub Repository"><i class="fab fa-github"></i></a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="project-content">
+                            <h3 class="project-title">E-commerce Website</h3>
+                            <p class="project-description">A fully responsive e-commerce platform with user authentication and payment integration.</p>
+                            <div class="project-tags">
+                                <span class="tag">HTML</span>
+                                <span class="tag">CSS</span>
+                                <span class="tag">JavaScript</span>
+                                <span class="tag">React</span>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="glass-card project-card" data-category="app">
+                        <div class="project-image">
+                            <img src="assets/project-placeholder-2.jpg" alt="Project Two">
+                            <div class="project-overlay">
+                                <div class="project-links">
+                                    <a href="#" class="project-link" aria-label="View Project"><i class="fas fa-eye"></i></a>
+                                    <a href="#" class="project-link" aria-label="GitHub Repository"><i class="fab fa-github"></i></a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="project-content">
+                            <h3 class="project-title">Fitness Tracker App</h3>
+                            <p class="project-description">A mobile application for tracking workouts, nutrition, and fitness goals.</p>
+                            <div class="project-tags">
+                                <span class="tag">React Native</span>
+                                <span class="tag">Firebase</span>
+                                <span class="tag">Redux</span>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="glass-card project-card" data-category="design">
+                        <div class="project-image">
+                            <img src="assets/project-placeholder-3.jpg" alt="Project Three">
+                            <div class="project-overlay">
+                                <div class="project-links">
+                                    <a href="#" class="project-link" aria-label="View Project"><i class="fas fa-eye"></i></a>
+                                    <a href="#" class="project-link" aria-label="GitHub Repository"><i class="fab fa-github"></i></a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="project-content">
+                            <h3 class="project-title">UI/UX Design System</h3>
+                            <p class="project-description">A comprehensive design system with reusable components for web and mobile.</p>
+                            <div class="project-tags">
+                                <span class="tag">Figma</span>
+                                <span class="tag">Adobe XD</span>
+                                <span class="tag">UI/UX</span>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="glass-card project-card" data-category="web">
+                        <div class="project-image">
+                            <img src="assets/project-placeholder-4.jpg" alt="Project Four">
+                            <div class="project-overlay">
+                                <div class="project-links">
+                                    <a href="#" class="project-link" aria-label="View Project"><i class="fas fa-eye"></i></a>
+                                    <a href="#" class="project-link" aria-label="GitHub Repository"><i class="fab fa-github"></i></a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="project-content">
+                            <h3 class="project-title">Portfolio Website</h3>
+                            <p class="project-description">A personal portfolio website showcasing projects and skills with glassmorphism design.</p>
+                            <div class="project-tags">
+                                <span class="tag">HTML</span>
+                                <span class="tag">CSS</span>
+                                <span class="tag">JavaScript</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Contact Section -->
+        <section id="contact" class="contact-section">
+            <div class="container">
+                <div class="section-header">
+                    <h2 class="section-title">Get In Touch</h2>
+                    <div class="title-underline"></div>
+                </div>
+                
+                <div class="contact-container">
+                    <div class="glass-card contact-card">
+                        <div class="contact-info">
+                            <h3 class="card-title">Contact Information</h3>
+                            <p>Feel free to reach out to me through any of the following methods.</p>
+                            
+                            <div class="contact-items">
+                                <div class="contact-item">
+                                    <div class="contact-icon">
+                                        <i class="fas fa-map-marker-alt"></i>
+                                    </div>
+                                    <div class="contact-detail">
+                                        <h4>Location</h4>
+                                        <p>City, Country</p>
+                                    </div>
+                                </div>
+                                
+                                <div class="contact-item">
+                                    <div class="contact-icon">
+                                        <i class="fas fa-envelope"></i>
+                                    </div>
+                                    <div class="contact-detail">
+                                        <h4>Email</h4>
+                                        <p>your.email@example.com</p>
+                                    </div>
+                                </div>
+                                
+                                <div class="contact-item">
+                                    <div class="contact-icon">
+                                        <i class="fas fa-phone-alt"></i>
+                                    </div>
+                                    <div class="contact-detail">
+                                        <h4>Phone</h4>
+                                        <p>+1 (123) 456-7890</p>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <div class="contact-social">
+                                <h4>Connect With Me</h4>
+                                <div class="social-links">
+                                    <a href="#" aria-label="LinkedIn" class="social-link"><i class="fab fa-linkedin-in"></i></a>
+                                    <a href="#" aria-label="GitHub" class="social-link"><i class="fab fa-github"></i></a>
+                                    <a href="#" aria-label="Twitter" class="social-link"><i class="fab fa-twitter"></i></a>
+                                    <a href="#" aria-label="Instagram" class="social-link"><i class="fab fa-instagram"></i></a>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="contact-form-container">
+                            <h3 class="card-title">Send Me a Message</h3>
+                            <form id="contact-form" class="contact-form">
+                                <div class="form-group">
+                                    <input type="text" id="name" name="name" class="form-control" required>
+                                    <label for="name">Your Name</label>
+                                </div>
+                                
+                                <div class="form-group">
+                                    <input type="email" id="email" name="email" class="form-control" required>
+                                    <label for="email">Your Email</label>
+                                </div>
+                                
+                                <div class="form-group">
+                                    <input type="text" id="subject" name="subject" class="form-control" required>
+                                    <label for="subject">Subject</label>
+                                </div>
+                                
+                                <div class="form-group">
+                                    <textarea id="message" name="message" class="form-control" rows="5" required></textarea>
+                                    <label for="message">Your Message</label>
+                                </div>
+                                
+                                <button type="submit" class="glass-btn primary">Send Message</button>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="glass-card footer-card">
+                <div class="footer-content">
+                    <div class="footer-logo">
+                        <a href="#home">YourName</a>
+                    </div>
+                    <div class="footer-text">
+                        <p>&copy; 2023 All Rights Reserved</p>
+                    </div>
+                    <div class="footer-social">
+                        <a href="#" aria-label="LinkedIn" class="social-link"><i class="fab fa-linkedin-in"></i></a>
+                        <a href="#" aria-label="GitHub" class="social-link"><i class="fab fa-github"></i></a>
+                        <a href="#" aria-label="Twitter" class="social-link"><i class="fab fa-twitter"></i></a>
+                        <a href="#" aria-label="Instagram" class="social-link"><i class="fab fa-instagram"></i></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Back to Top Button -->
+    <a href="#home" class="back-to-top">
+        <i class="fas fa-chevron-up"></i>
+    </a>
+
+    <!-- JavaScript Files -->
+    <script src="https://cdn.jsdelivr.net/npm/particles.js@2.0.0/particles.min.js"></script>
+    <script src="js/main.js"></script>
+    <script src="js/form.js"></script>
+</body>
+</html>

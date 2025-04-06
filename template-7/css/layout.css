@@ -1,0 +1,194 @@
+/* Layout CSS: Main layout structures for the Windows 10 theme */
+
+/* General Layout */
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 var(--space-md);
+}
+
+/* Window Layout Components */
+.welcome-container,
+.about-container,
+.projects-container,
+.skills-container,
+.contact-container {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+.window-content > div {
+    height: 100%;
+}
+
+/* Welcome Layout */
+.welcome-header {
+    display: flex;
+    align-items: center;
+    gap: var(--space-xl);
+    margin-bottom: var(--space-xl);
+}
+
+.profile-image {
+    width: 160px;
+    height: 160px;
+    border-radius: 50%;
+    overflow: hidden;
+    border: 4px solid var(--win10-primary);
+    box-shadow: var(--win10-shadow);
+    flex-shrink: 0;
+}
+
+.welcome-text {
+    flex: 1;
+}
+
+.welcome-actions {
+    display: flex;
+    gap: var(--space-sm);
+    margin-top: var(--space-md);
+}
+
+.quick-stats {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: var(--space-md);
+    padding: var(--space-md);
+    margin-top: var(--space-md);
+    background-color: #f5f5f5;
+    border-radius: var(--radius-md);
+}
+
+/* About Layout */
+.about-body {
+    display: grid;
+    grid-template-columns: 3fr 2fr;
+    gap: var(--space-xl);
+    flex: 1;
+}
+
+.about-footer {
+    margin-top: var(--space-lg);
+}
+
+/* Projects Layout */
+.projects-header {
+    margin-bottom: var(--space-md);
+}
+
+.projects-filter {
+    display: flex;
+    flex-wrap: wrap;
+    gap: var(--space-xs);
+    margin-bottom: var(--space-lg);
+}
+
+.projects-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: var(--space-lg);
+    flex: 1;
+}
+
+/* Skills Layout */
+.skills-body {
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-xl);
+    flex: 1;
+}
+
+.skills-progress {
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-md);
+}
+
+.tech-tiles {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: var(--space-md);
+}
+
+.skill-tiles {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: var(--space-md);
+}
+
+/* Contact Layout */
+.contact-body {
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    gap: var(--space-xl);
+    flex: 1;
+}
+
+.contact-info {
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-md);
+}
+
+.social-icons {
+    display: flex;
+    gap: var(--space-sm);
+}
+
+/* Experience/Education Timelines */
+.timeline {
+    position: relative;
+    padding-left: 30px;
+}
+
+.timeline::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 10px;
+    bottom: 10px;
+    width: 3px;
+    background-color: var(--win10-primary);
+}
+
+.timeline-item {
+    position: relative;
+    margin-bottom: var(--space-lg);
+}
+
+.timeline-item:last-child {
+    margin-bottom: 0;
+}
+
+.timeline-icon {
+    position: absolute;
+    left: -42px;
+    top: 0;
+    width: 24px;
+    height: 24px;
+    background-color: var(--win10-primary);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    font-size: 12px;
+}
+
+/* Form Layout */
+.form-group {
+    margin-bottom: var(--space-sm);
+}
+
+.contact-form {
+    display: flex;
+    flex-direction: column;
+}
+
+.contact-form-container {
+    background-color: #f5f5f5;
+    border-radius: var(--radius-md);
+    padding: var(--space-md);
+    height: 100%;
+}

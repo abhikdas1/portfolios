@@ -1,0 +1,217 @@
+/* Responsive CSS: Media queries for different screen sizes */
+
+/* Large Desktop (1200px and up) */
+@media (min-width: 1200px) {
+    .terminal-container {
+        width: 80%;
+        max-width: 1200px;
+    }
+}
+
+/* Desktop (992px - 1199px) */
+@media (min-width: 992px) and (max-width: 1199px) {
+    .terminal-container {
+        width: 85%;
+    }
+}
+
+/* Tablet (768px - 991px) */
+@media (min-width: 768px) and (max-width: 991px) {
+    .terminal-container {
+        width: 90%;
+        height: 85vh;
+    }
+    
+    .ascii-art {
+        font-size: 8px;
+    }
+    
+    /* Scale down skills section */
+    .skill-group {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: var(--space-sm);
+    }
+    
+    /* Make timeline more compact */
+    .timeline {
+        padding-left: var(--space-md);
+    }
+    
+    .timeline-date {
+        left: calc(-1 * var(--space-md) - 5px);
+        font-size: var(--font-size-xs);
+    }
+    
+    /* Adjust project grid */
+    .projects-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+/* Mobile (up to 767px) */
+@media (max-width: 767px) {
+    .terminal-container {
+        width: 95%;
+        height: 90vh;
+        max-height: none;
+    }
+    
+    /* Hide full ASCII art on mobile and show a simplified version */
+    .ascii-art {
+        font-size: 6px;
+        height: 100px;
+        overflow: hidden;
+    }
+    
+    /* More compact welcome section */
+    .welcome-banner {
+        margin-bottom: var(--space-sm);
+    }
+    
+    /* Smaller prompt text */
+    .prompt {
+        font-size: var(--font-size-sm);
+    }
+    
+    /* Scale down skills section */
+    .skill-group {
+        display: grid;
+        grid-template-columns: 1fr;
+    }
+    
+    /* Make timeline more compact */
+    .timeline {
+        padding-left: var(--space-xs);
+    }
+    
+    .timeline::before {
+        left: 2px;
+    }
+    
+    .timeline-date {
+        position: static;
+        display: block;
+        margin-bottom: var(--space-xxs);
+        padding: var(--space-xxs);
+        background: none;
+        border: none;
+        border-left: 2px solid var(--terminal-text-dim);
+    }
+    
+    /* Adjust project display */
+    .project-info {
+        margin-left: 0;
+    }
+    
+    .project-links {
+        flex-direction: column;
+        gap: var(--space-xs);
+    }
+    
+    /* Contact form adjustments */
+    .contact-item {
+        flex-direction: column;
+    }
+    
+    .contact-label {
+        min-width: auto;
+        margin-bottom: var(--space-xxs);
+    }
+    
+    /* More compact footer */
+    .terminal-footer {
+        font-size: 10px;
+    }
+    
+    .terminal-info {
+        display: none;
+    }
+    
+    /* Commands table adjustments */
+    .commands-table td {
+        padding: var(--space-xxs) var(--space-xs);
+        font-size: var(--font-size-xs);
+    }
+}
+
+/* Small Mobile (up to 480px) */
+@media (max-width: 480px) {
+    .terminal-container {
+        width: 100%;
+        height: 100vh;
+        border-radius: 0;
+    }
+    
+    /* Hide the ASCII art completely on very small screens */
+    .ascii-art {
+        display: none;
+    }
+    
+    /* Minimal header */
+    .terminal-header {
+        height: 25px;
+    }
+    
+    .terminal-title {
+        font-size: 11px;
+    }
+    
+    /* Very compact content */
+    .terminal-content {
+        padding: var(--space-xs);
+    }
+    
+    /* Minimal prompt */
+    .prompt {
+        font-size: var(--font-size-xs);
+    }
+    
+    #terminal-input {
+        font-size: var(--font-size-sm);
+    }
+    
+    /* Minimize elements */
+    h2 {
+        font-size: var(--font-size-xl);
+    }
+    
+    h3 {
+        font-size: var(--font-size-lg);
+    }
+    
+    /* Compact table */
+    .commands-table {
+        font-size: var(--font-size-xs);
+    }
+    
+    .commands-table td {
+        padding: 2px 4px;
+    }
+}
+
+/* Dark mode preference */
+@media (prefers-color-scheme: dark) {
+    /* Terminal is already dark, no changes needed */
+}
+
+/* Light mode override for users who prefer light */
+@media (prefers-color-scheme: light) {
+    /* Keep the terminal dark even in light mode as it's a hacker theme */
+    body {
+        background-color: #111;
+    }
+}
+
+/* Handle high contrast mode */
+@media (forced-colors: active) {
+    :root {
+        --terminal-text: CanvasText;
+        --terminal-highlight: Highlight;
+        --terminal-border: ButtonText;
+    }
+    
+    .terminal-container {
+        border: 2px solid CanvasText;
+    }
+}

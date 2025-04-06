@@ -1,0 +1,299 @@
+/* Animations CSS: All animations and transitions */
+
+/* Preloader Animation */
+@keyframes fadeOut {
+    from {
+        opacity: 1;
+    }
+    to {
+        opacity: 0;
+        visibility: hidden;
+    }
+}
+
+@keyframes progressFill {
+    from {
+        width: 0;
+    }
+    to {
+        width: 100%;
+    }
+}
+
+/* Logo Animation */
+@keyframes drawPath {
+    to {
+        stroke-dashoffset: 0;
+    }
+}
+
+@keyframes fillIn {
+    from {
+        fill-opacity: 0;
+    }
+    to {
+        fill-opacity: 1;
+    }
+}
+
+/* Reveal Animation */
+@keyframes revealRight {
+    0% {
+        transform: translateX(-100%);
+    }
+    50% {
+        transform: translateX(0);
+    }
+    100% {
+        transform: translateX(100%);
+    }
+}
+
+/* Fade Animations */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes fadeInDown {
+    from {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes fadeInLeft {
+    from {
+        opacity: 0;
+        transform: translateX(-50px);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+@keyframes fadeInRight {
+    from {
+        opacity: 0;
+        transform: translateX(50px);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+/* Skill Bar Animation */
+@keyframes skillProgress {
+    from {
+        width: 0;
+    }
+    to {
+        width: var(--percent);
+    }
+}
+
+/* Pulse Animation */
+@keyframes pulse {
+    0% {
+        box-shadow: 0 0 0 0 rgba(0, 146, 255, 0.4);
+    }
+    70% {
+        box-shadow: 0 0 0 10px rgba(0, 146, 255, 0);
+    }
+    100% {
+        box-shadow: 0 0 0 0 rgba(0, 146, 255, 0);
+    }
+}
+
+/* Scroll Down Animation */
+@keyframes bounce {
+    0%, 20%, 50%, 80%, 100% {
+        transform: translateY(0);
+    }
+    40% {
+        transform: translateY(-10px);
+    }
+    60% {
+        transform: translateY(-5px);
+    }
+}
+
+/* Glitch Animation */
+@keyframes glitch {
+    0% {
+        transform: translate(0);
+    }
+    20% {
+        transform: translate(-2px, 2px);
+    }
+    40% {
+        transform: translate(-2px, -2px);
+    }
+    60% {
+        transform: translate(2px, 2px);
+    }
+    80% {
+        transform: translate(2px, -2px);
+    }
+    100% {
+        transform: translate(0);
+    }
+}
+
+@keyframes glitchOpacity {
+    0% {
+        opacity: 1;
+    }
+    30% {
+        opacity: 0.75;
+    }
+    50% {
+        opacity: 0.9;
+    }
+    70% {
+        opacity: 0.7;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+/* Button Hover Animation */
+@keyframes buttonShine {
+    0% {
+        background-position: 0;
+    }
+    60% {
+        background-position: 180px;
+    }
+    100% {
+        background-position: 180px;
+    }
+}
+
+/* Spotlight effect */
+@keyframes spotlight {
+    0%, 100% {
+        background-position: -100% 0%;
+    }
+    50% {
+        background-position: 200% 0%;
+    }
+}
+
+/* Hero Image Animation */
+.image-glitch-container {
+    animation: glitch 5s infinite;
+}
+
+.glitch-img:nth-child(1) {
+    animation: glitchOpacity 4s infinite;
+    animation-delay: 0.1s;
+}
+
+.glitch-img:nth-child(2) {
+    animation: glitchOpacity 4s infinite reverse;
+    animation-delay: 0.2s;
+}
+
+/* Scroll Icon Animation */
+.scroll-icon {
+    animation: bounce 2s infinite;
+}
+
+/* Logo Hover Effect */
+.logo:hover .bat-logo-small {
+    animation: pulse 1.5s infinite;
+}
+
+/* Input Focus Animation */
+.input-group input:focus,
+.input-group textarea:focus {
+    animation: pulse 2s infinite;
+}
+
+/* Apply Animations */
+.reveal-title h2 {
+    position: relative;
+    z-index: 2;
+}
+
+.reveal-title .reveal-layer {
+    animation: revealRight 1.5s cubic-bezier(0.77, 0, 0.18, 1) forwards;
+}
+
+/* Element Animations (to be triggered by JS) */
+.fade-in {
+    animation: fadeIn 1s forwards;
+}
+
+.fade-in-up {
+    animation: fadeInUp 1s forwards;
+}
+
+.fade-in-down {
+    animation: fadeInDown 1s forwards;
+}
+
+.fade-in-left {
+    animation: fadeInLeft 1s forwards;
+}
+
+.fade-in-right {
+    animation: fadeInRight 1s forwards;
+}
+
+/* Animation Delays */
+.delay-1 {
+    animation-delay: 0.1s;
+}
+
+.delay-2 {
+    animation-delay: 0.2s;
+}
+
+.delay-3 {
+    animation-delay: 0.3s;
+}
+
+.delay-4 {
+    animation-delay: 0.4s;
+}
+
+.delay-5 {
+    animation-delay: 0.5s;
+}
+
+/* Animated gradient border */
+@keyframes border-pulse {
+    0% {
+        border-color: var(--accent-primary);
+    }
+    50% {
+        border-color: var(--accent-secondary);
+    }
+    100% {
+        border-color: var(--accent-primary);
+    }
+}

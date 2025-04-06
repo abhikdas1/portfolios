@@ -1,0 +1,239 @@
+/* Responsive CSS: Media queries for different screen sizes */
+
+/* Large screens (above 1200px) */
+@media (min-width: 1201px) {
+    .container {
+        max-width: 1140px;
+    }
+}
+
+/* Desktop (992px - 1200px) */
+@media (max-width: 1200px) {
+    html {
+        font-size: 60%;
+    }
+    
+    .container {
+        max-width: 960px;
+    }
+    
+    .hero-name {
+        font-size: 6rem;
+    }
+}
+
+/* Tablet (768px - 991px) */
+@media (max-width: 991px) {
+    html {
+        font-size: 58%;
+    }
+    
+    .container {
+        max-width: 720px;
+    }
+    
+    /* Side Nav transforms to Mobile Header */
+    .side-nav {
+        transform: translateX(-100%);
+        z-index: 1001;
+    }
+    
+    .side-nav.active {
+        transform: translateX(0);
+    }
+    
+    .mobile-header {
+        display: block;
+    }
+    
+    .main-content {
+        margin-left: 0;
+        padding-top: var(--header-height);
+    }
+    
+    /* Create a dark overlay when mobile menu is open */
+    .menu-overlay {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-color: rgba(0, 0, 0, 0.5);
+        z-index: 1000;
+        opacity: 0;
+        visibility: hidden;
+        transition: all var(--transition-fast);
+    }
+    
+    .menu-overlay.active {
+        opacity: 1;
+        visibility: visible;
+    }
+    
+    /* Hero section mobile styles */
+    .hero-name {
+        font-size: 5rem;
+    }
+    
+    .hero-shape {
+        width: 30%;
+        clip-path: polygon(50% 0, 100% 0, 100% 100%, 0 100%);
+    }
+    
+    /* About section mobile styles */
+    .about-content {
+        grid-template-columns: 1fr;
+        gap: var(--spacing-lg);
+    }
+    
+    .about-image {
+        max-width: 400px;
+        margin: 0 auto;
+    }
+    
+    /* Skills progress mobile styles */
+    .skills-progress {
+        grid-template-columns: 1fr;
+    }
+    
+    /* Contact section mobile styles */
+    .contact-content {
+        grid-template-columns: 1fr;
+        gap: var(--spacing-lg);
+    }
+    
+    .contact-cards {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+        gap: var(--spacing-md);
+    }
+    
+    /* Footer mobile styles */
+    .footer .container {
+        flex-direction: column;
+        gap: var(--spacing-sm);
+        text-align: center;
+    }
+}
+
+/* Mobile Large (576px - 767px) */
+@media (max-width: 767px) {
+    html {
+        font-size: 56%;
+    }
+    
+    .container {
+        width: 100%;
+        padding: 0 var(--spacing-md);
+    }
+    
+    /* Hero section mobile styles */
+    .hero-name {
+        font-size: 4.2rem;
+    }
+    
+    .hero-title {
+        font-size: 2.4rem;
+    }
+    
+    .hero-buttons {
+        flex-direction: column;
+        gap: var(--spacing-sm);
+    }
+    
+    .hero-buttons .btn {
+        width: 100%;
+    }
+    
+    /* Projects section mobile styles */
+    .projects-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    /* Timeline mobile styles */
+    .timeline::before {
+        left: 15px;
+    }
+    
+    .timeline-marker {
+        width: 30px;
+        height: 30px;
+        font-size: 1.4rem;
+    }
+    
+    .timeline-item {
+        padding-left: 50px;
+    }
+    
+    /* Forms mobile styles */
+    .form-row {
+        grid-template-columns: 1fr;
+    }
+    
+    /* Testimonials mobile styles */
+    .testimonials-container {
+        grid-template-columns: 1fr;
+    }
+}
+
+/* Mobile Small (below 576px) */
+@media (max-width: 575px) {
+    .container {
+        padding: 0 var(--spacing-sm);
+    }
+    
+    .section-header {
+        margin-bottom: var(--spacing-md);
+    }
+    
+    .section-title {
+        font-size: 3rem;
+    }
+    
+    .section-subtitle {
+        font-size: 1.6rem;
+    }
+    
+    .hero-name {
+        font-size: 3.6rem;
+    }
+    
+    .hero-title {
+        font-size: 2rem;
+    }
+    
+    .hero-description {
+        font-size: 1.6rem;
+    }
+    
+    .hero-socials {
+        justify-content: center;
+    }
+    
+    .about-info {
+        grid-template-columns: 1fr;
+    }
+    
+    .skills-card-container {
+        grid-template-columns: 1fr;
+    }
+    
+    .projects-filter {
+        flex-direction: column;
+        gap: var(--spacing-xs);
+    }
+    
+    .filter-btn {
+        width: 100%;
+    }
+    
+    .contact-card {
+        padding: var(--spacing-md);
+    }
+    
+    .contact-icon {
+        width: 50px;
+        height: 50px;
+        font-size: 2rem;
+    }
+}

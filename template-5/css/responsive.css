@@ -1,0 +1,286 @@
+/* Responsive CSS: Media queries for different screen sizes */
+
+/* Large screens (above 1200px) */
+@media (min-width: 1201px) {
+    .container {
+        max-width: 1140px;
+    }
+}
+
+/* Desktop (992px - 1200px) */
+@media (max-width: 1200px) {
+    :root {
+        --space-xl: 4rem;
+    }
+    
+    .container {
+        max-width: 960px;
+    }
+    
+    h1 {
+        font-size: 4.2rem;
+    }
+    
+    h2 {
+        font-size: 3.2rem;
+    }
+    
+    .cyber-glitch-title {
+        font-size: 4.2rem;
+    }
+    
+    .cyber-projects-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    
+    .cyber-avatar {
+        width: 250px;
+        height: 300px;
+    }
+    
+    .cyber-nav-links {
+        gap: var(--space-sm);
+    }
+}
+
+/* Tablet (768px - 991px) */
+@media (max-width: 991px) {
+    :root {
+        --space-xl: 3.5rem;
+    }
+    
+    .container {
+        max-width: 720px;
+    }
+    
+    .cyber-grid {
+        grid-template-columns: 1fr;
+        gap: var(--space-lg);
+    }
+    
+    .cyber-hero-image {
+        order: -1;
+        justify-content: center;
+    }
+    
+    .cyber-nav-toggle {
+        display: flex;
+    }
+    
+    .cyber-nav-links {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-color: rgba(7, 7, 21, 0.95);
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: var(--space-lg);
+        z-index: 100;
+        transform: translateY(-100%);
+        transition: transform var(--transition-fast);
+    }
+    
+    .cyber-nav-links.active {
+        transform: translateY(0);
+    }
+    
+    .cyber-nav-links a {
+        font-size: 2.4rem;
+    }
+    
+    .cyber-skill-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .cyber-tech-cards {
+        grid-template-columns: repeat(3, 1fr);
+        grid-column: auto;
+    }
+    
+    .cyber-projects-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    
+    .cyber-timeline-item {
+        grid-template-columns: 100px 1fr;
+        gap: var(--space-md);
+    }
+    
+    .cyber-timeline::before {
+        left: 100px;
+    }
+    
+    .cyber-timeline-item::after {
+        left: 100px;
+    }
+    
+    .cyber-contact-grid {
+        grid-template-columns: 1fr;
+        gap: var(--space-lg);
+    }
+    
+    .cyber-social-grid {
+        grid-template-columns: repeat(4, 1fr);
+    }
+    
+    .cyber-footer-content {
+        flex-direction: column;
+        gap: var(--space-md);
+        text-align: center;
+    }
+    
+    .footer-nav {
+        order: 3;
+    }
+}
+
+/* Mobile Large (576px - 767px) */
+@media (max-width: 767px) {
+    :root {
+        --space-xl: 3rem;
+        --space-lg: 2.5rem;
+    }
+    
+    html {
+        font-size: 55%;
+    }
+    
+    .container {
+        width: 100%;
+        padding: 0 20px;
+    }
+    
+    .cyber-glitch-title {
+        font-size: 3.6rem;
+    }
+    
+    .system-status {
+        display: none;
+    }
+    
+    .cyber-stats {
+        grid-template-columns: 1fr;
+    }
+    
+    .cyber-tech-cards {
+        grid-template-columns: 1fr;
+    }
+    
+    .cyber-projects-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .cyber-project-filter {
+        flex-wrap: wrap;
+    }
+    
+    .cyber-tab-buttons {
+        flex-direction: column;
+        gap: var(--space-sm);
+    }
+    
+    .cyber-timeline-item {
+        grid-template-columns: 1fr;
+        gap: var(--space-sm);
+    }
+    
+    .cyber-timeline::before {
+        display: none;
+    }
+    
+    .cyber-timeline-item::after {
+        display: none;
+    }
+    
+    .timeline-date {
+        display: inline-block;
+        margin-bottom: var(--space-sm);
+    }
+    
+    .cyber-social-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    
+    .footer-nav {
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+}
+
+/* Mobile Small (below 576px) */
+@media (max-width: 575px) {
+    :root {
+        --space-xl: 2.5rem;
+        --space-lg: 2rem;
+        --space-md: 1.5rem;
+    }
+    
+    html {
+        font-size: 50%;
+    }
+    
+    .cyber-glitch-title {
+        font-size: 3rem;
+    }
+    
+    .cyber-subtitle {
+        font-size: 1.8rem;
+    }
+    
+    .cyber-buttons {
+        flex-direction: column;
+        gap: var(--space-md);
+    }
+    
+    .cyber-btn {
+        width: 100%;
+        margin-right: 0;
+        text-align: center;
+    }
+    
+    .cyber-avatar {
+        width: 200px;
+        height: 250px;
+    }
+    
+    .cyber-about-details .cyber-card {
+        margin-top: var(--space-md);
+    }
+    
+    .cyber-detail-item {
+        flex-direction: column;
+        gap: var(--space-xs);
+    }
+    
+    .detail-label {
+        width: 100%;
+    }
+    
+    .cyber-footer-social {
+        margin-top: var(--space-sm);
+    }
+}
+
+/* Animation and Effect Adjustments for Mobile */
+@media (max-width: 767px) {
+    .cyber-avatar-glitch,
+    .cyber-avatar-scan {
+        display: none;
+    }
+    
+    .scanline {
+        opacity: 0.05;
+    }
+    
+    .cyber-circuits {
+        opacity: 0.1;
+    }
+    
+    .cyber-glitch-title::before,
+    .cyber-glitch-title::after {
+        display: none;
+    }
+}

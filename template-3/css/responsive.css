@@ -1,0 +1,318 @@
+/* Responsive CSS: Media queries for different screen sizes */
+
+/* Large screens (above 1200px) */
+@media (min-width: 1201px) {
+    .container {
+        max-width: 1140px;
+    }
+}
+
+/* Desktop (992px - 1200px) */
+@media (max-width: 1200px) {
+    :root {
+        --section-spacing: 8rem;
+        --font-size-xxlarge: 4.6rem;
+        --font-size-xlarge: 3.2rem;
+    }
+    
+    .container {
+        max-width: 960px;
+    }
+    
+    .info-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    
+    .project-card {
+        width: 320px;
+    }
+    
+    .main-image {
+        width: 300px;
+        height: 400px;
+    }
+    
+    .secondary-image {
+        width: 220px;
+        height: 280px;
+    }
+}
+
+/* Tablet (768px - 991px) */
+@media (max-width: 991px) {
+    :root {
+        --section-spacing: 7rem;
+        --font-size-xxlarge: 4rem;
+        --font-size-xlarge: 3rem;
+        --font-size-large: 2.2rem;
+    }
+    
+    .container {
+        max-width: 720px;
+    }
+    
+    .split-section {
+        grid-template-columns: 1fr;
+        gap: var(--spacing-lg);
+    }
+    
+    .hero-description {
+        max-width: 100%;
+    }
+    
+    .hero-visual {
+        order: -1;
+        height: auto;
+        margin-bottom: var(--spacing-lg);
+    }
+    
+    .geometric-shape {
+        width: 250px;
+        height: 250px;
+    }
+    
+    .profile-image {
+        width: 350px;
+        height: 450px;
+    }
+    
+    .stacked-images {
+        height: auto;
+        display: flex;
+        justify-content: center;
+    }
+    
+    .main-image, .secondary-image {
+        position: relative;
+        top: auto;
+        left: auto;
+        right: auto;
+        bottom: auto;
+    }
+    
+    .main-image {
+        width: 300px;
+        height: 400px;
+        z-index: 2;
+    }
+    
+    .secondary-image {
+        display: none;
+    }
+    
+    .shape-element {
+        display: none;
+    }
+    
+    .info-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    
+    .tabs-navigation {
+        flex-wrap: wrap;
+    }
+    
+    .tab-btn {
+        margin-bottom: var(--spacing-xs);
+    }
+    
+    .projects-carousel {
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: var(--spacing-md);
+    }
+    
+    .project-card {
+        width: 300px;
+    }
+    
+    .scroll-indicator.horizontal {
+        display: none;
+    }
+    
+    .testimonials-wrapper {
+        max-width: 100%;
+    }
+    
+    .footer-content {
+        flex-direction: column;
+        gap: var(--spacing-md);
+        text-align: center;
+    }
+}
+
+/* Mobile Large (576px - 767px) */
+@media (max-width: 767px) {
+    :root {
+        --section-spacing: 6rem;
+        --font-size-xxlarge: 3.5rem;
+        --font-size-xlarge: 2.8rem;
+        --font-size-large: 2rem;
+        --font-size-medium: 1.6rem;
+    }
+    
+    .container {
+        width: 100%;
+        padding: 0 20px;
+    }
+    
+    .nav-toggle {
+        top: 20px;
+        right: 20px;
+        width: 45px;
+        height: 45px;
+    }
+    
+    .nav-links a {
+        font-size: var(--font-size-large);
+    }
+    
+    .hero-title .name {
+        font-size: var(--font-size-xxlarge);
+    }
+    
+    .hero-title .profession {
+        font-size: var(--font-size-large);
+    }
+    
+    .hero-description {
+        font-size: var(--font-size-base);
+    }
+    
+    .hero-actions {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: var(--spacing-sm);
+    }
+    
+    .profile-image {
+        width: 280px;
+        height: 350px;
+    }
+    
+    .geometric-shape {
+        width: 200px;
+        height: 200px;
+    }
+    
+    .about-text .btn {
+        width: 100%;
+    }
+    
+    .stats-container {
+        flex-wrap: wrap;
+        gap: var(--spacing-md);
+    }
+    
+    .stat-item {
+        width: 45%;
+    }
+    
+    .info-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .tabs-navigation {
+        flex-direction: column;
+        gap: var(--spacing-xs);
+    }
+    
+    .tab-btn {
+        width: 100%;
+    }
+    
+    .project-categories {
+        flex-wrap: wrap;
+        gap: var(--spacing-xs);
+    }
+    
+    .category-btn {
+        margin-bottom: var(--spacing-xs);
+    }
+    
+    .resume-nav {
+        flex-direction: column;
+        gap: var(--spacing-xs);
+    }
+    
+    .resume-tab {
+        width: 100%;
+    }
+    
+    .timeline-item {
+        padding-left: 30px;
+    }
+    
+    .testimonial-card {
+        padding: var(--spacing-md);
+    }
+    
+    .form-row {
+        display: block;
+    }
+    
+    .contact-method {
+        align-items: center;
+    }
+    
+    .back-to-top {
+        bottom: 20px;
+        right: 20px;
+    }
+    
+    .back-to-top button {
+        width: 45px;
+        height: 45px;
+    }
+}
+
+/* Mobile Small (below 576px) */
+@media (max-width: 575px) {
+    :root {
+        --section-spacing: 5rem;
+        --font-size-xxlarge: 3rem;
+        --font-size-xlarge: 2.4rem;
+        --font-size-large: 1.8rem;
+    }
+    
+    .nav-content {
+        max-width: 90%;
+    }
+    
+    .section-title {
+        font-size: var(--font-size-xlarge);
+    }
+    
+    .profile-image {
+        width: 240px;
+        height: 300px;
+    }
+    
+    .geometric-shape {
+        width: 180px;
+        height: 180px;
+    }
+    
+    .highlighted-text {
+        font-size: var(--font-size-base);
+    }
+    
+    .stat-item {
+        width: 100%;
+    }
+    
+    .testimonial-header {
+        flex-direction: column;
+        text-align: center;
+    }
+    
+    .client-image {
+        margin-right: 0;
+        margin-bottom: var(--spacing-sm);
+    }
+    
+    .quote-icon {
+        position: static;
+        margin-top: var(--spacing-sm);
+    }
+}

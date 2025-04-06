@@ -1,0 +1,331 @@
+/* Responsive CSS: Media queries for different screen sizes */
+
+/* Large Desktop (1200px and up) */
+@media (min-width: 1200px) {
+    /* Adjust the window default sizes */
+    .window {
+        width: 70%;
+        height: 70%;
+        max-width: 1200px;
+        max-height: 800px;
+    }
+}
+
+/* Desktop (992px - 1199px) */
+@media (min-width: 992px) and (max-width: 1199px) {
+    /* Adjust the window default sizes */
+    .window {
+        width: 80%;
+        height: 75%;
+    }
+    
+    /* Projects grid */
+    .projects-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    
+    /* Education cards */
+    .education-cards {
+        grid-template-columns: repeat(3, 1fr);
+    }
+    
+    /* Skill cards */
+    .skills-grid {
+        grid-template-columns: repeat(4, 1fr);
+    }
+}
+
+/* Tablet (768px - 991px) */
+@media (min-width: 768px) and (max-width: 991px) {
+    /* Adjust the window default sizes */
+    .window {
+        width: 85%;
+        height: 80%;
+    }
+    
+    /* Projects grid */
+    .projects-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: var(--space-md);
+    }
+    
+    /* Education cards */
+    .education-cards {
+        grid-template-columns: repeat(2, 1fr);
+        gap: var(--space-md);
+    }
+    
+    /* Skill cards */
+    .skills-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    
+    /* About section */
+    .about-body {
+        grid-template-columns: 1fr;
+        gap: var(--space-lg);
+    }
+    
+    .about-details {
+        max-width: 600px;
+    }
+    
+    /* Welcome section */
+    .welcome-header {
+        flex-direction: column;
+        text-align: center;
+        gap: var(--space-lg);
+    }
+    
+    .welcome-actions {
+        justify-content: center;
+    }
+    
+    /* Quick stats */
+    .quick-stats {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    
+    /* Contact section */
+    .contact-body {
+        grid-template-columns: 1fr;
+        gap: var(--space-lg);
+    }
+    
+    .contact-info {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: var(--space-md);
+    }
+    
+    .contact-socials {
+        grid-column: span 2;
+    }
+    
+    /* Timeline */
+    .timeline {
+        padding-left: var(--space-lg);
+    }
+    
+    .timeline::before {
+        left: 0;
+    }
+    
+    .timeline-marker {
+        left: calc(-1 * var(--space-lg));
+    }
+    
+    /* Start menu */
+    .start-menu {
+        width: 320px;
+    }
+}
+
+/* Mobile (up to 767px) */
+@media (max-width: 767px) {
+    /* Adjust the window default sizes */
+    .window {
+        width: 90%;
+        height: 85%;
+        min-width: 300px;
+    }
+    
+    /* Projects grid */
+    .projects-grid {
+        grid-template-columns: 1fr;
+        gap: var(--space-md);
+    }
+    
+    /* Education cards */
+    .education-cards {
+        grid-template-columns: 1fr;
+        gap: var(--space-md);
+    }
+    
+    /* Skill cards */
+    .skills-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    /* About section */
+    .about-body {
+        grid-template-columns: 1fr;
+        gap: var(--space-md);
+    }
+    
+    /* Welcome section */
+    .welcome-header {
+        flex-direction: column;
+        text-align: center;
+        gap: var(--space-md);
+    }
+    
+    .welcome-actions {
+        flex-direction: column;
+        gap: var(--space-xs);
+    }
+    
+    .profile-image {
+        width: 120px;
+        height: 120px;
+    }
+    
+    /* Quick stats */
+    .quick-stats {
+        grid-template-columns: 1fr;
+    }
+    
+    /* Contact section */
+    .contact-body {
+        grid-template-columns: 1fr;
+        gap: var(--space-md);
+    }
+    
+    /* Timeline */
+    .timeline {
+        padding-left: var(--space-md);
+    }
+    
+    .timeline::before {
+        left: 0;
+    }
+    
+    .timeline-marker {
+        left: calc(-1 * var(--space-md));
+    }
+    
+    /* Desktop icons */
+    .desktop-icons {
+        grid-template-columns: repeat(4, 1fr);
+    }
+    
+    /* Start menu */
+    .start-menu {
+        width: 280px;
+        height: 450px;
+    }
+    
+    .menu-items {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    
+    /* Window title */
+    .window-title {
+        max-width: 150px;
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+    }
+    
+    /* Projects filter */
+    .projects-filter {
+        flex-wrap: wrap;
+    }
+    
+    /* Task items */
+    .task-items {
+        max-width: 200px;
+    }
+    
+    .task-item span {
+        display: none;
+    }
+}
+
+/* Small Mobile (up to 576px) */
+@media (max-width: 576px) {
+    /* Window controls */
+    .window-control {
+        width: 30px;
+    }
+    
+    /* Adjust desktop icons */
+    .desktop-icons {
+        grid-template-columns: repeat(3, 1fr);
+    }
+    
+    /* Window */
+    .window {
+        min-width: 250px;
+    }
+    
+    /* Contact items */
+    .contact-info {
+        gap: var(--space-sm);
+    }
+    
+    /* Taskbar */
+    .taskbar-right {
+        gap: var(--space-sm);
+    }
+    
+    .date-display {
+        display: none;
+    }
+    
+    /* Start menu */
+    .start-menu {
+        width: 250px;
+        left: var(--space-xs);
+    }
+    
+    /* Window title max width */
+    .window-title {
+        max-width: 100px;
+    }
+    
+    /* Task items */
+    .task-items {
+        max-width: 150px;
+    }
+}
+
+/* Handle Windows in Mobile devices - Touch support */
+@media (hover: none) and (pointer: coarse) {
+    /* Make window header larger for touch */
+    .window-header {
+        height: 40px;
+    }
+    
+    .window-control {
+        width: 40px;
+        height: 40px;
+    }
+    
+    /* Increase touch target size for desktop icons */
+    .desktop-icon {
+        padding: var(--space-sm);
+    }
+    
+    /* Adjust taskbar height */
+    .taskbar {
+        height: 56px;
+    }
+    
+    .start-menu-button {
+        width: 56px;
+        height: 56px;
+    }
+    
+    /* Adjust menu items for touch */
+    .menu-item {
+        padding: var(--space-sm);
+    }
+    
+    /* Hide Windows cursor style as it doesn't work well on mobile */
+    .win-theme, 
+    .win-theme a, 
+    .win-theme button, 
+    .win-theme .desktop-icon, 
+    .win-theme .window-header,
+    .win-theme input, 
+    .win-theme textarea {
+        cursor: auto;
+    }
+    
+    /* Adjust window resize handle for touch */
+    .window-resize-handle {
+        width: 20px;
+        height: 20px;
+    }
+}

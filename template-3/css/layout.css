@@ -1,0 +1,343 @@
+/* Layout CSS: Grid system, sections layout */
+
+/* ... existing code ... */
+
+/* Resume panel */
+.resume-panel {
+    display: none;
+    animation: fadeIn var(--transition-medium);
+}
+
+.resume-panel.active {
+    display: block;
+}
+
+.resume-download {
+    text-align: center;
+    margin-top: var(--spacing-xl);
+}
+
+/* Timeline */
+.timeline {
+    position: relative;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.timeline-item {
+    position: relative;
+    padding-left: 50px;
+    margin-bottom: var(--spacing-lg);
+}
+
+.timeline-item:last-child {
+    margin-bottom: 0;
+}
+
+.timeline-dot {
+    position: absolute;
+    left: 0;
+    top: 5px;
+    width: 20px;
+    height: 20px;
+    border-radius: var(--radius-round);
+    background-color: var(--color-primary);
+    z-index: 2;
+}
+
+.timeline-item::before {
+    content: '';
+    position: absolute;
+    left: 9px;
+    top: 5px;
+    bottom: -40px;
+    width: 2px;
+    background-color: var(--color-border);
+}
+
+.timeline-item:last-child::before {
+    display: none;
+}
+
+.timeline-date {
+    display: inline-block;
+    padding: 0.5rem 1.5rem;
+    background-color: var(--color-bg-alt);
+    border-radius: var(--radius-sm);
+    font-size: var(--font-size-small);
+    font-weight: 600;
+    color: var(--color-text-light);
+    margin-bottom: var(--spacing-sm);
+}
+
+.timeline-content h3 {
+    margin-bottom: var(--spacing-xs);
+    font-size: var(--font-size-large);
+}
+
+.timeline-content h4 {
+    color: var(--color-primary);
+    margin-bottom: var(--spacing-sm);
+    font-family: var(--font-primary);
+    font-size: var(--font-size-medium);
+    font-weight: 500;
+}
+
+.timeline-content p {
+    margin-bottom: var(--spacing-sm);
+}
+
+.timeline-details {
+    list-style: disc;
+    padding-left: var(--spacing-lg);
+    color: var(--color-text-light);
+}
+
+.timeline-details li {
+    margin-bottom: var(--spacing-xs);
+}
+
+/* Testimonials Section */
+.testimonials-wrapper {
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+.testimonials-slider {
+    position: relative;
+    overflow: hidden;
+}
+
+.testimonial-slide {
+    padding: var(--spacing-sm);
+}
+
+.testimonial-controls {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: var(--spacing-md);
+    margin-top: var(--spacing-lg);
+}
+
+.testimonial-btn {
+    width: 40px;
+    height: 40px;
+    border-radius: var(--radius-round);
+    background-color: var(--color-bg-alt);
+    border: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--color-text);
+    cursor: pointer;
+    transition: all var(--transition-medium);
+}
+
+.testimonial-btn:hover {
+    background-color: var(--color-primary);
+    color: white;
+}
+
+.testimonial-dots {
+    display: flex;
+    gap: var(--spacing-sm);
+}
+
+/* Contact Section */
+.contact-wrapper {
+    margin-top: var(--spacing-xl);
+}
+
+.contact-info {
+    padding-right: var(--spacing-lg);
+}
+
+.contact-intro {
+    font-size: var(--font-size-medium);
+    margin-bottom: var(--spacing-lg);
+}
+
+.contact-method {
+    display: flex;
+    align-items: flex-start;
+    gap: var(--spacing-md);
+    margin-bottom: var(--spacing-md);
+}
+
+.method-icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 50px;
+    height: 50px;
+    background-color: var(--color-bg-alt);
+    border-radius: var(--radius-round);
+    color: var(--color-primary);
+    font-size: var(--font-size-medium);
+    flex-shrink: 0;
+}
+
+.method-details h3 {
+    margin-bottom: var(--spacing-xs);
+    font-size: var(--font-size-medium);
+}
+
+.method-details p {
+    margin-bottom: 0;
+}
+
+.social-links-container {
+    margin-top: var(--spacing-lg);
+}
+
+.social-links-container h3 {
+    margin-bottom: var(--spacing-sm);
+    font-size: var(--font-size-medium);
+}
+
+.social-links {
+    display: flex;
+    gap: var(--spacing-sm);
+}
+
+.social-link {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 40px;
+    height: 40px;
+    border-radius: var(--radius-round);
+    background-color: var(--color-bg-alt);
+    color: var(--color-text);
+    transition: all var(--transition-medium);
+}
+
+.social-link:hover {
+    background-color: var(--color-primary);
+    color: white;
+    transform: translateY(-3px);
+}
+
+.contact-form-container {
+    background-color: var(--color-bg-alt);
+    border-radius: var(--radius-lg);
+    padding: var(--spacing-lg);
+    box-shadow: var(--shadow-md);
+}
+
+.input-group {
+    margin-bottom: var(--spacing-md);
+}
+
+.input-group label {
+    display: block;
+    margin-bottom: var(--spacing-xs);
+    font-weight: 500;
+    color: var(--color-text);
+}
+
+.input-group input,
+.input-group textarea {
+    width: 100%;
+    padding: 1.2rem;
+    border: 1px solid var(--color-border);
+    border-radius: var(--radius-md);
+    background-color: var(--color-bg);
+    font-family: var(--font-primary);
+    font-size: var(--font-size-base);
+    transition: all var(--transition-fast);
+}
+
+.input-group input:focus,
+.input-group textarea:focus {
+    outline: none;
+    border-color: var(--color-primary);
+    box-shadow: 0 0 0 3px rgba(238, 108, 77, 0.1);
+}
+
+/* Footer */
+.footer {
+    background-color: var(--color-bg-alt);
+    padding: var(--spacing-lg) 0;
+    margin-top: var(--section-spacing);
+    position: relative;
+}
+
+.footer-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.footer-logo {
+    font-family: var(--font-secondary);
+    font-size: var(--font-size-large);
+    font-weight: 700;
+    color: var(--color-text);
+}
+
+.footer-text {
+    text-align: center;
+    margin-bottom: 0;
+}
+
+.footer-text i {
+    color: var(--color-primary);
+}
+
+.footer-links {
+    display: flex;
+    gap: var(--spacing-lg);
+}
+
+.footer-links a {
+    color: var(--color-text);
+    font-weight: 500;
+    transition: color var(--transition-fast);
+}
+
+.footer-links a:hover {
+    color: var(--color-primary);
+}
+
+.back-to-top {
+    position: absolute;
+    bottom: 30px;
+    right: 30px;
+}
+
+.back-to-top button {
+    width: 50px;
+    height: 50px;
+    border-radius: var(--radius-round);
+    background-color: var(--color-primary);
+    color: white;
+    border: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.8rem;
+    cursor: pointer;
+    box-shadow: var(--shadow-md);
+    transition: all var(--transition-medium);
+}
+
+.back-to-top button:hover {
+    background-color: var(--color-primary-dark);
+    transform: translateY(-5px);
+}
+
+/* Cursor Follow Element */
+.cursor-follow {
+    position: fixed;
+    width: 30px;
+    height: 30px;
+    border-radius: var(--radius-round);
+    background-color: rgba(238, 108, 77, 0.3);
+    pointer-events: none;
+    z-index: 9999;
+    transform: translate(-50%, -50%);
+    transition: transform 0.1s ease, width 0.3s ease, height 0.3s ease;
+    display: none;
+}

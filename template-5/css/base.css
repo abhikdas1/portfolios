@@ -1,0 +1,240 @@
+/* Base CSS: Variables, resets, and typography */
+
+/* CSS Variables */
+:root {
+    /* Cyberpunk Color Palette */
+    --cyber-bg-dark: #070715;
+    --cyber-bg-medium: #0a0a1e;
+    --cyber-bg-light: #10102a;
+    --cyber-text: #e0e0ff;
+    --cyber-text-secondary: #9595bd;
+    
+    /* Neon Colors */
+    --neon-blue: #00fff9;
+    --neon-purple: #bd00ff;
+    --neon-pink: #ff00ff;
+    --neon-green: #00ff66;
+    --neon-yellow: #ffff00;
+    
+    /* Theme Colors - Default is blue */
+    --neon-primary: var(--neon-blue);
+    --neon-secondary: var(--neon-purple);
+    --neon-accent: var(--neon-pink);
+    
+    /* UI Colors */
+    --cyber-border: rgba(0, 255, 249, 0.2);
+    --cyber-shadow: 0 0 10px rgba(0, 255, 249, 0.5);
+    --terminal-bg: rgba(7, 7, 21, 0.8);
+    
+    /* Typography */
+    --font-primary: 'Orbitron', sans-serif;
+    --font-secondary: 'Chakra Petch', sans-serif;
+    --font-text: 'Rajdhani', sans-serif;
+    
+    /* Spacing */
+    --space-xs: 0.5rem;
+    --space-sm: 1rem;
+    --space-md: 2rem;
+    --space-lg: 3rem;
+    --space-xl: 5rem;
+    
+    /* Border radius */
+    --cyber-radius-sm: 2px;
+    --cyber-radius-md: 4px;
+    
+    /* Animations */
+    --glitch-duration: 3s;
+    --transition-fast: 0.3s;
+    --transition-medium: 0.5s;
+    --transition-slow: 0.8s;
+}
+
+/* Theme Colors */
+body.neon-blue {
+    --neon-primary: var(--neon-blue);
+    --neon-secondary: var(--neon-purple);
+    --neon-accent: var(--neon-pink);
+}
+
+body.neon-pink {
+    --neon-primary: var(--neon-pink);
+    --neon-secondary: var(--neon-purple);
+    --neon-accent: var(--neon-blue);
+}
+
+body.neon-green {
+    --neon-primary: var(--neon-green);
+    --neon-secondary: var(--neon-blue);
+    --neon-accent: var(--neon-yellow);
+}
+
+body.neon-gold {
+    --neon-primary: var(--neon-yellow);
+    --neon-secondary: var(--neon-green);
+    --neon-accent: var(--neon-blue);
+}
+
+/* Box sizing */
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+/* HTML & Body */
+html {
+    font-size: 62.5%;
+    scroll-behavior: smooth;
+    scroll-padding-top: 8rem;
+}
+
+body {
+    font-family: var(--font-text);
+    font-size: 1.6rem;
+    line-height: 1.6;
+    color: var(--cyber-text);
+    background-color: var(--cyber-bg-dark);
+    overflow-x: hidden;
+    cursor: default;
+}
+
+body::before {
+    content: "";
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: radial-gradient(circle at center, var(--cyber-bg-medium) 0%, var(--cyber-bg-dark) 100%);
+    z-index: -2;
+}
+
+/* Typography */
+h1, h2, h3, h4, h5, h6 {
+    font-family: var(--font-primary);
+    margin-bottom: 1rem;
+    line-height: 1.2;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+}
+
+h1 {
+    font-size: 4.8rem;
+}
+
+h2 {
+    font-size: 3.6rem;
+}
+
+h3 {
+    font-size: 2.4rem;
+}
+
+h4 {
+    font-size: 2rem;
+}
+
+p {
+    margin-bottom: 1.5rem;
+}
+
+a {
+    color: var(--neon-primary);
+    text-decoration: none;
+    transition: all var(--transition-fast);
+    position: relative;
+}
+
+a:hover {
+    color: var(--neon-accent);
+}
+
+/* Lists */
+ul, ol {
+    list-style: none;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+}
+
+/* Forms & Inputs */
+input, textarea, button, select {
+    font-family: var(--font-secondary);
+    font-size: 1.6rem;
+}
+
+button {
+    cursor: pointer;
+    border: none;
+    background: none;
+}
+
+/* Container */
+.container {
+    max-width: 1200px;
+    width: 90%;
+    margin: 0 auto;
+    position: relative;
+}
+
+/* Selection styling */
+::selection {
+    background-color: var(--neon-primary);
+    color: var(--cyber-bg-dark);
+}
+
+/* Scrollbar */
+::-webkit-scrollbar {
+    width: 8px;
+    height: 8px;
+}
+
+::-webkit-scrollbar-track {
+    background: var(--cyber-bg-medium);
+}
+
+::-webkit-scrollbar-thumb {
+    background: var(--neon-primary);
+    border-radius: var(--cyber-radius-sm);
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: var(--neon-accent);
+}
+
+/* Focus states */
+a:focus, button:focus, input:focus, textarea:focus, select:focus {
+    outline: none;
+    box-shadow: 0 0 0 2px var(--neon-primary);
+}
+
+/* Utility Classes */
+.text-glitch {
+    position: relative;
+    display: inline-block;
+}
+
+.text-gradient {
+    background: linear-gradient(to right, var(--neon-primary), var(--neon-accent));
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+}
+
+.visually-hidden {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    white-space: nowrap;
+    border: 0;
+}

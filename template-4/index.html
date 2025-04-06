@@ -1,0 +1,671 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Your Name - Interactive Portfolio | ProfileCraft</title>
+    <meta name="description" content="Interactive portfolio with creative visualizations and smooth transitions">
+    
+    <!-- CSS Links -->
+    <link rel="stylesheet" href="css/base.css">
+    <link rel="stylesheet" href="css/layout.css">
+    <link rel="stylesheet" href="css/components.css">
+    <link rel="stylesheet" href="css/responsive.css">
+    <link rel="stylesheet" href="css/style.css">
+    
+    <!-- Font Awesome for icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <!-- Theme Toggle Button -->
+    <button id="theme-toggle" class="theme-toggle" aria-label="Toggle dark/light theme">
+        <i class="fas fa-sun light-icon"></i>
+        <i class="fas fa-moon dark-icon"></i>
+    </button>
+    
+    <!-- Fixed Side Panel -->
+    <aside class="side-panel">
+        <div class="side-panel-content">
+            <div class="profile-container">
+                <div class="profile-image">
+                    <img src="assets/profile-placeholder.jpg" alt="Your Name">
+                </div>
+                <h1 class="name">Your Name</h1>
+                <p class="profession">Your Profession</p>
+                <div class="panel-socials">
+                    <a href="#" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+                    <a href="#" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+                    <a href="#" aria-label="GitHub"><i class="fab fa-github"></i></a>
+                    <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                </div>
+            </div>
+            
+            <nav class="panel-navigation">
+                <ul>
+                    <li><a href="#home" class="nav-link active"><i class="fas fa-home"></i><span>Home</span></a></li>
+                    <li><a href="#about" class="nav-link"><i class="fas fa-user"></i><span>About</span></a></li>
+                    <li><a href="#skills" class="nav-link"><i class="fas fa-code"></i><span>Skills</span></a></li>
+                    <li><a href="#portfolio" class="nav-link"><i class="fas fa-briefcase"></i><span>Portfolio</span></a></li>
+                    <li><a href="#experience" class="nav-link"><i class="fas fa-history"></i><span>Experience</span></a></li>
+                    <li><a href="#testimonials" class="nav-link"><i class="fas fa-quote-left"></i><span>Testimonials</span></a></li>
+                    <li><a href="#contact" class="nav-link"><i class="fas fa-envelope"></i><span>Contact</span></a></li>
+                </ul>
+            </nav>
+            
+            <div class="panel-footer">
+                <a href="#" class="btn primary-btn">Download CV</a>
+                <p class="copyright">© 2023 ProfileCraft</p>
+            </div>
+        </div>
+    </aside>
+
+    <!-- Main Content Area -->
+    <main class="main-content">
+        <!-- Canvas Background Effect -->
+        <div id="particles-js" class="particles-container"></div>
+        
+        <!-- Home Section -->
+        <section id="home" class="section home-section active">
+            <div class="section-inner">
+                <div class="hero-content">
+                    <h1 class="animated-heading">
+                        <span class="line">Hello, I'm <span class="highlight">Your Name</span></span>
+                        <span class="line">I create <span class="txt-rotate" data-period="2000" data-rotate='[ "beautiful websites", "mobile applications", "user experiences", "digital solutions" ]'></span></span>
+                    </h1>
+                    <p class="hero-description">A creative professional specializing in digital experiences that combine innovation with functionality.</p>
+                    <div class="hero-buttons">
+                        <a href="#portfolio" class="btn primary-btn">View My Work</a>
+                        <a href="#contact" class="btn outline-btn">Contact Me</a>
+                    </div>
+                </div>
+                
+                <div class="scroll-indicator">
+                    <span>Scroll Down</span>
+                    <i class="fas fa-chevron-down"></i>
+                </div>
+            </div>
+        </section>
+        
+        <!-- About Section -->
+        <section id="about" class="section about-section">
+            <div class="section-inner">
+                <div class="section-header">
+                    <span class="section-subtitle">About Me</span>
+                    <h2 class="section-title">Who I Am</h2>
+                </div>
+                
+                <div class="about-grid">
+                    <div class="about-text">
+                        <p class="lead-text">I'm a passionate professional with expertise in creating compelling digital experiences.</p>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla facilisi. Sed euismod, nisl eget ultricies ultricies, nisl nisl aliquam nisl, nec aliquam nisl nisl nec nisl. Sed euismod, nisl eget ultricies ultricies, nisl nisl aliquam nisl, nec aliquam nisl nisl nec nisl.</p>
+                        <p>Nulla facilisi. Sed euismod, nisl eget ultricies ultricies, nisl nisl aliquam nisl, nec aliquam nisl nisl nec nisl.</p>
+                    </div>
+                    
+                    <div class="about-details">
+                        <div class="details-item">
+                            <h4><i class="fas fa-user-circle"></i> Name:</h4>
+                            <p>Your Name</p>
+                        </div>
+                        <div class="details-item">
+                            <h4><i class="fas fa-envelope"></i> Email:</h4>
+                            <p>your.email@example.com</p>
+                        </div>
+                        <div class="details-item">
+                            <h4><i class="fas fa-phone"></i> Phone:</h4>
+                            <p>(123) 456-7890</p>
+                        </div>
+                        <div class="details-item">
+                            <h4><i class="fas fa-map-marker-alt"></i> Location:</h4>
+                            <p>City, Country</p>
+                        </div>
+                        <div class="details-item">
+                            <h4><i class="fas fa-calendar-alt"></i> Available:</h4>
+                            <p>Freelance / Full-time</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="counters">
+                    <div class="counter-item" data-count="5">
+                        <div class="counter-number">0</div>
+                        <div class="counter-text">Years of Experience</div>
+                    </div>
+                    <div class="counter-item" data-count="50">
+                        <div class="counter-number">0</div>
+                        <div class="counter-text">Projects Completed</div>
+                    </div>
+                    <div class="counter-item" data-count="30">
+                        <div class="counter-number">0</div>
+                        <div class="counter-text">Happy Clients</div>
+                    </div>
+                    <div class="counter-item" data-count="10">
+                        <div class="counter-number">0</div>
+                        <div class="counter-text">Awards Won</div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <!-- Skills Section -->
+        <section id="skills" class="section skills-section">
+            <div class="section-inner">
+                <div class="section-header">
+                    <span class="section-subtitle">My Skills</span>
+                    <h2 class="section-title">What I'm Good At</h2>
+                </div>
+                
+                <div class="skills-container">
+                    <div class="skill-group">
+                        <h3 class="skill-group-title">Development</h3>
+                        <div class="skill-bars">
+                            <div class="skill-bar-item">
+                                <div class="skill-info">
+                                    <span class="skill-name">HTML/CSS</span>
+                                    <span class="skill-percentage">95%</span>
+                                </div>
+                                <div class="skill-progress-bg">
+                                    <div class="skill-progress-fill" style="width: 95%"></div>
+                                </div>
+                            </div>
+                            
+                            <div class="skill-bar-item">
+                                <div class="skill-info">
+                                    <span class="skill-name">JavaScript</span>
+                                    <span class="skill-percentage">90%</span>
+                                </div>
+                                <div class="skill-progress-bg">
+                                    <div class="skill-progress-fill" style="width: 90%"></div>
+                                </div>
+                            </div>
+                            
+                            <div class="skill-bar-item">
+                                <div class="skill-info">
+                                    <span class="skill-name">React</span>
+                                    <span class="skill-percentage">85%</span>
+                                </div>
+                                <div class="skill-progress-bg">
+                                    <div class="skill-progress-fill" style="width: 85%"></div>
+                                </div>
+                            </div>
+                            
+                            <div class="skill-bar-item">
+                                <div class="skill-info">
+                                    <span class="skill-name">Node.js</span>
+                                    <span class="skill-percentage">80%</span>
+                                </div>
+                                <div class="skill-progress-bg">
+                                    <div class="skill-progress-fill" style="width: 80%"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="skill-group">
+                        <h3 class="skill-group-title">Design</h3>
+                        <div class="skill-cards">
+                            <div class="skill-card">
+                                <div class="skill-card-icon">
+                                    <i class="fas fa-pencil-ruler"></i>
+                                </div>
+                                <h4>UI/UX Design</h4>
+                                <p>Figma, Adobe XD, Prototyping, Wireframing</p>
+                            </div>
+                            
+                            <div class="skill-card">
+                                <div class="skill-card-icon">
+                                    <i class="fas fa-mobile-alt"></i>
+                                </div>
+                                <h4>Responsive Design</h4>
+                                <p>Mobile-First, Adaptive Layouts, Cross-Browser</p>
+                            </div>
+                            
+                            <div class="skill-card">
+                                <div class="skill-card-icon">
+                                    <i class="fas fa-palette"></i>
+                                </div>
+                                <h4>Visual Design</h4>
+                                <p>Photoshop, Illustrator, Color Theory</p>
+                            </div>
+                            
+                            <div class="skill-card">
+                                <div class="skill-card-icon">
+                                    <i class="fas fa-paint-brush"></i>
+                                </div>
+                                <h4>Motion Graphics</h4>
+                                <p>After Effects, CSS Animations, SVG Animation</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <!-- Portfolio Section -->
+        <section id="portfolio" class="section portfolio-section">
+            <div class="section-inner">
+                <div class="section-header">
+                    <span class="section-subtitle">My Portfolio</span>
+                    <h2 class="section-title">Recent Works</h2>
+                </div>
+                
+                <div class="portfolio-filter">
+                    <button class="filter-btn active" data-filter="all">All</button>
+                    <button class="filter-btn" data-filter="web">Web Design</button>
+                    <button class="filter-btn" data-filter="app">App Development</button>
+                    <button class="filter-btn" data-filter="ui">UI/UX Design</button>
+                </div>
+                
+                <div class="portfolio-grid">
+                    <div class="portfolio-item" data-category="web">
+                        <div class="portfolio-img">
+                            <img src="assets/project-1.jpg" alt="E-commerce Website">
+                            <div class="portfolio-overlay">
+                                <div class="overlay-content">
+                                    <h3>E-commerce Website</h3>
+                                    <p>Web Design, Development</p>
+                                    <div class="overlay-links">
+                                        <a href="#" class="overlay-link" aria-label="Preview"><i class="fas fa-eye"></i></a>
+                                        <a href="#" class="overlay-link" aria-label="Details"><i class="fas fa-link"></i></a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="portfolio-item" data-category="app">
+                        <div class="portfolio-img">
+                            <img src="assets/project-2.jpg" alt="Fitness App">
+                            <div class="portfolio-overlay">
+                                <div class="overlay-content">
+                                    <h3>Fitness App</h3>
+                                    <p>App Development, UX Design</p>
+                                    <div class="overlay-links">
+                                        <a href="#" class="overlay-link" aria-label="Preview"><i class="fas fa-eye"></i></a>
+                                        <a href="#" class="overlay-link" aria-label="Details"><i class="fas fa-link"></i></a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="portfolio-item" data-category="ui">
+                        <div class="portfolio-img">
+                            <img src="assets/project-3.jpg" alt="Dashboard UI Kit">
+                            <div class="portfolio-overlay">
+                                <div class="overlay-content">
+                                    <h3>Dashboard UI Kit</h3>
+                                    <p>UI/UX Design, Web Design</p>
+                                    <div class="overlay-links">
+                                        <a href="#" class="overlay-link" aria-label="Preview"><i class="fas fa-eye"></i></a>
+                                        <a href="#" class="overlay-link" aria-label="Details"><i class="fas fa-link"></i></a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="portfolio-item" data-category="web">
+                        <div class="portfolio-img">
+                            <img src="assets/project-4.jpg" alt="Portfolio Website">
+                            <div class="portfolio-overlay">
+                                <div class="overlay-content">
+                                    <h3>Portfolio Website</h3>
+                                    <p>Web Design, Development</p>
+                                    <div class="overlay-links">
+                                        <a href="#" class="overlay-link" aria-label="Preview"><i class="fas fa-eye"></i></a>
+                                        <a href="#" class="overlay-link" aria-label="Details"><i class="fas fa-link"></i></a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="portfolio-item" data-category="app">
+                        <div class="portfolio-img">
+                            <img src="assets/project-5.jpg" alt="Food Delivery App">
+                            <div class="portfolio-overlay">
+                                <div class="overlay-content">
+                                    <h3>Food Delivery App</h3>
+                                    <p>App Development, UI Design</p>
+                                    <div class="overlay-links">
+                                        <a href="#" class="overlay-link" aria-label="Preview"><i class="fas fa-eye"></i></a>
+                                        <a href="#" class="overlay-link" aria-label="Details"><i class="fas fa-link"></i></a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="portfolio-item" data-category="ui">
+                        <div class="portfolio-img">
+                            <img src="assets/project-6.jpg" alt="Travel App UI">
+                            <div class="portfolio-overlay">
+                                <div class="overlay-content">
+                                    <h3>Travel App UI</h3>
+                                    <p>UI/UX Design, Prototyping</p>
+                                    <div class="overlay-links">
+                                        <a href="#" class="overlay-link" aria-label="Preview"><i class="fas fa-eye"></i></a>
+                                        <a href="#" class="overlay-link" aria-label="Details"><i class="fas fa-link"></i></a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <!-- Experience Section -->
+        <section id="experience" class="section experience-section">
+            <div class="section-inner">
+                <div class="section-header">
+                    <span class="section-subtitle">My Background</span>
+                    <h2 class="section-title">Experience & Education</h2>
+                </div>
+                
+                <div class="timeline-tabs">
+                    <div class="tab-buttons">
+                        <button class="tab-btn active" data-tab="experience">Work Experience</button>
+                        <button class="tab-btn" data-tab="education">Education</button>
+                    </div>
+                    
+                    <div class="tab-content">
+                        <div class="tab-pane active" id="experience-pane">
+                            <div class="timeline">
+                                <div class="timeline-item">
+                                    <span class="timeline-date">2022 - Present</span>
+                                    <div class="timeline-content">
+                                        <h3 class="timeline-title">Senior Web Developer</h3>
+                                        <h4 class="timeline-subtitle">Company Name</h4>
+                                        <p class="timeline-description">Description of your role, responsibilities, achievements, and technologies used.</p>
+                                        <ul class="timeline-list">
+                                            <li>Led the development of the company's flagship product</li>
+                                            <li>Implemented modern CI/CD pipelines improving deployment efficiency by 40%</li>
+                                            <li>Mentored junior developers and facilitated code reviews</li>
+                                        </ul>
+                                    </div>
+                                </div>
+                                
+                                <div class="timeline-item">
+                                    <span class="timeline-date">2020 - 2022</span>
+                                    <div class="timeline-content">
+                                        <h3 class="timeline-title">Frontend Developer</h3>
+                                        <h4 class="timeline-subtitle">Company Name</h4>
+                                        <p class="timeline-description">Description of your role, responsibilities, achievements, and technologies used.</p>
+                                        <ul class="timeline-list">
+                                            <li>Rebuilt the company website increasing mobile conversions by 35%</li>
+                                            <li>Developed reusable component library for internal projects</li>
+                                            <li>Collaborated with designers to implement pixel-perfect interfaces</li>
+                                        </ul>
+                                    </div>
+                                </div>
+                                
+                                <div class="timeline-item">
+                                    <span class="timeline-date">2019 - 2020</span>
+                                    <div class="timeline-content">
+                                        <h3 class="timeline-title">Web Development Intern</h3>
+                                        <h4 class="timeline-subtitle">Company Name</h4>
+                                        <p class="timeline-description">Description of your role, responsibilities, achievements, and technologies used.</p>
+                                        <ul class="timeline-list">
+                                            <li>Assisted in developing features for client websites</li>
+                                            <li>Fixed bugs and improved performance across multiple projects</li>
+                                            <li>Gained practical experience with modern development workflows</li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="tab-pane" id="education-pane">
+                            <div class="timeline">
+                                <div class="timeline-item">
+                                    <span class="timeline-date">2018 - 2022</span>
+                                    <div class="timeline-content">
+                                        <h3 class="timeline-title">Bachelor of Science in Computer Science</h3>
+                                        <h4 class="timeline-subtitle">University Name</h4>
+                                        <p class="timeline-description">Description of your academic achievements, relevant coursework, or any special projects.</p>
+                                        <ul class="timeline-list">
+                                            <li>GPA: 3.8/4.0</li>
+                                            <li>Specialization in Web Development</li>
+                                            <li>Participated in various hackathons and coding competitions</li>
+                                        </ul>
+                                    </div>
+                                </div>
+                                
+                                <div class="timeline-item">
+                                    <span class="timeline-date">2020</span>
+                                    <div class="timeline-content">
+                                        <h3 class="timeline-title">Web Development Certification</h3>
+                                        <h4 class="timeline-subtitle">Online Learning Platform</h4>
+                                        <p class="timeline-description">Description of the certification, skills acquired, and relevant projects completed.</p>
+                                        <ul class="timeline-list">
+                                            <li>Advanced JavaScript techniques</li>
+                                            <li>Modern framework implementation</li>
+                                            <li>Built 5 fully functional web applications</li>
+                                        </ul>
+                                    </div>
+                                </div>
+                                
+                                <div class="timeline-item">
+                                    <span class="timeline-date">2014 - 2018</span>
+                                    <div class="timeline-content">
+                                        <h3 class="timeline-title">High School Diploma</h3>
+                                        <h4 class="timeline-subtitle">High School Name</h4>
+                                        <p class="timeline-description">Description of your achievements, relevant coursework, or any special projects.</p>
+                                        <ul class="timeline-list">
+                                            <li>Computer Science Club President</li>
+                                            <li>Developed the school's first official website</li>
+                                            <li>Graduated with honors</li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <!-- Testimonials Section -->
+        <section id="testimonials" class="section testimonials-section">
+            <div class="section-inner">
+                <div class="section-header">
+                    <span class="section-subtitle">What Clients Say</span>
+                    <h2 class="section-title">Testimonials</h2>
+                </div>
+                
+                <div class="testimonials-carousel">
+                    <div class="swiper-container">
+                        <div class="swiper-wrapper">
+                            <div class="swiper-slide testimonial-item">
+                                <div class="testimonial-card">
+                                    <div class="testimonial-quote">
+                                        <i class="fas fa-quote-left"></i>
+                                    </div>
+                                    <div class="testimonial-text">
+                                        <p>"Working with this professional was an amazing experience. The quality of work was exceptional and delivered on time. Would definitely recommend to anyone looking for a skilled developer."</p>
+                                    </div>
+                                    <div class="testimonial-client">
+                                        <div class="client-img">
+                                            <img src="assets/client-1.jpg" alt="Client 1">
+                                        </div>
+                                        <div class="client-info">
+                                            <h4 class="client-name">Client Name 1</h4>
+                                            <p class="client-role">CEO, Company Name</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <div class="swiper-slide testimonial-item">
+                                <div class="testimonial-card">
+                                    <div class="testimonial-quote">
+                                        <i class="fas fa-quote-left"></i>
+                                    </div>
+                                    <div class="testimonial-text">
+                                        <p>"Outstanding service and excellent communication throughout the project. The results exceeded our expectations. Highly recommended for anyone seeking top-tier web development services."</p>
+                                    </div>
+                                    <div class="testimonial-client">
+                                        <div class="client-img">
+                                            <img src="assets/client-2.jpg" alt="Client 2">
+                                        </div>
+                                        <div class="client-info">
+                                            <h4 class="client-name">Client Name 2</h4>
+                                            <p class="client-role">Marketing Director, Company Name</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <div class="swiper-slide testimonial-item">
+                                <div class="testimonial-card">
+                                    <div class="testimonial-quote">
+                                        <i class="fas fa-quote-left"></i>
+                                    </div>
+                                    <div class="testimonial-text">
+                                        <p>"I was impressed by the creativity and attention to detail. The project was delivered ahead of schedule and the quality was beyond what we expected. Will definitely hire again for future projects."</p>
+                                    </div>
+                                    <div class="testimonial-client">
+                                        <div class="client-img">
+                                            <img src="assets/client-3.jpg" alt="Client 3">
+                                        </div>
+                                        <div class="client-info">
+                                            <h4 class="client-name">Client Name 3</h4>
+                                            <p class="client-role">Project Manager, Company Name</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="swiper-pagination"></div>
+                    </div>
+                    
+                    <div class="swiper-button-prev"></div>
+                    <div class="swiper-button-next"></div>
+                </div>
+            </div>
+        </section>
+        
+        <!-- Contact Section -->
+        <section id="contact" class="section contact-section">
+            <div class="section-inner">
+                <div class="section-header">
+                    <span class="section-subtitle">Get In Touch</span>
+                    <h2 class="section-title">Contact Me</h2>
+                </div>
+                
+                <div class="contact-container">
+                    <div class="contact-info">
+                        <div class="contact-info-item">
+                            <div class="contact-info-icon">
+                                <i class="fas fa-map-marker-alt"></i>
+                            </div>
+                            <div class="contact-info-content">
+                                <h4>Location</h4>
+                                <p>City, Country</p>
+                            </div>
+                        </div>
+                        
+                        <div class="contact-info-item">
+                            <div class="contact-info-icon">
+                                <i class="fas fa-envelope"></i>
+                            </div>
+                            <div class="contact-info-content">
+                                <h4>Email</h4>
+                                <p>your.email@example.com</p>
+                            </div>
+                        </div>
+                        
+                        <div class="contact-info-item">
+                            <div class="contact-info-icon">
+                                <i class="fas fa-phone-alt"></i>
+                            </div>
+                            <div class="contact-info-content">
+                                <h4>Phone</h4>
+                                <p>(123) 456-7890</p>
+                            </div>
+                        </div>
+                        
+                        <div class="contact-info-item">
+                            <div class="contact-info-icon">
+                                <i class="fas fa-globe"></i>
+                            </div>
+                            <div class="contact-info-content">
+                                <h4>Website</h4>
+                                <p>www.yourwebsite.com</p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="contact-form-container">
+                        <form id="contact-form" class="contact-form">
+                            <div class="form-group">
+                                <input type="text" id="name" name="name" placeholder="Your Name" required>
+                                <span class="input-focus-effect"></span>
+                            </div>
+                            
+                            <div class="form-group">
+                                <input type="email" id="email" name="email" placeholder="Your Email" required>
+                                <span class="input-focus-effect"></span>
+                            </div>
+                            
+                            <div class="form-group">
+                                <input type="text" id="subject" name="subject" placeholder="Subject">
+                                <span class="input-focus-effect"></span>
+                            </div>
+                            
+                            <div class="form-group">
+                                <textarea id="message" name="message" placeholder="Your Message" required></textarea>
+                                <span class="input-focus-effect"></span>
+                            </div>
+                            
+                            <div class="form-group">
+                                <button type="submit" class="btn primary-btn">
+                                    <span class="btn-text">Send Message</span>
+                                    <i class="fas fa-paper-plane"></i>
+                                </button>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+                
+                <div class="map-container">
+                    <div id="map" class="google-map">
+                        <!-- Map will be loaded via JavaScript -->
+                        <div class="map-placeholder">Google Map will be loaded here</div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Mobile Navigation Bar -->
+    <div class="mobile-nav">
+        <a href="#home" class="mobile-nav-link active">
+            <i class="fas fa-home"></i>
+            <span>Home</span>
+        </a>
+        <a href="#about" class="mobile-nav-link">
+            <i class="fas fa-user"></i>
+            <span>About</span>
+        </a>
+        <a href="#portfolio" class="mobile-nav-link">
+            <i class="fas fa-briefcase"></i>
+            <span>Portfolio</span>
+        </a>
+        <a href="#contact" class="mobile-nav-link">
+            <i class="fas fa-envelope"></i>
+            <span>Contact</span>
+        </a>
+    </div>
+
+    <!-- JavaScript Dependencies -->
+    <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
+    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+    
+    <!-- Custom Scripts -->
+    <script src="js/main.js"></script>
+    <script src="js/form.js"></script>
+</body>
+</html>

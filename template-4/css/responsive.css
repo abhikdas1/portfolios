@@ -1,0 +1,232 @@
+/* Responsive CSS: Media queries for different screen sizes */
+
+/* Large screens (above 1200px) */
+@media (min-width: 1201px) {
+    .section-inner {
+        max-width: 1140px;
+    }
+}
+
+/* Desktop (992px - 1200px) */
+@media (max-width: 1200px) {
+    :root {
+        --side-panel-width: 260px;
+    }
+    
+    .section-inner {
+        max-width: 960px;
+    }
+    
+    .animated-heading {
+        font-size: 3rem;
+    }
+    
+    .counters {
+        grid-template-columns: repeat(2, 1fr);
+        gap: var(--space-md);
+    }
+    
+    .skill-bars {
+        grid-template-columns: 1fr;
+    }
+    
+    .portfolio-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    
+    .contact-container {
+        grid-template-columns: 1fr;
+        gap: var(--space-lg);
+    }
+    
+    .contact-info {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+/* Tablet (768px - 991px) */
+@media (max-width: 991px) {
+    .side-panel {
+        transform: translateX(-100%);
+        z-index: 999;
+        transition: transform var(--transition-normal);
+    }
+    
+    .side-panel.active {
+        transform: translateX(0);
+    }
+    
+    .main-content {
+        margin-left: 0;
+    }
+    
+    .section-inner {
+        max-width: 720px;
+    }
+    
+    .animated-heading {
+        font-size: 2.5rem;
+    }
+    
+    .hero-description {
+        font-size: 1rem;
+    }
+    
+    .about-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .skill-cards {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    
+    .timeline-item:before {
+        left: -5px;
+    }
+    
+    .swiper-button-prev {
+        left: 0;
+    }
+    
+    .swiper-button-next {
+        right: 0;
+    }
+    
+    .map-container {
+        height: 300px;
+    }
+}
+
+/* Mobile Large (576px - 767px) */
+@media (max-width: 767px) {
+    :root {
+        --space-xl: 2.5rem;
+        --space-xxl: 4rem;
+    }
+    
+    .section-inner {
+        width: 100%;
+        padding: 0 var(--space-md);
+    }
+    
+    .animated-heading {
+        font-size: 2rem;
+    }
+    
+    .hero-buttons {
+        flex-direction: column;
+        gap: var(--space-sm);
+        width: 100%;
+    }
+    
+    .hero-buttons .btn {
+        width: 100%;
+    }
+    
+    .about-details {
+        display: grid;
+        grid-template-columns: 1fr;
+    }
+    
+    .counters {
+        grid-template-columns: 1fr;
+    }
+    
+    .skill-cards {
+        grid-template-columns: 1fr;
+    }
+    
+    .skill-group-title {
+        text-align: center;
+    }
+    
+    .portfolio-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .tab-buttons {
+        flex-direction: column;
+        gap: var(--space-xs);
+    }
+    
+    .tab-btn {
+        width: 100%;
+    }
+    
+    .contact-info {
+        grid-template-columns: 1fr;
+    }
+    
+    .timeline-item {
+        padding-left: var(--space-lg);
+    }
+    
+    .mobile-nav {
+        display: flex;
+    }
+}
+
+/* Mobile Small (below 576px) */
+@media (max-width: 575px) {
+    :root {
+        --space-lg: 1.5rem;
+        --space-xl: 2rem;
+        --space-xxl: 3rem;
+    }
+    
+    h1 {
+        font-size: 2.5rem;
+    }
+    
+    h2 {
+        font-size: 2rem;
+    }
+    
+    .section-title {
+        font-size: 2rem;
+    }
+    
+    .animated-heading {
+        font-size: 1.8rem;
+    }
+    
+    .theme-toggle {
+        top: 1rem;
+        right: 1rem;
+    }
+    
+    .portfolio-filter {
+        flex-direction: column;
+        gap: var(--space-xs);
+    }
+    
+    .filter-btn {
+        width: 100%;
+    }
+    
+    .testimonial-card {
+        padding: var(--space-md);
+    }
+    
+    .testimonial-client {
+        flex-direction: column;
+        text-align: center;
+    }
+    
+    .client-img {
+        margin-right: 0;
+        margin-bottom: var(--space-xs);
+    }
+    
+    .contact-form-container {
+        padding: var(--space-md);
+    }
+}
+
+/* Handle Mobile Navigation Elements */
+@media (min-width: 992px) {
+    .mobile-nav {
+        display: none;
+    }
+}

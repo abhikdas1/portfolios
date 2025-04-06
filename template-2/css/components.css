@@ -1,0 +1,399 @@
+/* Components CSS: Specific UI components styling */
+
+/* Skill card component */
+.skill-card {
+    background-color: var(--surface-color);
+    border-radius: var(--border-radius-lg);
+    padding: var(--spacing-lg);
+    text-align: center;
+    box-shadow: var(--card-shadow);
+    transition: transform var(--transition-fast), box-shadow var(--transition-fast);
+}
+
+.skill-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.15);
+}
+
+.skill-icon {
+    width: 70px;
+    height: 70px;
+    border-radius: var(--border-radius-circle);
+    background-color: var(--primary-color);
+    color: white;
+    font-size: 3rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto var(--spacing-md);
+}
+
+.skill-card h3 {
+    margin-bottom: var(--spacing-sm);
+}
+
+.skill-card p {
+    margin-bottom: 0;
+    color: var(--text-tertiary);
+}
+
+/* Skill progress bar */
+.skill-item {
+    margin-bottom: var(--spacing-md);
+}
+
+.skill-info {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: var(--spacing-xs);
+}
+
+.skill-info h4 {
+    font-size: 1.6rem;
+    margin-bottom: 0;
+}
+
+.skill-info span {
+    color: var(--primary-color);
+    font-weight: 600;
+}
+
+.skill-bar {
+    width: 100%;
+    height: 10px;
+    background-color: var(--surface-color);
+    border-radius: var(--border-radius-sm);
+    overflow: hidden;
+}
+
+.skill-progress {
+    height: 100%;
+    background: linear-gradient(to right, var(--primary-color), var(--secondary-color));
+    border-radius: var(--border-radius-sm);
+}
+
+/* Filter button component */
+.filter-btn {
+    padding: 1rem 2rem;
+    background-color: var(--surface-color);
+    border: none;
+    border-radius: var(--border-radius-md);
+    font-size: 1.4rem;
+    cursor: pointer;
+    transition: all var(--transition-fast);
+    font-weight: 500;
+    color: var(--text-secondary);
+}
+
+.filter-btn:hover, .filter-btn.active {
+    background-color: var(--primary-color);
+    color: white;
+    box-shadow: 0 5px 15px rgba(108, 99, 255, 0.3);
+}
+
+/* Project card component */
+.project-card {
+    background-color: var(--surface-color);
+    border-radius: var(--border-radius-lg);
+    overflow: hidden;
+    box-shadow: var(--card-shadow);
+    transition: transform var(--transition-fast), box-shadow var(--transition-fast);
+}
+
+.project-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.15);
+}
+
+.project-img {
+    height: 240px;
+    position: relative;
+}
+
+.project-img img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.project-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.7);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    opacity: 0;
+    transition: opacity var(--transition-fast);
+}
+
+.project-card:hover .project-overlay {
+    opacity: 1;
+}
+
+.project-links {
+    display: flex;
+    gap: var(--spacing-sm);
+}
+
+.project-links a {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 50px;
+    height: 50px;
+    border-radius: var(--border-radius-circle);
+    background-color: var(--primary-color);
+    color: white;
+    font-size: 2rem;
+    transition: all var(--transition-fast);
+}
+
+.project-links a:hover {
+    background-color: white;
+    color: var(--primary-color);
+}
+
+.project-info {
+    padding: var(--spacing-md);
+}
+
+.project-category {
+    color: var(--primary-color);
+    font-size: 1.4rem;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    margin-bottom: var(--spacing-xs);
+    font-weight: 600;
+}
+
+.project-title {
+    margin-bottom: var(--spacing-xs);
+}
+
+.project-description {
+    margin-bottom: var(--spacing-sm);
+    color: var(--text-secondary);
+}
+
+.project-tech {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+}
+
+.project-tech span {
+    padding: 4px 12px;
+    background-color: var(--background-color);
+    border-radius: var(--border-radius-sm);
+    font-size: 1.2rem;
+    color: var(--text-tertiary);
+}
+
+/* Timeline components */
+.timeline-period {
+    display: inline-block;
+    background-color: var(--primary-color);
+    color: white;
+    padding: 5px 15px;
+    border-radius: var(--border-radius-sm);
+    font-size: 1.4rem;
+    margin-bottom: var(--spacing-sm);
+    font-weight: 500;
+}
+
+.timeline-title {
+    margin-bottom: 5px;
+}
+
+.timeline-subtitle {
+    color: var(--text-tertiary);
+    font-size: 1.6rem;
+    margin-bottom: var(--spacing-sm);
+    font-weight: 500;
+}
+
+.timeline-description {
+    margin-bottom: var(--spacing-sm);
+}
+
+.timeline-list {
+    list-style: disc;
+    padding-left: 2rem;
+    margin-bottom: 0;
+}
+
+.timeline-list li {
+    margin-bottom: 5px;
+    color: var(--text-secondary);
+}
+
+/* Testimonial card component */
+.testimonial-card {
+    background-color: var(--surface-color);
+    border-radius: var(--border-radius-lg);
+    padding: var(--spacing-lg);
+    position: relative;
+    box-shadow: var(--card-shadow);
+    transition: transform var(--transition-fast);
+}
+
+.testimonial-card:hover {
+    transform: translateY(-10px);
+}
+
+.testimonial-quote {
+    font-size: 4rem;
+    color: var(--primary-color);
+    opacity: 0.3;
+    position: absolute;
+    top: 20px;
+    left: 20px;
+}
+
+.testimonial-text {
+    font-style: italic;
+    margin-bottom: var(--spacing-lg);
+    padding-top: var(--spacing-md);
+}
+
+.testimonial-author {
+    display: flex;
+    align-items: center;
+    gap: var(--spacing-sm);
+}
+
+.testimonial-avatar {
+    width: 60px;
+    height: 60px;
+    border-radius: var(--border-radius-circle);
+    overflow: hidden;
+    border: 3px solid var(--primary-color);
+}
+
+.testimonial-info h4 {
+    margin-bottom: 0;
+    font-size: 1.8rem;
+}
+
+.testimonial-info p {
+    margin-bottom: 0;
+    color: var(--text-tertiary);
+}
+
+.testimonial-prev,
+.testimonial-next {
+    width: 40px;
+    height: 40px;
+    border-radius: var(--border-radius-circle);
+    background-color: var(--surface-color);
+    color: var(--text-primary);
+    border: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition: all var(--transition-fast);
+    box-shadow: var(--card-shadow);
+}
+
+.testimonial-prev:hover,
+.testimonial-next:hover {
+    background-color: var(--primary-color);
+    color: white;
+}
+
+.testimonial-dots {
+    display: flex;
+    gap: 10px;
+}
+
+.dot {
+    width: 10px;
+    height: 10px;
+    border-radius: var(--border-radius-circle);
+    background-color: var(--border-color);
+    cursor: pointer;
+    transition: background-color var(--transition-fast);
+}
+
+.dot.active {
+    background-color: var(--primary-color);
+}
+
+/* Contact card component */
+.contact-card {
+    background-color: var(--surface-color);
+    border-radius: var(--border-radius-lg);
+    padding: var(--spacing-lg);
+    text-align: center;
+    box-shadow: var(--card-shadow);
+    transition: transform var(--transition-fast);
+}
+
+.contact-card:hover {
+    transform: translateY(-10px);
+}
+
+.contact-icon {
+    width: 70px;
+    height: 70px;
+    border-radius: var(--border-radius-circle);
+    background-color: var(--primary-color);
+    color: white;
+    font-size: 2.4rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto var(--spacing-md);
+}
+
+.contact-card h3 {
+    margin-bottom: var(--spacing-sm);
+}
+
+.contact-card p {
+    margin-bottom: 0;
+}
+
+/* Contact form component */
+.contact-form-container {
+    background-color: var(--surface-color);
+    border-radius: var(--border-radius-lg);
+    padding: var(--spacing-lg);
+    box-shadow: var(--card-shadow);
+}
+
+.form-group {
+    margin-bottom: var(--spacing-md);
+}
+
+.form-group input,
+.form-group textarea {
+    width: 100%;
+    padding: 1.5rem;
+    border: 1px solid var(--border-color);
+    border-radius: var(--border-radius-md);
+    background-color: var(--background-color);
+    color: var(--text-primary);
+    font-size: 1.6rem;
+    transition: border-color var(--transition-fast), box-shadow var(--transition-fast);
+}
+
+.form-group input:focus,
+.form-group textarea:focus {
+    border-color: var(--primary-color);
+    box-shadow: 0 0 0 3px rgba(108, 99, 255, 0.2);
+}
+
+.form-group textarea {
+    min-height: 150px;
+    resize: vertical;
+}
+
+.form-group .btn {
+    width: 100%;
+}

@@ -1,0 +1,222 @@
+/* Base CSS: Variables, resets, and typography */
+
+/* CSS Variables */
+:root {
+    /* Windows Colors */
+    --win-bg: #f0f0f0;
+    --win-primary: #0078d7;
+    --win-primary-hover: #006cc1;
+    --win-primary-active: #005ba1;
+    --win-accent: #0078d7;
+    --win-text: #000000;
+    --win-text-secondary: #6e6e6e;
+    --win-light: #ffffff;
+    --win-dark: #333333;
+    --win-border: #d1d1d1;
+    --win-window-bg: #ffffff;
+    --win-taskbar: #f0f0f0;
+    --win-menu-bg: #ffffff;
+    --win-btn-hover: #e5f1fb;
+    --win-btn-active: #cce4f7;
+    --win-disabled: #cccccc;
+    --win-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    --win-window-shadow: 0 4px 15px rgba(0, 0, 0, 0.15);
+    --win-menu-shadow: 0 5px 25px rgba(0, 0, 0, 0.18);
+    
+    /* Spacing */
+    --space-xxxs: 0.25rem;   /* 4px */
+    --space-xxs: 0.5rem;     /* 8px */
+    --space-xs: 0.75rem;     /* 12px */
+    --space-sm: 1rem;        /* 16px */
+    --space-md: 1.5rem;      /* 24px */
+    --space-lg: 2rem;        /* 32px */
+    --space-xl: 2.5rem;      /* 40px */
+    --space-xxl: 3rem;       /* 48px */
+    
+    /* Typography */
+    --font-primary: 'Segoe UI', sans-serif;
+    --font-size-xs: 0.75rem;      /* 12px */
+    --font-size-sm: 0.875rem;     /* 14px */
+    --font-size-md: 1rem;         /* 16px */
+    --font-size-lg: 1.125rem;     /* 18px */
+    --font-size-xl: 1.25rem;      /* 20px */
+    --font-size-xxl: 1.5rem;      /* 24px */
+    --font-size-xxxl: 2rem;       /* 32px */
+    --font-size-display: 2.5rem;  /* 40px */
+    
+    /* Border Radius */
+    --radius-sm: 4px;
+    --radius-md: 8px;
+    --radius-lg: 12px;
+    --radius-full: 1000px;
+    
+    /* Animation Speed */
+    --transition-fast: 150ms;
+    --transition-normal: 300ms;
+    --transition-slow: 500ms;
+    
+    /* Z-index levels */
+    --z-desktop: 1;
+    --z-window: 10;
+    --z-taskbar: 100;
+    --z-menu: 200;
+    --z-notification: 300;
+}
+
+/* Box sizing */
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+/* HTML & Body */
+html {
+    font-size: 16px;
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: var(--font-primary);
+    font-size: var(--font-size-md);
+    line-height: 1.5;
+    color: var(--win-text);
+    background-color: var(--win-bg);
+    overflow: hidden;
+    height: 100vh;
+    width: 100vw;
+    position: relative;
+}
+
+/* Typography */
+h1, h2, h3, h4, h5, h6 {
+    font-weight: 600;
+    line-height: 1.2;
+    margin-top: 0;
+    margin-bottom: var(--space-xs);
+    color: var(--win-text);
+}
+
+h1 {
+    font-size: var(--font-size-display);
+    font-weight: 700;
+}
+
+h2 {
+    font-size: var(--font-size-xxxl);
+}
+
+h3 {
+    font-size: var(--font-size-xxl);
+}
+
+h4 {
+    font-size: var(--font-size-xl);
+}
+
+h5 {
+    font-size: var(--font-size-lg);
+}
+
+h6 {
+    font-size: var(--font-size-md);
+}
+
+p {
+    margin-top: 0;
+    margin-bottom: var(--space-sm);
+}
+
+.lead-text {
+    font-size: var(--font-size-lg);
+    font-weight: 500;
+    margin-bottom: var(--space-md);
+}
+
+/* Links */
+a {
+    color: var(--win-primary);
+    text-decoration: none;
+    transition: color var(--transition-normal);
+}
+
+a:hover {
+    color: var(--win-primary-hover);
+    text-decoration: underline;
+}
+
+/* Lists */
+ul, ol {
+    margin-top: 0;
+    margin-bottom: var(--space-sm);
+    padding-left: var(--space-lg);
+}
+
+li {
+    margin-bottom: var(--space-xxs);
+}
+
+/* Buttons */
+button {
+    font-family: var(--font-primary);
+    font-size: var(--font-size-md);
+    cursor: pointer;
+    border: none;
+    background: none;
+}
+
+/* Forms */
+input, textarea, select {
+    font-family: var(--font-primary);
+    font-size: var(--font-size-md);
+}
+
+/* Images */
+img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+}
+
+/* Focus Styles */
+:focus {
+    outline: 2px solid var(--win-primary);
+    outline-offset: 2px;
+}
+
+/* Selection */
+::selection {
+    background-color: var(--win-primary);
+    color: var(--win-light);
+}
+
+/* Helper Classes */
+.text-center {
+    text-align: center;
+}
+
+.text-right {
+    text-align: right;
+}
+
+.text-accent {
+    color: var(--win-primary);
+}
+
+.hidden {
+    display: none !important;
+}
+
+.sr-only {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    white-space: nowrap;
+    border-width: 0;
+}

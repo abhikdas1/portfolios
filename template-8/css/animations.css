@@ -1,0 +1,172 @@
+/* Animations CSS: Terminal-specific animations */
+
+/* Typing animation */
+@keyframes typing {
+    from { width: 0 }
+    to { width: 100% }
+}
+
+.typing {
+    overflow: hidden;
+    white-space: nowrap;
+    animation: 
+        typing 3.5s steps(40, end);
+}
+
+/* Blinking cursor animation */
+@keyframes blink {
+    0%, 100% { opacity: 1; }
+    50% { opacity: 0; }
+}
+
+/* Fade in animation */
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+/* Terminal boot animation */
+@keyframes terminalBoot {
+    0% { opacity: 0; }
+    20% { opacity: 0; }
+    30% { opacity: 1; }
+    40% { opacity: 0.8; }
+    50% { opacity: 1; }
+    60% { opacity: 0.5; }
+    70% { opacity: 1; }
+    100% { opacity: 1; }
+}
+
+.terminal-container {
+    animation: terminalBoot 2s ease-out;
+}
+
+/* Glitch animation */
+@keyframes glitch {
+    0% {
+        text-shadow: 
+            0.05em 0 0 var(--terminal-error),
+            -0.05em -0.025em 0 var(--terminal-highlight),
+            -0.025em 0.05em 0 var(--terminal-info);
+    }
+    15% {
+        text-shadow: 
+            -0.05em -0.025em 0 var(--terminal-error),
+            0.025em 0.025em 0 var(--terminal-highlight),
+            -0.05em -0.05em 0 var(--terminal-info);
+    }
+    30% {
+        text-shadow: 
+            0.025em 0.05em 0 var(--terminal-error),
+            0.05em 0 0 var(--terminal-highlight),
+            0 -0.05em 0 var(--terminal-info);
+    }
+    45% {
+        text-shadow: 
+            -0.025em 0 0 var(--terminal-error),
+            -0.025em -0.025em 0 var(--terminal-highlight),
+            -0.025em -0.05em 0 var(--terminal-info);
+    }
+    60% {
+        text-shadow: 
+            -0.025em 0.025em 0 var(--terminal-error),
+            -0.025em -0.025em 0 var(--terminal-highlight),
+            -0.025em -0.05em 0 var(--terminal-info);
+    }
+    75% {
+        text-shadow: 
+            0.025em 0.05em 0 var(--terminal-error),
+            0.05em 0 0 var(--terminal-highlight),
+            0 -0.05em 0 var(--terminal-info);
+    }
+    100% {
+        text-shadow: 
+            0.05em 0 0 var(--terminal-error),
+            -0.05em -0.025em 0 var(--terminal-highlight),
+            -0.025em 0.05em 0 var(--terminal-info);
+    }
+}
+
+.glitch {
+    animation: glitch 1s linear infinite;
+}
+
+/* Scan lines effect */
+.terminal-container::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(
+        to bottom,
+        transparent 0%,
+        rgba(0, 255, 0, 0.05) 50%,
+        transparent 100%
+    );
+    background-size: 100% 4px;
+    pointer-events: none;
+    z-index: var(--z-overlay);
+}
+
+/* Old TV flickering effect */
+@keyframes flicker {
+    0% { opacity: 0.9; }
+    5% { opacity: 1; }
+    10% { opacity: 0.9; }
+    15% { opacity: 1; }
+    20% { opacity: 0.9; }
+    25% { opacity: 1; }
+    30% { opacity: 0.9; }
+    35% { opacity: 1; }
+    40% { opacity: 0.9; }
+    45% { opacity: 1; }
+    50% { opacity: 0.9; }
+    55% { opacity: 1; }
+    60% { opacity: 0.9; }
+    65% { opacity: 1; }
+    70% { opacity: 0.9; }
+    75% { opacity: 1; }
+    80% { opacity: 0.9; }
+    85% { opacity: 1; }
+    90% { opacity: 0.9; }
+    95% { opacity: 1; }
+    100% { opacity: 0.9; }
+}
+
+.terminal-container::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 255, 0, 0.03);
+    animation: flicker 5s infinite;
+    pointer-events: none;
+    z-index: var(--z-overlay);
+}
+
+/* Command processing animation */
+@keyframes processing {
+    0% { content: "⠋"; }
+    10% { content: "⠙"; }
+    20% { content: "⠹"; }
+    30% { content: "⠸"; }
+    40% { content: "⠼"; }
+    50% { content: "⠴"; }
+    60% { content: "⠦"; }
+    70% { content: "⠧"; }
+    80% { content: "⠇"; }
+    90% { content: "⠏"; }
+    100% { content: "⠋"; }
+}
+
+.processing::after {
+    content: "⠋";
+    display: inline-block;
+    margin-left: 10px;
+    animation: processing 1s infinite steps(10);
+    color: var(--terminal-highlight);
+}

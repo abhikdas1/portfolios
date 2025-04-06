@@ -1,0 +1,790 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Your Name - Cyberpunk Portfolio | ProfileCraft</title>
+    <meta name="description" content="Futuristic cyberpunk portfolio with high-tech aesthetics and neon elements">
+    
+    <!-- CSS Links -->
+    <link rel="stylesheet" href="css/base.css">
+    <link rel="stylesheet" href="css/layout.css">
+    <link rel="stylesheet" href="css/components.css">
+    <link rel="stylesheet" href="css/responsive.css">
+    <link rel="stylesheet" href="css/cyberpunk.css">
+    <link rel="stylesheet" href="css/style.css">
+    
+    <!-- Font Awesome for icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;500;600;700;800;900&family=Chakra+Petch:wght@300;400;500;600;700&family=Rajdhani:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body class="cyberpunk-theme">
+    <!-- Cyberpunk Elements -->
+    <div class="noise-overlay"></div>
+    <div class="scanline"></div>
+    <div class="cyber-particles"></div>
+
+    <!-- System Status Bar -->
+    <div class="system-status">
+        <div class="status-item" id="system-time">00:00:00</div>
+        <div class="status-divider">|</div>
+        <div class="status-item" id="system-date">SYS.DATE_UNDEFINED</div>
+        <div class="status-divider">|</div>
+        <div class="status-item" id="system-status">SYS.ONLINE</div>
+        <div class="status-divider">|</div>
+        <div class="status-item">
+            <select id="theme-selector">
+                <option value="neon-blue">NEON_BLUE</option>
+                <option value="neon-pink">NEON_PINK</option>
+                <option value="neon-green">NEON_GREEN</option>
+                <option value="neon-gold">NEON_GOLD</option>
+            </select>
+        </div>
+    </div>
+
+    <!-- Main Navigation -->
+    <nav class="cyber-nav">
+        <div class="cyber-nav-inner">
+            <div class="cyber-logo glitch" data-text="CYBER•CRAFT">CYBER•CRAFT</div>
+            <button class="cyber-nav-toggle">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+            <ul class="cyber-nav-links">
+                <li><a href="#home" class="active" data-text="[HOME]">[HOME]</a></li>
+                <li><a href="#about" data-text="[ABOUT]">[ABOUT]</a></li>
+                <li><a href="#skills" data-text="[SKILLS]">[SKILLS]</a></li>
+                <li><a href="#projects" data-text="[PROJECTS]">[PROJECTS]</a></li>
+                <li><a href="#experience" data-text="[EXPERIENCE]">[EXPERIENCE]</a></li>
+                <li><a href="#contact" data-text="[CONTACT]">[CONTACT]</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="home" class="cyber-section cyber-hero">
+        <div class="container">
+            <div class="cyber-grid">
+                <div class="cyber-hero-content">
+                    <div class="cyber-tag">// SYSTEM.BOOT_SEQUENCE.INITIATED</div>
+                    <h1 class="cyber-glitch-title" data-text="[YOUR_NAME]">[YOUR_NAME]</h1>
+                    <h2 class="cyber-subtitle">[<span class="cyber-typewriter" data-words="WEB DEVELOPER, UI/UX DESIGNER, DIGITAL ARTIST, TECH INNOVATOR"></span>]</h2>
+                    <p class="cyber-description">Welcome to my digital portfolio. Navigate through the system to discover my projects, skills, and experiences in the digital realm.</p>
+                    <div class="cyber-buttons">
+                        <a href="#projects" class="cyber-btn">
+                            <span></span>
+                            <span></span>
+                            <span></span>
+                            <span></span>
+                            VIEW_PROJECTS
+                        </a>
+                        <a href="#contact" class="cyber-btn cyber-btn-outline">
+                            <span></span>
+                            <span></span>
+                            <span></span>
+                            <span></span>
+                            ESTABLISH_CONNECTION
+                        </a>
+                    </div>
+                </div>
+                <div class="cyber-hero-image">
+                    <div class="cyber-avatar">
+                        <img src="assets/profile-placeholder.jpg" alt="Your Name">
+                        <div class="cyber-avatar-glitch"></div>
+                        <div class="cyber-avatar-scan"></div>
+                    </div>
+                    <div class="cyber-circuits"></div>
+                </div>
+            </div>
+            <div class="cyber-scroll-indicator">
+                <span>SCROLL_DOWN</span>
+                <i class="fas fa-angle-down"></i>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="cyber-section cyber-about">
+        <div class="container">
+            <div class="section-header">
+                <div class="cyber-tag">// SYSTEM.USER_DATA</div>
+                <h2 class="cyber-section-title" data-text="ABOUT_SYSTEM">ABOUT_SYSTEM</h2>
+                <div class="cyber-separator"></div>
+            </div>
+            
+            <div class="cyber-grid">
+                <div class="cyber-about-data">
+                    <div class="cyber-terminal">
+                        <div class="terminal-header">
+                            <span>SYSTEM.BIO</span>
+                            <div class="terminal-buttons">
+                                <span></span>
+                                <span></span>
+                                <span></span>
+                            </div>
+                        </div>
+                        <div class="terminal-body">
+                            <div class="terminal-line">$ <span class="terminal-command">user.get_info</span></div>
+                            <p>I am a passionate digital creator with expertise in designing and developing futuristic web experiences. With a background in computer science and a love for cyberpunk aesthetics, I combine technical precision with creative vision.</p>
+                            <p>My mission is to create digital experiences that push boundaries and explore the intersection of technology and art.</p>
+                            <div class="terminal-line">$ <span class="terminal-command">user.get_stats</span></div>
+                            <div class="cyber-stats">
+                                <div class="cyber-stat">
+                                    <div class="stat-value" data-count="5">0</div>
+                                    <div class="stat-label">YRS_EXPERIENCE</div>
+                                </div>
+                                <div class="cyber-stat">
+                                    <div class="stat-value" data-count="50">0</div>
+                                    <div class="stat-label">PROJECTS</div>
+                                </div>
+                                <div class="cyber-stat">
+                                    <div class="stat-value" data-count="30">0</div>
+                                    <div class="stat-label">CLIENTS</div>
+                                </div>
+                                <div class="cyber-stat">
+                                    <div class="stat-value" data-count="15">0</div>
+                                    <div class="stat-label">AWARDS</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <a href="#" class="cyber-btn cyber-btn-sm">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                        DOWNLOAD_CV.exe
+                    </a>
+                </div>
+                <div class="cyber-about-details">
+                    <div class="cyber-card">
+                        <div class="cyber-card-header">
+                            <h3>SYSTEM_DETAILS</h3>
+                            <div class="cyber-card-icon">
+                                <i class="fas fa-microchip"></i>
+                            </div>
+                        </div>
+                        <div class="cyber-card-content">
+                            <div class="cyber-detail-item">
+                                <div class="detail-label">NAME:</div>
+                                <div class="detail-value">Your Name</div>
+                            </div>
+                            <div class="cyber-detail-item">
+                                <div class="detail-label">EMAIL:</div>
+                                <div class="detail-value">your.email@example.com</div>
+                            </div>
+                            <div class="cyber-detail-item">
+                                <div class="detail-label">LOCATION:</div>
+                                <div class="detail-value">City, Country</div>
+                            </div>
+                            <div class="cyber-detail-item">
+                                <div class="detail-label">SYSTEM_STATUS:</div>
+                                <div class="detail-value">AVAILABLE FOR HIRE</div>
+                            </div>
+                            <div class="cyber-detail-item">
+                                <div class="detail-label">NET_LINKS:</div>
+                                <div class="detail-value cyber-social-links">
+                                    <a href="#" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+                                    <a href="#" aria-label="GitHub"><i class="fab fa-github"></i></a>
+                                    <a href="#" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+                                    <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Skills Section -->
+    <section id="skills" class="cyber-section cyber-skills">
+        <div class="container">
+            <div class="section-header">
+                <div class="cyber-tag">// SYSTEM.CAPABILITIES</div>
+                <h2 class="cyber-section-title" data-text="TECH_SKILLS">TECH_SKILLS</h2>
+                <div class="cyber-separator"></div>
+            </div>
+            
+            <div class="cyber-skill-grid">
+                <div class="cyber-skill-category">
+                    <h3 class="cyber-category-title">FRONTEND</h3>
+                    <div class="cyber-skills-list">
+                        <div class="cyber-skill">
+                            <div class="skill-info">
+                                <div class="skill-name">HTML5/CSS3</div>
+                                <div class="skill-percent">95%</div>
+                            </div>
+                            <div class="cyber-progress">
+                                <div class="cyber-progress-bar" style="width: 95%"></div>
+                            </div>
+                        </div>
+                        <div class="cyber-skill">
+                            <div class="skill-info">
+                                <div class="skill-name">JavaScript</div>
+                                <div class="skill-percent">90%</div>
+                            </div>
+                            <div class="cyber-progress">
+                                <div class="cyber-progress-bar" style="width: 90%"></div>
+                            </div>
+                        </div>
+                        <div class="cyber-skill">
+                            <div class="skill-info">
+                                <div class="skill-name">React.js</div>
+                                <div class="skill-percent">85%</div>
+                            </div>
+                            <div class="cyber-progress">
+                                <div class="cyber-progress-bar" style="width: 85%"></div>
+                            </div>
+                        </div>
+                        <div class="cyber-skill">
+                            <div class="skill-info">
+                                <div class="skill-name">Vue.js</div>
+                                <div class="skill-percent">80%</div>
+                            </div>
+                            <div class="cyber-progress">
+                                <div class="cyber-progress-bar" style="width: 80%"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="cyber-skill-category">
+                    <h3 class="cyber-category-title">BACKEND</h3>
+                    <div class="cyber-skills-list">
+                        <div class="cyber-skill">
+                            <div class="skill-info">
+                                <div class="skill-name">Node.js</div>
+                                <div class="skill-percent">85%</div>
+                            </div>
+                            <div class="cyber-progress">
+                                <div class="cyber-progress-bar" style="width: 85%"></div>
+                            </div>
+                        </div>
+                        <div class="cyber-skill">
+                            <div class="skill-info">
+                                <div class="skill-name">Express</div>
+                                <div class="skill-percent">80%</div>
+                            </div>
+                            <div class="cyber-progress">
+                                <div class="cyber-progress-bar" style="width: 80%"></div>
+                            </div>
+                        </div>
+                        <div class="cyber-skill">
+                            <div class="skill-info">
+                                <div class="skill-name">MongoDB</div>
+                                <div class="skill-percent">75%</div>
+                            </div>
+                            <div class="cyber-progress">
+                                <div class="cyber-progress-bar" style="width: 75%"></div>
+                            </div>
+                        </div>
+                        <div class="cyber-skill">
+                            <div class="skill-info">
+                                <div class="skill-name">Firebase</div>
+                                <div class="skill-percent">85%</div>
+                            </div>
+                            <div class="cyber-progress">
+                                <div class="cyber-progress-bar" style="width: 85%"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="cyber-tech-cards">
+                    <div class="cyber-tech-card">
+                        <div class="tech-icon">
+                            <i class="fas fa-paint-brush"></i>
+                        </div>
+                        <h4>DESIGN</h4>
+                        <ul class="tech-list">
+                            <li>Figma</li>
+                            <li>Adobe XD</li>
+                            <li>Photoshop</li>
+                            <li>Illustrator</li>
+                        </ul>
+                    </div>
+                    <div class="cyber-tech-card">
+                        <div class="tech-icon">
+                            <i class="fas fa-mobile-alt"></i>
+                        </div>
+                        <h4>MOBILE</h4>
+                        <ul class="tech-list">
+                            <li>React Native</li>
+                            <li>Flutter</li>
+                            <li>iOS</li>
+                            <li>Android</li>
+                        </ul>
+                    </div>
+                    <div class="cyber-tech-card">
+                        <div class="tech-icon">
+                            <i class="fas fa-tools"></i>
+                        </div>
+                        <h4>TOOLS</h4>
+                        <ul class="tech-list">
+                            <li>Git/GitHub</li>
+                            <li>VS Code</li>
+                            <li>Docker</li>
+                            <li>CI/CD</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section id="projects" class="cyber-section cyber-projects">
+        <div class="container">
+            <div class="section-header">
+                <div class="cyber-tag">// SYSTEM.OPERATIONS</div>
+                <h2 class="cyber-section-title" data-text="PROJECTS">PROJECTS</h2>
+                <div class="cyber-separator"></div>
+            </div>
+            
+            <div class="cyber-project-filter">
+                <button class="cyber-filter-btn active" data-filter="all">ALL</button>
+                <button class="cyber-filter-btn" data-filter="web">WEB_DEV</button>
+                <button class="cyber-filter-btn" data-filter="app">APP_DEV</button>
+                <button class="cyber-filter-btn" data-filter="design">UI_DESIGN</button>
+            </div>
+            
+            <div class="cyber-projects-grid">
+                <div class="cyber-project" data-category="web">
+                    <div class="project-image">
+                        <img src="assets/project-1.jpg" alt="Project 1">
+                        <div class="project-overlay">
+                            <div class="project-links">
+                                <a href="#" class="project-link" aria-label="View project"><i class="fas fa-eye"></i></a>
+                                <a href="#" class="project-link" aria-label="View code"><i class="fab fa-github"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="project-info">
+                        <div class="project-header">
+                            <h3 class="project-title">CYBER DASHBOARD</h3>
+                            <div class="project-category">WEB_DEV</div>
+                        </div>
+                        <p class="project-desc">A futuristic admin dashboard with cyberpunk aesthetics and advanced data visualization.</p>
+                        <div class="project-tech">
+                            <span>React</span>
+                            <span>Node.js</span>
+                            <span>D3.js</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="cyber-project" data-category="app">
+                    <div class="project-image">
+                        <img src="assets/project-2.jpg" alt="Project 2">
+                        <div class="project-overlay">
+                            <div class="project-links">
+                                <a href="#" class="project-link" aria-label="View project"><i class="fas fa-eye"></i></a>
+                                <a href="#" class="project-link" aria-label="View code"><i class="fab fa-github"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="project-info">
+                        <div class="project-header">
+                            <h3 class="project-title">NEON MESSENGER</h3>
+                            <div class="project-category">APP_DEV</div>
+                        </div>
+                        <p class="project-desc">A secure messaging application with a cyberpunk interface and encryption features.</p>
+                        <div class="project-tech">
+                            <span>React Native</span>
+                            <span>Firebase</span>
+                            <span>Redux</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="cyber-project" data-category="design">
+                    <div class="project-image">
+                        <img src="assets/project-3.jpg" alt="Project 3">
+                        <div class="project-overlay">
+                            <div class="project-links">
+                                <a href="#" class="project-link" aria-label="View project"><i class="fas fa-eye"></i></a>
+                                <a href="#" class="project-link" aria-label="View code"><i class="fab fa-github"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="project-info">
+                        <div class="project-header">
+                            <h3 class="project-title">GLITCH UI KIT</h3>
+                            <div class="project-category">UI_DESIGN</div>
+                        </div>
+                        <p class="project-desc">A comprehensive UI kit featuring cyberpunk-themed components, glitch effects, and neon elements.</p>
+                        <div class="project-tech">
+                            <span>Figma</span>
+                            <span>Adobe XD</span>
+                            <span>Photoshop</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="cyber-project" data-category="web">
+                    <div class="project-image">
+                        <img src="assets/project-4.jpg" alt="Project 4">
+                        <div class="project-overlay">
+                            <div class="project-links">
+                                <a href="#" class="project-link" aria-label="View project"><i class="fas fa-eye"></i></a>
+                                <a href="#" class="project-link" aria-label="View code"><i class="fab fa-github"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="project-info">
+                        <div class="project-header">
+                            <h3 class="project-title">DIGITAL MARKETPLACE</h3>
+                            <div class="project-category">WEB_DEV</div>
+                        </div>
+                        <p class="project-desc">A high-tech digital marketplace for trading virtual assets with blockchain integration.</p>
+                        <div class="project-tech">
+                            <span>Vue.js</span>
+                            <span>Ethereum</span>
+                            <span>Web3.js</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="cyber-project" data-category="app">
+                    <div class="project-image">
+                        <img src="assets/project-5.jpg" alt="Project 5">
+                        <div class="project-overlay">
+                            <div class="project-links">
+                                <a href="#" class="project-link" aria-label="View project"><i class="fas fa-eye"></i></a>
+                                <a href="#" class="project-link" aria-label="View code"><i class="fab fa-github"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="project-info">
+                        <div class="project-header">
+                            <h3 class="project-title">AR NAVIGATOR</h3>
+                            <div class="project-category">APP_DEV</div>
+                        </div>
+                        <p class="project-desc">An augmented reality navigation app with cyberpunk visual elements and real-time data overlay.</p>
+                        <div class="project-tech">
+                            <span>Flutter</span>
+                            <span>ARCore</span>
+                            <span>MapBox</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="cyber-project" data-category="design">
+                    <div class="project-image">
+                        <img src="assets/project-6.jpg" alt="Project 6">
+                        <div class="project-overlay">
+                            <div class="project-links">
+                                <a href="#" class="project-link" aria-label="View project"><i class="fas fa-eye"></i></a>
+                                <a href="#" class="project-link" aria-label="View code"><i class="fab fa-github"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="project-info">
+                        <div class="project-header">
+                            <h3 class="project-title">TECH MUSIC APP</h3>
+                            <div class="project-category">UI_DESIGN</div>
+                        </div>
+                        <p class="project-desc">A music streaming application design with futuristic interfaces and reactive audio visualizations.</p>
+                        <div class="project-tech">
+                            <span>Figma</span>
+                            <span>After Effects</span>
+                            <span>Principle</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Experience Section -->
+    <section id="experience" class="cyber-section cyber-experience">
+        <div class="container">
+            <div class="section-header">
+                <div class="cyber-tag">// SYSTEM.TIMELINE</div>
+                <h2 class="cyber-section-title" data-text="EXPERIENCE">EXPERIENCE</h2>
+                <div class="cyber-separator"></div>
+            </div>
+            
+            <div class="cyber-tabs">
+                <div class="cyber-tab-buttons">
+                    <button class="cyber-tab-btn active" data-tab="work">WORK_HISTORY</button>
+                    <button class="cyber-tab-btn" data-tab="education">EDUCATION</button>
+                </div>
+                
+                <div class="cyber-tab-content">
+                    <div class="cyber-tab-pane active" id="work-pane">
+                        <div class="cyber-timeline">
+                            <div class="cyber-timeline-item">
+                                <div class="timeline-date">2022 - PRESENT</div>
+                                <div class="timeline-content">
+                                    <div class="timeline-position">SENIOR DEVELOPER</div>
+                                    <div class="timeline-company">TECH INNOVATIONS INC</div>
+                                    <div class="timeline-desc">
+                                        <p>Leading the development of cutting-edge web applications with focus on performance and user experience.</p>
+                                        <ul class="timeline-achievements">
+                                            <li>Designed and implemented an AI-driven recommendation system</li>
+                                            <li>Optimized application performance by 40%</li>
+                                            <li>Led a team of 5 developers on multiple projects</li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <div class="cyber-timeline-item">
+                                <div class="timeline-date">2020 - 2022</div>
+                                <div class="timeline-content">
+                                    <div class="timeline-position">FRONTEND DEVELOPER</div>
+                                    <div class="timeline-company">DIGITAL SOLUTIONS CO</div>
+                                    <div class="timeline-desc">
+                                        <p>Developed responsive and interactive web interfaces for various clients in the tech industry.</p>
+                                        <ul class="timeline-achievements">
+                                            <li>Created a component library that increased development speed by 30%</li>
+                                            <li>Implemented complex animations and transitions</li>
+                                            <li>Collaborated with designers to translate mockups into functional interfaces</li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <div class="cyber-timeline-item">
+                                <div class="timeline-date">2018 - 2020</div>
+                                <div class="timeline-content">
+                                    <div class="timeline-position">UI/UX DESIGNER</div>
+                                    <div class="timeline-company">CREATIVE TECH LAB</div>
+                                    <div class="timeline-desc">
+                                        <p>Designed user interfaces and experiences for web and mobile applications with a focus on usability and aesthetics.</p>
+                                        <ul class="timeline-achievements">
+                                            <li>Redesigned the company's flagship product, increasing user engagement by 25%</li>
+                                            <li>Created wireframes, prototypes, and high-fidelity designs</li>
+                                            <li>Conducted user research and usability testing</li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="cyber-tab-pane" id="education-pane">
+                        <div class="cyber-timeline">
+                            <div class="cyber-timeline-item">
+                                <div class="timeline-date">2014 - 2018</div>
+                                <div class="timeline-content">
+                                    <div class="timeline-position">BACHELOR OF COMPUTER SCIENCE</div>
+                                    <div class="timeline-company">TECH UNIVERSITY</div>
+                                    <div class="timeline-desc">
+                                        <p>Studied computer science with a focus on software development, data structures, and algorithms.</p>
+                                        <ul class="timeline-achievements">
+                                            <li>GPA: 3.8/4.0</li>
+                                            <li>Specialization in Web Technologies</li>
+                                            <li>Senior project: AI-driven web application for content recommendation</li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <div class="cyber-timeline-item">
+                                <div class="timeline-date">2020</div>
+                                <div class="timeline-content">
+                                    <div class="timeline-position">ADVANCED WEB DEVELOPMENT</div>
+                                    <div class="timeline-company">TECH ACADEMY</div>
+                                    <div class="timeline-desc">
+                                        <p>Completed an intensive program on modern web development technologies and frameworks.</p>
+                                        <ul class="timeline-achievements">
+                                            <li>Learned React, Node.js, and MongoDB</li>
+                                            <li>Built full-stack web applications</li>
+                                            <li>Collaborated with other developers on real-world projects</li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <div class="cyber-timeline-item">
+                                <div class="timeline-date">2021</div>
+                                <div class="timeline-content">
+                                    <div class="timeline-position">UI/UX DESIGN CERTIFICATION</div>
+                                    <div class="timeline-company">DESIGN INSTITUTE</div>
+                                    <div class="timeline-desc">
+                                        <p>Gained expertise in user interface and experience design principles and methodologies.</p>
+                                        <ul class="timeline-achievements">
+                                            <li>Mastered Figma and Adobe XD</li>
+                                            <li>Studied user research and testing methodologies</li>
+                                            <li>Developed a portfolio of UI/UX design projects</li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="cyber-section cyber-contact">
+        <div class="container">
+            <div class="section-header">
+                <div class="cyber-tag">// SYSTEM.COMMUNICATION</div>
+                <h2 class="cyber-section-title" data-text="CONTACT">CONTACT</h2>
+                <div class="cyber-separator"></div>
+            </div>
+            
+            <div class="cyber-contact-grid">
+                <div class="cyber-contact-info">
+                    <div class="cyber-card">
+                        <div class="cyber-card-header">
+                            <h3>COM_CHANNELS</h3>
+                            <div class="cyber-card-icon">
+                                <i class="fas fa-network-wired"></i>
+                            </div>
+                        </div>
+                        <div class="cyber-card-content">
+                            <div class="cyber-contact-item">
+                                <div class="contact-icon">
+                                    <i class="fas fa-map-marker-alt"></i>
+                                </div>
+                                <div class="contact-details">
+                                    <h4>LOCATION</h4>
+                                    <p>City, Country</p>
+                                </div>
+                            </div>
+                            <div class="cyber-contact-item">
+                                <div class="contact-icon">
+                                    <i class="fas fa-envelope"></i>
+                                </div>
+                                <div class="contact-details">
+                                    <h4>EMAIL</h4>
+                                    <p>your.email@example.com</p>
+                                </div>
+                            </div>
+                            <div class="cyber-contact-item">
+                                <div class="contact-icon">
+                                    <i class="fas fa-phone-alt"></i>
+                                </div>
+                                <div class="contact-details">
+                                    <h4>PHONE</h4>
+                                    <p>(123) 456-7890</p>
+                                </div>
+                            </div>
+                            <div class="cyber-contact-item">
+                                <div class="contact-icon">
+                                    <i class="fas fa-clock"></i>
+                                </div>
+                                <div class="contact-details">
+                                    <h4>AVAILABILITY</h4>
+                                    <p>Mon-Fri: 09:00 - 18:00</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="cyber-social-card">
+                        <h3>NETWORK_NODES</h3>
+                        <div class="cyber-social-grid">
+                            <a href="#" class="cyber-social-btn" aria-label="LinkedIn">
+                                <i class="fab fa-linkedin-in"></i>
+                                <span>LinkedIn</span>
+                            </a>
+                            <a href="#" class="cyber-social-btn" aria-label="GitHub">
+                                <i class="fab fa-github"></i>
+                                <span>GitHub</span>
+                            </a>
+                            <a href="#" class="cyber-social-btn" aria-label="Twitter">
+                                <i class="fab fa-twitter"></i>
+                                <span>Twitter</span>
+                            </a>
+                            <a href="#" class="cyber-social-btn" aria-label="Instagram">
+                                <i class="fab fa-instagram"></i>
+                                <span>Instagram</span>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="cyber-contact-form">
+                    <div class="cyber-terminal contact-terminal">
+                        <div class="terminal-header">
+                            <span>SYSTEM.MESSENGER</span>
+                            <div class="terminal-buttons">
+                                <span></span>
+                                <span></span>
+                                <span></span>
+                            </div>
+                        </div>
+                        <div class="terminal-body">
+                            <div class="terminal-line">$ <span class="terminal-command">init new_message</span></div>
+                            <form id="contact-form" class="cyber-form">
+                                <div class="cyber-form-group">
+                                    <label for="name">NAME:</label>
+                                    <input type="text" id="name" name="name" required>
+                                    <div class="cyber-input-border"></div>
+                                </div>
+                                <div class="cyber-form-group">
+                                    <label for="email">EMAIL:</label>
+                                    <input type="email" id="email" name="email" required>
+                                    <div class="cyber-input-border"></div>
+                                </div>
+                                <div class="cyber-form-group">
+                                    <label for="subject">SUBJECT:</label>
+                                    <input type="text" id="subject" name="subject">
+                                    <div class="cyber-input-border"></div>
+                                </div>
+                                <div class="cyber-form-group">
+                                    <label for="message">MESSAGE:</label>
+                                    <textarea id="message" name="message" required></textarea>
+                                    <div class="cyber-input-border"></div>
+                                </div>
+                                <button type="submit" class="cyber-submit-btn">
+                                    <span></span>
+                                    <span></span>
+                                    <span></span>
+                                    <span></span>
+                                    TRANSMIT_MESSAGE
+                                </button>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="cyber-footer">
+        <div class="container">
+            <div class="cyber-footer-content">
+                <div class="cyber-logo footer-logo glitch" data-text="CYBER•CRAFT">CYBER•CRAFT</div>
+                <div class="footer-nav">
+                    <a href="#home">[HOME]</a>
+                    <a href="#about">[ABOUT]</a>
+                    <a href="#skills">[SKILLS]</a>
+                    <a href="#projects">[PROJECTS]</a>
+                    <a href="#contact">[CONTACT]</a>
+                </div>
+                <div class="cyber-footer-social">
+                    <a href="#" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+                    <a href="#" aria-label="GitHub"><i class="fab fa-github"></i></a>
+                    <a href="#" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+                    <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                </div>
+            </div>
+            <div class="cyber-copy">
+                <div class="copyright">&copy; 2023 CYBERCRAFT | ALL_RIGHTS_RESERVED</div>
+                <div class="cyber-tagline">[ DESIGNED_IN_THE_DIGITAL_FRONTIER ]</div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- JavaScript Files -->
+    <script src="js/generate-assets.js"></script>
+    <script src="js/cyberpunk-effects.js"></script>
+    <script src="js/main.js"></script>
+    <script src="js/form.js"></script>
+</body>
+</html>

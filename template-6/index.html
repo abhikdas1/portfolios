@@ -1,0 +1,798 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Your Name - Windows Portfolio | ProfileCraft</title>
+    <meta name="description" content="Interactive Windows-themed portfolio showcasing professional experience and projects">
+    
+    <!-- CSS Links -->
+    <link rel="stylesheet" href="css/base.css">
+    <link rel="stylesheet" href="css/layout.css">
+    <link rel="stylesheet" href="css/components.css">
+    <link rel="stylesheet" href="css/windows.css">
+    <link rel="stylesheet" href="css/responsive.css">
+    
+    <!-- Font Awesome for icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Segoe+UI:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body class="win-theme">
+    <!-- Desktop Background -->
+    <div class="desktop-bg"></div>
+    
+    <!-- Desktop Icons -->
+    <div class="desktop-icons">
+        <div class="desktop-icon" data-window="about">
+            <div class="icon-img"><i class="fas fa-user"></i></div>
+            <div class="icon-text">About Me</div>
+        </div>
+        <div class="desktop-icon" data-window="projects">
+            <div class="icon-img"><i class="fas fa-briefcase"></i></div>
+            <div class="icon-text">Projects</div>
+        </div>
+        <div class="desktop-icon" data-window="skills">
+            <div class="icon-img"><i class="fas fa-code"></i></div>
+            <div class="icon-text">Skills</div>
+        </div>
+        <div class="desktop-icon" data-window="experience">
+            <div class="icon-img"><i class="fas fa-history"></i></div>
+            <div class="icon-text">Experience</div>
+        </div>
+        <div class="desktop-icon" data-window="education">
+            <div class="icon-img"><i class="fas fa-graduation-cap"></i></div>
+            <div class="icon-text">Education</div>
+        </div>
+        <div class="desktop-icon" data-window="contact">
+            <div class="icon-img"><i class="fas fa-envelope"></i></div>
+            <div class="icon-text">Contact</div>
+        </div>
+        <div class="desktop-icon" data-window="resume">
+            <div class="icon-img"><i class="fas fa-file-alt"></i></div>
+            <div class="icon-text">Resume.pdf</div>
+        </div>
+    </div>
+    
+    <!-- Windows -->
+    <div class="windows-container">
+        <!-- Welcome Window -->
+        <div class="window" id="welcome-window" data-window-id="welcome">
+            <div class="window-header">
+                <div class="window-title">
+                    <i class="fas fa-home window-icon"></i>
+                    <span>Welcome</span>
+                </div>
+                <div class="window-controls">
+                    <button class="window-control minimize"><i class="fas fa-window-minimize"></i></button>
+                    <button class="window-control maximize"><i class="fas fa-window-maximize"></i></button>
+                    <button class="window-control close"><i class="fas fa-times"></i></button>
+                </div>
+            </div>
+            <div class="window-content">
+                <div class="welcome-container">
+                    <div class="welcome-header">
+                        <div class="profile-image">
+                            <img src="assets/profile-placeholder.jpg" alt="Your Name">
+                        </div>
+                        <div class="welcome-text">
+                            <h1>Welcome to <span class="text-accent">Your Name's</span> Portfolio</h1>
+                            <p class="lead-text">Professional <span class="typing-text" data-words="Developer, Designer, Photographer, Creator"></span></p>
+                            <p>Welcome to my Windows-themed interactive portfolio. Click on the desktop icons or use the start menu to navigate through different sections.</p>
+                            <div class="welcome-actions">
+                                <button class="win-btn primary" id="explore-projects">Explore Projects</button>
+                                <button class="win-btn secondary" id="contact-me">Contact Me</button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="quick-stats">
+                        <div class="stat-item">
+                            <div class="stat-icon"><i class="fas fa-code-branch"></i></div>
+                            <div class="stat-number" data-count="50">0</div>
+                            <div class="stat-text">Projects Completed</div>
+                        </div>
+                        <div class="stat-item">
+                            <div class="stat-icon"><i class="fas fa-briefcase"></i></div>
+                            <div class="stat-number" data-count="5">0</div>
+                            <div class="stat-text">Years Experience</div>
+                        </div>
+                        <div class="stat-item">
+                            <div class="stat-icon"><i class="fas fa-smile"></i></div>
+                            <div class="stat-number" data-count="30">0</div>
+                            <div class="stat-text">Happy Clients</div>
+                        </div>
+                        <div class="stat-item">
+                            <div class="stat-icon"><i class="fas fa-award"></i></div>
+                            <div class="stat-number" data-count="10">0</div>
+                            <div class="stat-text">Awards</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="window-statusbar">
+                <div class="status-item">Ready</div>
+                <div class="status-item"><i class="fas fa-wifi"></i> Connected</div>
+            </div>
+        </div>
+
+        <!-- About Window -->
+        <div class="window" id="about-window" data-window-id="about">
+            <div class="window-header">
+                <div class="window-title">
+                    <i class="fas fa-user window-icon"></i>
+                    <span>About Me</span>
+                </div>
+                <div class="window-controls">
+                    <button class="window-control minimize"><i class="fas fa-window-minimize"></i></button>
+                    <button class="window-control maximize"><i class="fas fa-window-maximize"></i></button>
+                    <button class="window-control close"><i class="fas fa-times"></i></button>
+                </div>
+            </div>
+            <div class="window-content">
+                <div class="about-container">
+                    <div class="about-header">
+                        <h2>About Me</h2>
+                        <div class="win-separator"></div>
+                    </div>
+                    <div class="about-body">
+                        <div class="about-text">
+                            <p>Hello! I'm Your Name, a passionate developer specializing in creating interactive, user-friendly applications and websites. With a background in computer science and a love for design, I bring a unique perspective to every project.</p>
+                            <p>I believe in the power of technology to transform and improve lives. My approach combines technical expertise with creative problem-solving to build solutions that not only function flawlessly but also provide an exceptional user experience.</p>
+                            <p>When I'm not coding, you can find me hiking in nature, experimenting with photography, or exploring new coffee shops in the city.</p>
+                        </div>
+                        <div class="about-details">
+                            <div class="detail-item">
+                                <div class="detail-label">Name:</div>
+                                <div class="detail-value">Your Name</div>
+                            </div>
+                            <div class="detail-item">
+                                <div class="detail-label">Email:</div>
+                                <div class="detail-value">your.email@example.com</div>
+                            </div>
+                            <div class="detail-item">
+                                <div class="detail-label">Phone:</div>
+                                <div class="detail-value">(123) 456-7890</div>
+                            </div>
+                            <div class="detail-item">
+                                <div class="detail-label">Location:</div>
+                                <div class="detail-value">City, Country</div>
+                            </div>
+                            <div class="detail-item">
+                                <div class="detail-label">Availability:</div>
+                                <div class="detail-value">Available for hire</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="about-footer">
+                        <a href="#" class="win-btn primary" id="download-cv">
+                            <i class="fas fa-download"></i> Download Resume
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <div class="window-statusbar">
+                <div class="status-item">Updated: 2023</div>
+            </div>
+        </div>
+        
+        <!-- Projects Window -->
+        <div class="window" id="projects-window" data-window-id="projects">
+            <div class="window-header">
+                <div class="window-title">
+                    <i class="fas fa-briefcase window-icon"></i>
+                    <span>Projects</span>
+                </div>
+                <div class="window-controls">
+                    <button class="window-control minimize"><i class="fas fa-window-minimize"></i></button>
+                    <button class="window-control maximize"><i class="fas fa-window-maximize"></i></button>
+                    <button class="window-control close"><i class="fas fa-times"></i></button>
+                </div>
+            </div>
+            <div class="window-content">
+                <div class="projects-container">
+                    <div class="projects-header">
+                        <h2>My Projects</h2>
+                        <div class="win-separator"></div>
+                        <div class="projects-filter">
+                            <button class="filter-btn active" data-filter="all">All</button>
+                            <button class="filter-btn" data-filter="web">Web Development</button>
+                            <button class="filter-btn" data-filter="app">Mobile Apps</button>
+                            <button class="filter-btn" data-filter="design">UI/UX Design</button>
+                        </div>
+                    </div>
+                    <div class="projects-grid">
+                        <div class="project-card" data-category="web">
+                            <div class="project-img">
+                                <img src="assets/project-1.jpg" alt="Project 1">
+                            </div>
+                            <div class="project-details">
+                                <h3>E-commerce Website</h3>
+                                <p>A responsive online store with secure payment integration and inventory management.</p>
+                                <div class="project-tech">
+                                    <span class="tech-tag">HTML</span>
+                                    <span class="tech-tag">CSS</span>
+                                    <span class="tech-tag">JavaScript</span>
+                                    <span class="tech-tag">React</span>
+                                </div>
+                                <div class="project-links">
+                                    <a href="#" class="win-btn small-btn">View Live</a>
+                                    <a href="#" class="win-btn small-btn secondary">GitHub</a>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="project-card" data-category="app">
+                            <div class="project-img">
+                                <img src="assets/project-2.jpg" alt="Project 2">
+                            </div>
+                            <div class="project-details">
+                                <h3>Fitness Tracker App</h3>
+                                <p>Mobile application for tracking workouts, nutrition, and setting fitness goals.</p>
+                                <div class="project-tech">
+                                    <span class="tech-tag">React Native</span>
+                                    <span class="tech-tag">Firebase</span>
+                                    <span class="tech-tag">Redux</span>
+                                </div>
+                                <div class="project-links">
+                                    <a href="#" class="win-btn small-btn">View Live</a>
+                                    <a href="#" class="win-btn small-btn secondary">GitHub</a>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="project-card" data-category="design">
+                            <div class="project-img">
+                                <img src="assets/project-3.jpg" alt="Project 3">
+                            </div>
+                            <div class="project-details">
+                                <h3>Dashboard UI Kit</h3>
+                                <p>Modern, customizable dashboard components for data visualization and analytics.</p>
+                                <div class="project-tech">
+                                    <span class="tech-tag">Figma</span>
+                                    <span class="tech-tag">Adobe XD</span>
+                                    <span class="tech-tag">Sketch</span>
+                                </div>
+                                <div class="project-links">
+                                    <a href="#" class="win-btn small-btn">View Demo</a>
+                                    <a href="#" class="win-btn small-btn secondary">Details</a>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="project-card" data-category="web">
+                            <div class="project-img">
+                                <img src="assets/project-4.jpg" alt="Project 4">
+                            </div>
+                            <div class="project-details">
+                                <h3>Task Management System</h3>
+                                <p>Web application for team collaboration, task assignment, and progress tracking.</p>
+                                <div class="project-tech">
+                                    <span class="tech-tag">Vue.js</span>
+                                    <span class="tech-tag">Node.js</span>
+                                    <span class="tech-tag">MongoDB</span>
+                                </div>
+                                <div class="project-links">
+                                    <a href="#" class="win-btn small-btn">View Live</a>
+                                    <a href="#" class="win-btn small-btn secondary">GitHub</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="window-statusbar">
+                <div class="status-item">4 projects displayed</div>
+            </div>
+        </div>
+        
+        <!-- Skills Window -->
+        <div class="window" id="skills-window" data-window-id="skills">
+            <div class="window-header">
+                <div class="window-title">
+                    <i class="fas fa-code window-icon"></i>
+                    <span>Skills</span>
+                </div>
+                <div class="window-controls">
+                    <button class="window-control minimize"><i class="fas fa-window-minimize"></i></button>
+                    <button class="window-control maximize"><i class="fas fa-window-maximize"></i></button>
+                    <button class="window-control close"><i class="fas fa-times"></i></button>
+                </div>
+            </div>
+            <div class="window-content">
+                <div class="skills-container">
+                    <div class="skills-header">
+                        <h2>My Skills</h2>
+                        <div class="win-separator"></div>
+                    </div>
+                    <div class="skills-body">
+                        <div class="skills-section">
+                            <h3>Technical Skills</h3>
+                            <div class="skills-progress">
+                                <div class="skill-item">
+                                    <div class="skill-info">
+                                        <span class="skill-name">HTML/CSS</span>
+                                        <span class="skill-percentage">90%</span>
+                                    </div>
+                                    <div class="skill-bar">
+                                        <div class="skill-progress" style="width: 90%"></div>
+                                    </div>
+                                </div>
+                                <div class="skill-item">
+                                    <div class="skill-info">
+                                        <span class="skill-name">JavaScript</span>
+                                        <span class="skill-percentage">85%</span>
+                                    </div>
+                                    <div class="skill-bar">
+                                        <div class="skill-progress" style="width: 85%"></div>
+                                    </div>
+                                </div>
+                                <div class="skill-item">
+                                    <div class="skill-info">
+                                        <span class="skill-name">React</span>
+                                        <span class="skill-percentage">80%</span>
+                                    </div>
+                                    <div class="skill-bar">
+                                        <div class="skill-progress" style="width: 80%"></div>
+                                    </div>
+                                </div>
+                                <div class="skill-item">
+                                    <div class="skill-info">
+                                        <span class="skill-name">Node.js</span>
+                                        <span class="skill-percentage">75%</span>
+                                    </div>
+                                    <div class="skill-bar">
+                                        <div class="skill-progress" style="width: 75%"></div>
+                                    </div>
+                                </div>
+                                <div class="skill-item">
+                                    <div class="skill-info">
+                                        <span class="skill-name">SQL/NoSQL</span>
+                                        <span class="skill-percentage">70%</span>
+                                    </div>
+                                    <div class="skill-bar">
+                                        <div class="skill-progress" style="width: 70%"></div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="skills-section">
+                            <h3>Design Skills</h3>
+                            <div class="skills-grid">
+                                <div class="skill-card">
+                                    <div class="skill-icon"><i class="fas fa-paint-brush"></i></div>
+                                    <h4>UI Design</h4>
+                                    <p>Creating user interfaces that are both functional and aesthetically pleasing.</p>
+                                </div>
+                                <div class="skill-card">
+                                    <div class="skill-icon"><i class="fas fa-user-friends"></i></div>
+                                    <h4>UX Design</h4>
+                                    <p>Designing seamless user experiences that solve real problems.</p>
+                                </div>
+                                <div class="skill-card">
+                                    <div class="skill-icon"><i class="fas fa-mobile-alt"></i></div>
+                                    <h4>Responsive Design</h4>
+                                    <p>Building layouts that work perfectly across all device sizes.</p>
+                                </div>
+                                <div class="skill-card">
+                                    <div class="skill-icon"><i class="fas fa-bezier-curve"></i></div>
+                                    <h4>Graphic Design</h4>
+                                    <p>Creating visual assets that enhance brand identity and communication.</p>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="skills-section">
+                            <h3>Tools & Technologies</h3>
+                            <div class="tech-tags">
+                                <span class="tech-tag">Git</span>
+                                <span class="tech-tag">VS Code</span>
+                                <span class="tech-tag">Figma</span>
+                                <span class="tech-tag">Adobe XD</span>
+                                <span class="tech-tag">Photoshop</span>
+                                <span class="tech-tag">Docker</span>
+                                <span class="tech-tag">AWS</span>
+                                <span class="tech-tag">Firebase</span>
+                                <span class="tech-tag">MongoDB</span>
+                                <span class="tech-tag">MySQL</span>
+                                <span class="tech-tag">GraphQL</span>
+                                <span class="tech-tag">Webpack</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="window-statusbar">
+                <div class="status-item">Last updated: June 2023</div>
+            </div>
+        </div>
+        
+        <!-- Experience Window -->
+        <div class="window" id="experience-window" data-window-id="experience">
+            <div class="window-header">
+                <div class="window-title">
+                    <i class="fas fa-history window-icon"></i>
+                    <span>Experience</span>
+                </div>
+                <div class="window-controls">
+                    <button class="window-control minimize"><i class="fas fa-window-minimize"></i></button>
+                    <button class="window-control maximize"><i class="fas fa-window-maximize"></i></button>
+                    <button class="window-control close"><i class="fas fa-times"></i></button>
+                </div>
+            </div>
+            <div class="window-content">
+                <div class="experience-container">
+                    <div class="experience-header">
+                        <h2>Work Experience</h2>
+                        <div class="win-separator"></div>
+                    </div>
+                    <div class="experience-timeline">
+                        <div class="timeline-item">
+                            <div class="timeline-marker">
+                                <div class="marker-dot"></div>
+                                <div class="marker-line"></div>
+                            </div>
+                            <div class="timeline-content">
+                                <div class="timeline-date">2022 - Present</div>
+                                <div class="timeline-card">
+                                    <h3>Senior Web Developer</h3>
+                                    <h4>Tech Company Inc.</h4>
+                                    <p>Leading development of web applications for enterprise clients, focusing on performance optimization and accessibility.</p>
+                                    <ul>
+                                        <li>Implemented CI/CD pipelines that reduced deployment time by 40%</li>
+                                        <li>Led a team of 5 developers on multiple client projects</li>
+                                        <li>Introduced modern front-end architecture that improved performance by 30%</li>
+                                    </ul>
+                                    <div class="tech-tags">
+                                        <span class="tech-tag">React</span>
+                                        <span class="tech-tag">TypeScript</span>
+                                        <span class="tech-tag">Node.js</span>
+                                        <span class="tech-tag">AWS</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="timeline-item">
+                            <div class="timeline-marker">
+                                <div class="marker-dot"></div>
+                                <div class="marker-line"></div>
+                            </div>
+                            <div class="timeline-content">
+                                <div class="timeline-date">2020 - 2022</div>
+                                <div class="timeline-card">
+                                    <h3>Frontend Developer</h3>
+                                    <h4>Digital Agency Co.</h4>
+                                    <p>Developed responsive websites and web applications for various clients across multiple industries.</p>
+                                    <ul>
+                                        <li>Built 15+ client websites with a focus on mobile responsiveness</li>
+                                        <li>Created a reusable component library that increased development efficiency</li>
+                                        <li>Collaborated with designers to implement pixel-perfect interfaces</li>
+                                    </ul>
+                                    <div class="tech-tags">
+                                        <span class="tech-tag">HTML5</span>
+                                        <span class="tech-tag">CSS3</span>
+                                        <span class="tech-tag">JavaScript</span>
+                                        <span class="tech-tag">Vue.js</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="timeline-item">
+                            <div class="timeline-marker">
+                                <div class="marker-dot"></div>
+                                <div class="marker-line"></div>
+                            </div>
+                            <div class="timeline-content">
+                                <div class="timeline-date">2018 - 2020</div>
+                                <div class="timeline-card">
+                                    <h3>Web Development Intern</h3>
+                                    <h4>Startup Ltd.</h4>
+                                    <p>Assisted in building and maintaining web applications while learning modern development practices.</p>
+                                    <ul>
+                                        <li>Contributed to frontend development of the company's main product</li>
+                                        <li>Fixed bugs and implemented minor features</li>
+                                        <li>Participated in code reviews and learned from senior developers</li>
+                                    </ul>
+                                    <div class="tech-tags">
+                                        <span class="tech-tag">HTML</span>
+                                        <span class="tech-tag">CSS</span>
+                                        <span class="tech-tag">JavaScript</span>
+                                        <span class="tech-tag">jQuery</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="window-statusbar">
+                <div class="status-item">3 positions</div>
+            </div>
+        </div>
+        
+        <!-- Education Window -->
+        <div class="window" id="education-window" data-window-id="education">
+            <div class="window-header">
+                <div class="window-title">
+                    <i class="fas fa-graduation-cap window-icon"></i>
+                    <span>Education</span>
+                </div>
+                <div class="window-controls">
+                    <button class="window-control minimize"><i class="fas fa-window-minimize"></i></button>
+                    <button class="window-control maximize"><i class="fas fa-window-maximize"></i></button>
+                    <button class="window-control close"><i class="fas fa-times"></i></button>
+                </div>
+            </div>
+            <div class="window-content">
+                <div class="education-container">
+                    <div class="education-header">
+                        <h2>Educational Background</h2>
+                        <div class="win-separator"></div>
+                    </div>
+                    <div class="education-cards">
+                        <div class="education-card">
+                            <div class="edu-icon"><i class="fas fa-university"></i></div>
+                            <div class="edu-content">
+                                <h3>Bachelor of Science in Computer Science</h3>
+                                <h4>University Name</h4>
+                                <div class="edu-date">2016 - 2020</div>
+                                <p>Focused on software development, algorithms, and data structures. Graduated with honors.</p>
+                                <div class="edu-details">
+                                    <div class="detail-item">
+                                        <div class="detail-label">GPA:</div>
+                                        <div class="detail-value">3.8/4.0</div>
+                                    </div>
+                                    <div class="detail-item">
+                                        <div class="detail-label">Achievements:</div>
+                                        <div class="detail-value">Dean's List, Coding Competition Winner</div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="education-card">
+                            <div class="edu-icon"><i class="fas fa-certificate"></i></div>
+                            <div class="edu-content">
+                                <h3>Full Stack Web Development</h3>
+                                <h4>Online Technology Institute</h4>
+                                <div class="edu-date">2021</div>
+                                <p>Intensive program covering modern web development technologies and best practices.</p>
+                                <div class="edu-details">
+                                    <div class="detail-item">
+                                        <div class="detail-label">Topics:</div>
+                                        <div class="detail-value">MERN Stack, RESTful APIs, Authentication, Deployment</div>
+                                    </div>
+                                    <div class="detail-item">
+                                        <div class="detail-label">Projects:</div>
+                                        <div class="detail-value">E-commerce Platform, Social Media Dashboard</div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="education-card">
+                            <div class="edu-icon"><i class="fas fa-award"></i></div>
+                            <div class="edu-content">
+                                <h3>UI/UX Design Certification</h3>
+                                <h4>Design Academy</h4>
+                                <div class="edu-date">2022</div>
+                                <p>Comprehensive course on creating user-centered designs and interfaces.</p>
+                                <div class="edu-details">
+                                    <div class="detail-item">
+                                        <div class="detail-label">Skills:</div>
+                                        <div class="detail-value">User Research, Wireframing, Prototyping, Usability Testing</div>
+                                    </div>
+                                    <div class="detail-item">
+                                        <div class="detail-label">Tools:</div>
+                                        <div class="detail-value">Figma, Adobe XD, Sketch</div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="window-statusbar">
+                <div class="status-item">3 educational qualifications</div>
+            </div>
+        </div>
+        
+        <!-- Contact Window -->
+        <div class="window" id="contact-window" data-window-id="contact">
+            <div class="window-header">
+                <div class="window-title">
+                    <i class="fas fa-envelope window-icon"></i>
+                    <span>Contact</span>
+                </div>
+                <div class="window-controls">
+                    <button class="window-control minimize"><i class="fas fa-window-minimize"></i></button>
+                    <button class="window-control maximize"><i class="fas fa-window-maximize"></i></button>
+                    <button class="window-control close"><i class="fas fa-times"></i></button>
+                </div>
+            </div>
+            <div class="window-content">
+                <div class="contact-container">
+                    <div class="contact-header">
+                        <h2>Get In Touch</h2>
+                        <div class="win-separator"></div>
+                    </div>
+                    <div class="contact-body">
+                        <div class="contact-info">
+                            <div class="contact-card">
+                                <div class="contact-icon">
+                                    <i class="fas fa-map-marker-alt"></i>
+                                </div>
+                                <div class="contact-details">
+                                    <h3>Location</h3>
+                                    <p>City, Country</p>
+                                </div>
+                            </div>
+                            <div class="contact-card">
+                                <div class="contact-icon">
+                                    <i class="fas fa-envelope"></i>
+                                </div>
+                                <div class="contact-details">
+                                    <h3>Email</h3>
+                                    <p>your.email@example.com</p>
+                                </div>
+                            </div>
+                            <div class="contact-card">
+                                <div class="contact-icon">
+                                    <i class="fas fa-phone-alt"></i>
+                                </div>
+                                <div class="contact-details">
+                                    <h3>Phone</h3>
+                                    <p>(123) 456-7890</p>
+                                </div>
+                            </div>
+                            <div class="contact-socials">
+                                <h3>Connect With Me</h3>
+                                <div class="social-icons">
+                                    <a href="#" class="social-icon" aria-label="LinkedIn">
+                                        <i class="fab fa-linkedin-in"></i>
+                                    </a>
+                                    <a href="#" class="social-icon" aria-label="GitHub">
+                                        <i class="fab fa-github"></i>
+                                    </a>
+                                    <a href="#" class="social-icon" aria-label="Twitter">
+                                        <i class="fab fa-twitter"></i>
+                                    </a>
+                                    <a href="#" class="social-icon" aria-label="Instagram">
+                                        <i class="fab fa-instagram"></i>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="contact-form-container">
+                            <h3>Send Me a Message</h3>
+                            <form id="contact-form" class="contact-form">
+                                <div class="form-group">
+                                    <label for="name">Name</label>
+                                    <input type="text" id="name" name="name" class="form-control" required>
+                                </div>
+                                <div class="form-group">
+                                    <label for="email">Email</label>
+                                    <input type="email" id="email" name="email" class="form-control" required>
+                                </div>
+                                <div class="form-group">
+                                    <label for="subject">Subject</label>
+                                    <input type="text" id="subject" name="subject" class="form-control">
+                                </div>
+                                <div class="form-group">
+                                    <label for="message">Message</label>
+                                    <textarea id="message" name="message" class="form-control" rows="4" required></textarea>
+                                </div>
+                                <button type="submit" class="win-btn primary">Send Message</button>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="window-statusbar">
+                <div class="status-item">Ready to receive messages</div>
+            </div>
+        </div>
+    </div>
+    
+    <!-- Taskbar -->
+    <div class="taskbar">
+        <div class="start-menu-button">
+            <i class="fab fa-windows"></i>
+        </div>
+        <div class="task-items">
+            <!-- Task items will be added dynamically by JavaScript -->
+        </div>
+        <div class="taskbar-right">
+            <div class="time-display" id="current-time">00:00 AM</div>
+            <div class="date-display" id="current-date">Jan 1, 2023</div>
+        </div>
+    </div>
+    
+    <!-- Start Menu -->
+    <div class="start-menu">
+        <div class="start-header">
+            <div class="profile-section">
+                <div class="profile-img">
+                    <img src="assets/profile-placeholder.jpg" alt="Your Name">
+                </div>
+                <div class="profile-name">Your Name</div>
+            </div>
+            <div class="search-section">
+                <input type="text" placeholder="Search..." class="search-input">
+                <i class="fas fa-search search-icon"></i>
+            </div>
+        </div>
+        <div class="start-content">
+            <div class="menu-category">
+                <h3>Portfolio Sections</h3>
+                <div class="menu-items">
+                    <div class="menu-item" data-window="welcome">
+                        <div class="menu-icon"><i class="fas fa-home"></i></div>
+                        <div class="menu-text">Welcome</div>
+                    </div>
+                    <div class="menu-item" data-window="about">
+                        <div class="menu-icon"><i class="fas fa-user"></i></div>
+                        <div class="menu-text">About Me</div>
+                    </div>
+                    <div class="menu-item" data-window="projects">
+                        <div class="menu-icon"><i class="fas fa-briefcase"></i></div>
+                        <div class="menu-text">Projects</div>
+                    </div>
+                    <div class="menu-item" data-window="skills">
+                        <div class="menu-icon"><i class="fas fa-code"></i></div>
+                        <div class="menu-text">Skills</div>
+                    </div>
+                    <div class="menu-item" data-window="experience">
+                        <div class="menu-icon"><i class="fas fa-history"></i></div>
+                        <div class="menu-text">Experience</div>
+                    </div>
+                    <div class="menu-item" data-window="education">
+                        <div class="menu-icon"><i class="fas fa-graduation-cap"></i></div>
+                        <div class="menu-text">Education</div>
+                    </div>
+                    <div class="menu-item" data-window="contact">
+                        <div class="menu-icon"><i class="fas fa-envelope"></i></div>
+                        <div class="menu-text">Contact</div>
+                    </div>
+                </div>
+            </div>
+            <div class="menu-category">
+                <h3>Resources</h3>
+                <div class="menu-items">
+                    <div class="menu-item" data-window="resume">
+                        <div class="menu-icon"><i class="fas fa-file-alt"></i></div>
+                        <div class="menu-text">Resume.pdf</div>
+                    </div>
+                    <a href="#" class="menu-item" target="_blank">
+                        <div class="menu-icon"><i class="fab fa-github"></i></div>
+                        <div class="menu-text">GitHub</div>
+                    </a>
+                    <a href="#" class="menu-item" target="_blank">
+                        <div class="menu-icon"><i class="fab fa-linkedin"></i></div>
+                        <div class="menu-text">LinkedIn</div>
+                    </a>
+                </div>
+            </div>
+        </div>
+        <div class="start-footer">
+            <div class="power-button">
+                <i class="fas fa-power-off"></i>
+            </div>
+        </div>
+    </div>
+    
+    <!-- Notification/Toast System -->
+    <div class="notification-center"></div>
+    
+    <!-- JavaScript Files -->
+    <script src="js/generate-assets.js"></script>
+    <script src="js/windows.js"></script>
+    <script src="js/main.js"></script>
+    <script src="js/form.js"></script>
+</body>
+</html>

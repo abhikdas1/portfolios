@@ -1,0 +1,185 @@
+/* Base CSS: Variables, resets, and typography */
+
+/* CSS Variables */
+:root {
+    /* Terminal Colors */
+    --terminal-bg: #000000;
+    --terminal-text: #00ff00;
+    --terminal-text-dim: #008800;
+    --terminal-highlight: #00ffaa;
+    --terminal-error: #ff0000;
+    --terminal-warning: #ffff00;
+    --terminal-success: #00ff00;
+    --terminal-info: #00aaff;
+    --terminal-header: #111111;
+    --terminal-footer: #111111;
+    --terminal-border: #333333;
+    --terminal-shadow: 0 0 10px rgba(0, 255, 0, 0.5);
+    
+    /* Control Colors */
+    --control-close: #ff5f56;
+    --control-minimize: #ffbd2e;
+    --control-maximize: #27c93f;
+    
+    /* Spacing */
+    --space-xxxs: 0.25rem;  /* 4px */
+    --space-xxs: 0.5rem;    /* 8px */
+    --space-xs: 0.75rem;    /* 12px */
+    --space-sm: 1rem;       /* 16px */
+    --space-md: 1.5rem;     /* 24px */
+    --space-lg: 2rem;       /* 32px */
+    --space-xl: 2.5rem;     /* 40px */
+    --space-xxl: 3rem;      /* 48px */
+    
+    /* Typography */
+    --font-mono: 'Fira Code', 'Courier New', monospace;
+    --font-display: 'VT323', monospace;
+    --font-size-xs: 0.75rem;     /* 12px */
+    --font-size-sm: 0.875rem;    /* 14px */
+    --font-size-md: 1rem;        /* 16px */
+    --font-size-lg: 1.125rem;    /* 18px */
+    --font-size-xl: 1.25rem;     /* 20px */
+    --font-size-xxl: 1.5rem;     /* 24px */
+    --font-size-xxxl: 2rem;      /* 32px */
+    
+    /* Animation speeds */
+    --speed-slow: 1000ms;
+    --speed-normal: 500ms;
+    --speed-fast: 300ms;
+    --speed-instant: 100ms;
+    
+    /* Z-indices */
+    --z-background: -1;
+    --z-terminal: 10;
+    --z-overlay: 100;
+}
+
+/* Box sizing */
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+/* Document setup */
+html {
+    font-size: 16px;
+    height: 100%;
+}
+
+body {
+    font-family: var(--font-mono);
+    font-size: var(--font-size-md);
+    line-height: 1.5;
+    color: var(--terminal-text);
+    background-color: var(--terminal-bg);
+    min-height: 100%;
+    position: relative;
+    overflow: hidden;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Typography */
+h1, h2, h3, h4, h5, h6 {
+    font-family: var(--font-display);
+    margin-top: 0;
+    margin-bottom: var(--space-xs);
+    line-height: 1.2;
+    color: var(--terminal-highlight);
+}
+
+h1 {
+    font-size: var(--font-size-xxxl);
+}
+
+h2 {
+    font-size: var(--font-size-xxl);
+    border-bottom: 1px solid var(--terminal-text-dim);
+    padding-bottom: var(--space-xxs);
+    margin-bottom: var(--space-sm);
+}
+
+h3 {
+    font-size: var(--font-size-xl);
+    margin-top: var(--space-md);
+}
+
+h4 {
+    font-size: var(--font-size-lg);
+    color: var(--terminal-text);
+}
+
+p {
+    margin-top: 0;
+    margin-bottom: var(--space-sm);
+}
+
+/* Links */
+a {
+    color: var(--terminal-highlight);
+    text-decoration: none;
+    transition: all var(--speed-fast);
+}
+
+a:hover {
+    text-shadow: 0 0 8px var(--terminal-highlight);
+}
+
+/* Lists */
+ul, ol {
+    margin-top: 0;
+    margin-bottom: var(--space-sm);
+    padding-left: var(--space-lg);
+}
+
+li {
+    margin-bottom: var(--space-xxs);
+}
+
+/* Matrix background canvas */
+#matrix-bg {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: var(--z-background);
+}
+
+/* Helper Classes */
+.highlight {
+    color: var(--terminal-highlight);
+    font-weight: bold;
+}
+
+.command {
+    color: var(--terminal-highlight);
+    font-weight: bold;
+}
+
+.error {
+    color: var(--terminal-error);
+}
+
+.warning {
+    color: var(--terminal-warning);
+}
+
+.success {
+    color: var(--terminal-success);
+}
+
+.info {
+    color: var(--terminal-info);
+}
+
+.hidden {
+    display: none !important;
+}

@@ -1,0 +1,428 @@
+/* Main stylesheet: Imports all other CSS files and contains additional custom styles */
+
+/* Apply custom scrollbar */
+::-webkit-scrollbar {
+    width: 8px;
+    height: 8px;
+}
+
+::-webkit-scrollbar-track {
+    background: var(--cyber-bg-light);
+}
+
+::-webkit-scrollbar-thumb {
+    background: var(--neon-primary);
+    border-radius: 2px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: var(--neon-accent);
+}
+
+/* Selection styling */
+::selection {
+    background-color: var(--neon-primary);
+    color: var(--cyber-bg-dark);
+}
+
+/* Animated section titles */
+.cyber-section-title {
+    position: relative;
+    display: inline-block;
+    color: var(--cyber-text);
+    margin-bottom: 0;
+}
+
+.cyber-section-title::before {
+    content: attr(data-text);
+    position: absolute;
+    left: -2px;
+    text-shadow: 2px 0 var(--neon-accent);
+    top: 0;
+    color: var(--cyber-text);
+    background: var(--cyber-bg-dark);
+    overflow: hidden;
+    clip: rect(0, 900px, 0, 0);
+    animation: cyber-title-noise-anim 3s infinite linear alternate-reverse;
+}
+
+.cyber-section-title::after {
+    content: attr(data-text);
+    position: absolute;
+    left: 2px;
+    text-shadow: -2px 0 var(--neon-secondary);
+    top: 0;
+    color: var(--cyber-text);
+    background: var(--cyber-bg-dark);
+    overflow: hidden;
+    clip: rect(0, 900px, 0, 0);
+    animation: cyber-title-noise-anim-2 5s infinite linear alternate-reverse;
+}
+
+@keyframes cyber-title-noise-anim {
+    0% {
+        clip: rect(20px, 9999px, 15px, 0);
+    }
+    5% {
+        clip: rect(16px, 9999px, 16px, 0);
+    }
+    10% {
+        clip: rect(53px, 9999px, 87px, 0);
+    }
+    15% {
+        clip: rect(96px, 9999px, 78px, 0);
+    }
+    20% {
+        clip: rect(12px, 9999px, 26px, 0);
+    }
+    25% {
+        clip: rect(10px, 9999px, 32px, 0);
+    }
+    30% {
+        clip: rect(2px, 9999px, 21px, 0);
+    }
+    35% {
+        clip: rect(1px, 9999px, 65px, 0);
+    }
+    40% {
+        clip: rect(37px, 9999px, 40px, 0);
+    }
+    45% {
+        clip: rect(89px, 9999px, 46px, 0);
+    }
+    50% {
+        clip: rect(83px, 9999px, 8px, 0);
+    }
+    55% {
+        clip: rect(6px, 9999px, 83px, 0);
+    }
+    60% {
+        clip: rect(73px, 9999px, 15px, 0);
+    }
+    65% {
+        clip: rect(15px, 9999px, 10px, 0);
+    }
+    70% {
+        clip: rect(35px, 9999px, 90px, 0);
+    }
+    75% {
+        clip: rect(13px, 9999px, 9px, 0);
+    }
+    80% {
+        clip: rect(26px, 9999px, 84px, 0);
+    }
+    85% {
+        clip: rect(15px, 9999px, 41px, 0);
+    }
+    90% {
+        clip: rect(70px, 9999px, 2px, 0);
+    }
+    95% {
+        clip: rect(88px, 9999px, 3px, 0);
+    }
+    100% {
+        clip: rect(20px, 9999px, 40px, 0);
+    }
+}
+
+@keyframes cyber-title-noise-anim-2 {
+    0% {
+        clip: rect(46px, 9999px, 17px, 0);
+    }
+    5% {
+        clip: rect(10px, 9999px, 1px, 0);
+    }
+    10% {
+        clip: rect(19px, 9999px, 26px, 0);
+    }
+    15% {
+        clip: rect(61px, 9999px, 24px, 0);
+    }
+    20% {
+        clip: rect(86px, 9999px, 97px, 0);
+    }
+    25% {
+        clip: rect(28px, 9999px, 63px, 0);
+    }
+    30% {
+        clip: rect(64px, 9999px, 94px, 0);
+    }
+    35% {
+        clip: rect(35px, 9999px, 33px, 0);
+    }
+    40% {
+        clip: rect(59px, 9999px, 92px, 0);
+    }
+    45% {
+        clip: rect(94px, 9999px, 7px, 0);
+    }
+    50% {
+        clip: rect(74px, 9999px, 66px, 0);
+    }
+    55% {
+        clip: rect(83px, 9999px, 44px, 0);
+    }
+    60% {
+        clip: rect(23px, 9999px, 72px, 0);
+    }
+    65% {
+        clip: rect(21px, 9999px, 21px, 0);
+    }
+    70% {
+        clip: rect(15px, 9999px, 37px, 0);
+    }
+    75% {
+        clip: rect(55px, 9999px, 100px, 0);
+    }
+    80% {
+        clip: rect(2px, 9999px, 91px, 0);
+    }
+    85% {
+        clip: rect(44px, 9999px, 33px, 0);
+    }
+    90% {
+        clip: rect(43px, 9999px, 77px, 0);
+    }
+    95% {
+        clip: rect(40px, 9999px, 18px, 0);
+    }
+    100% {
+        clip: rect(92px, 9999px, 18px, 0);
+    }
+}
+
+/* Cyberpunk section active state */
+.cyber-section {
+    opacity: 0;
+    transition: opacity 0.5s ease;
+}
+
+.cyber-section.cyber-active {
+    opacity: 1;
+}
+
+/* Typewriter cursor blink */
+.cyber-subtitle::after {
+    content: '_';
+    animation: blink 1s infinite;
+}
+
+@keyframes blink {
+    0%, 100% {
+        opacity: 1;
+    }
+    50% {
+        opacity: 0;
+    }
+}
+
+/* Cyberpunk active glitch effect for title */
+.cyber-glitch-title.active-glitch {
+    animation: active-glitch 2s ease-in-out;
+}
+
+@keyframes active-glitch {
+    0% {
+        opacity: 1;
+        transform: translateX(0);
+    }
+    10% {
+        opacity: 0.8;
+        transform: translateX(-5px);
+    }
+    20% {
+        opacity: 1;
+        transform: translateX(5px);
+    }
+    30% {
+        opacity: 0.6;
+        transform: translateX(-3px);
+    }
+    40% {
+        opacity: 1;
+        transform: translateX(3px);
+    }
+    50% {
+        opacity: 0.8;
+        transform: translateX(0);
+    }
+    60% {
+        opacity: 1;
+        transform: translateX(0);
+    }
+    100% {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+/* Hero section adjustments */
+.cyber-hero {
+    position: relative;
+    overflow: hidden;
+}
+
+.cyber-hero::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: radial-gradient(circle at top right, rgba(189, 0, 255, 0.2) 0%, transparent 50%),
+                radial-gradient(circle at bottom left, rgba(0, 255, 249, 0.2) 0%, transparent 50%);
+    pointer-events: none;
+    z-index: -1;
+}
+
+/* Focus states for accessibility */
+a:focus, button:focus, input:focus, textarea:focus, select:focus {
+    outline: none;
+    box-shadow: 0 0 0 2px var(--neon-primary);
+}
+
+/* Nav toggle animation */
+.cyber-nav-toggle.active span:nth-child(1) {
+    transform: translateY(8px) rotate(45deg);
+}
+
+.cyber-nav-toggle.active span:nth-child(2) {
+    opacity: 0;
+}
+
+.cyber-nav-toggle.active span:nth-child(3) {
+    transform: translateY(-8px) rotate(-45deg);
+}
+
+/* Preload animation */
+.preload * {
+    transition: none !important;
+    animation-duration: 0s !important;
+}
+
+/* Print styles */
+@media print {
+    .cyber-nav,
+    .system-status,
+    .cyber-nav-toggle,
+    .cyber-particles,
+    .cyber-back-to-top,
+    .cyber-form,
+    .cyber-footer-social,
+    .cyber-footer-nav {
+        display: none !important;
+    }
+    
+    .cyber-section {
+        page-break-inside: avoid;
+        opacity: 1 !important;
+    }
+    
+    body {
+        background: white;
+        color: black;
+    }
+    
+    .cyber-card,
+    .cyber-terminal {
+        box-shadow: none;
+        border: 1px solid #ccc;
+    }
+    
+    .cyber-section-title,
+    .cyber-section-title::before,
+    .cyber-section-title::after {
+        color: black;
+        text-shadow: none;
+        animation: none;
+    }
+}
+
+/* Additional styles to fix display issues */
+
+/* Terminal fixes */
+.terminal-line {
+    display: block !important;
+    color: var(--neon-primary) !important;
+    margin-bottom: 1rem !important;
+    font-family: monospace !important;
+    white-space: pre-wrap !important;
+}
+
+.terminal-command {
+    display: inline-block !important;
+    color: var(--neon-green) !important;
+}
+
+.terminal-body p {
+    color: var(--cyber-text) !important;
+    margin-bottom: 1.5rem !important;
+    white-space: pre-wrap !important;
+}
+
+/* Stats fixes */
+.cyber-stats {
+    display: grid !important;
+    grid-template-columns: repeat(2, 1fr) !important;
+    gap: var(--space-md) !important;
+    margin-top: var(--space-md) !important;
+}
+
+.cyber-stat {
+    background-color: var(--cyber-bg-light) !important;
+    padding: 1.5rem !important;
+    border: 1px solid var(--cyber-border) !important;
+    text-align: center !important;
+    transition: transform var(--transition-fast) !important;
+}
+
+.stat-value {
+    font-family: var(--font-primary) !important;
+    font-size: 3.6rem !important;
+    color: var(--neon-primary) !important;
+    margin-bottom: 0.5rem !important;
+    text-shadow: 0 0 10px var(--neon-primary) !important;
+}
+
+.stat-label {
+    font-family: var(--font-secondary) !important;
+    font-size: 1.4rem !important;
+    color: var(--cyber-text-secondary) !important;
+    text-transform: uppercase !important;
+    letter-spacing: 2px !important;
+}
+
+/* Fix for avatar image */
+.cyber-avatar img {
+    width: 100% !important;
+    height: 100% !important;
+    object-fit: cover !important;
+    position: relative !important;
+    z-index: 1 !important;
+    display: block !important;
+}
+
+/* Fix for project images */
+.project-image img {
+    width: 100% !important;
+    height: 100% !important;
+    object-fit: cover !important;
+    transition: transform var(--transition-fast) !important;
+    display: block !important;
+}
+
+/* Additional debug helper */
+.debug-info {
+    position: fixed;
+    bottom: 10px;
+    left: 10px;
+    background: rgba(0,0,0,0.8);
+    color: #00ff00;
+    padding: 10px;
+    font-family: monospace;
+    font-size: 12px;
+    z-index: 9999;
+    max-width: 300px;
+    max-height: 200px;
+    overflow: auto;
+}
